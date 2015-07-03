@@ -1,1 +1,0 @@
-<?php if (!defined('THINK_PATH')) exit();?>看到此页面，说明程序运行成功
