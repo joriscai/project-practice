@@ -1,0 +1,157 @@
+body {
+		margin : 0px;
+		padding : 0px;
+		background : #ffffff;
+  }
+  #top {
+		position : absolute;
+		*border : #00f 1px solid;
+		height : 100px;
+		background : #000000;
+  }
+  #topmain {                                       
+		position : absolute;
+		*border : #00f 1px solid;
+		width : 170px;
+		height : 60px;
+		top : 15px;
+		left : 30px;                              
+  }
+  #main {
+		position : absolute;
+		*border : #00f 1px solid;
+		width: 1440px;
+		height : 475px;
+		background : #5e8f36;
+		top :90px;
+  }
+  #mainleft {
+		position : absolute;
+		display : inline-block;
+		*border : #00f 1px solid;
+		height : 20px;
+		left: 250px;
+  }
+  #mainright {
+		position : absolute;
+		display : inline-block;
+		*border : #00f 1px solid;
+		width : 350px;
+		height : 300px;
+		left : 800px;
+		top :80px;
+		background : #ffffff;
+  }
+  #left {
+		position : absolute;
+		*border : #00f 1px solid;
+		width : 350px;
+		height : 300px;
+  }
+  #right {
+		position : absolute;
+		display : inline-block;
+		*border : #00f 1px solid;
+		width : 310px;
+		height : 330px;
+  }
+  #box {
+		position : absolute;
+		display : inline-block;
+		*border : #00f 1px solid;
+		width : 310px;
+		height : 55px;
+		top : 10px;
+		left : 0px;
+  }
+  #box1,#box2,#box3,#box4,#box5 {
+		position : absolute;                            
+		width : 305px;
+		height : 45px;
+		line-height : 34px;
+		*border : #00f 1px solid;
+		top: 80px;
+		right: 110px;
+  }
+  #box2 {
+		top : 135px;
+  }
+  #box3 {
+		height : 45px;
+		width : 300px;
+		top : 195px;
+		right: 155px;
+  }
+  #box4 {
+		width : 100px;
+		height : 30px;
+		top : 250px;
+		right: 350px;
+		color : #696969;
+		*border : #00f 1px solid;
+  }
+  #box5 {
+		width : 130px;
+		height : 30px;
+		top : 250px;
+		right: 180px;
+		color : #696969;
+		font-size : 12px;
+		*border : #00f 1px solid;
+  }
+  #box a {                                            
+		text-decoration: none;
+		color : #ff9966;
+  }
+  #box a:hover {
+		text-decoration : underline;
+  }
+  #box3 .butto {
+		display: inline-block;
+		height : 45px;
+		width : 300px;
+		border: 0 none;
+		font-size : 25px;
+		background : #ff6666;
+		background-position: 0 0;
+		color: #fff;
+		cursor : pointer;
+  }
+  #box1 .txt,#box2 .txt {
+		border : #888888 1px solid;
+		padding : 7px 5px;
+		height : 25px;
+		line-height : 25px;
+		width : 246px;
+		float : left;
+		font-size : 14px;
+		outline : 0 none;
+		border-radius : 2px; 
+		margin : 1px;
+  }
+  #boxd1 {
+		position : absolute;
+		*border : #00f 1px solid;
+		width : 60px;
+		height : 60px;
+		padding-top : 10px;
+		font-size: 20px;
+		font-family : 黑体;
+		color : FFFFFF;
+		top: 75px;
+		right: 400px;
+  }
+  #boxd2 {
+  	    position : absolute;
+		*border : #00f 1px solid;
+		width : 60px;
+		font-size: 20px;
+		font-family : 黑体;
+		color : FFFFFF;
+		padding-top : 15px;
+		height : 35px;
+		top: 125px;
+		right: 400px;
+  }
+#topmain a{ border:0px;     color:#f9f5ff;
+ }
