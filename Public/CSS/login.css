@@ -1,0 +1,149 @@
+body {
+		margin : 0px;
+		padding : 0px;
+		background : #ffffff;
+  }
+  #top {
+		position : relative;
+		#border : #00 f 1px solid;
+		height : 100px;
+		background : #ffffff;
+  }
+  #topmain {                                       
+		position : relative;
+		#border : #00f 1px solid;
+		width : 170px;
+		height : 60px;
+		top : 15px;
+		left : 10%;                              
+  }
+  #main {
+		position : relative;
+		#border : #00f 1px solid;
+		height : 475px;
+		top : 0px;
+		background : #5e8f36;
+  }
+  #mainleft {
+		position : relative;
+		display : inline-block;
+		#border : #00f 1px solid;
+		width : 350px;
+		height : 300px;
+		left : -176px;
+  }
+  #mainright {
+		position : absolute;
+		display : inline-block;
+		#border : #00f 1px solid;
+		width : 350px;
+		height : 300px;
+		left : 840px;
+		top :80px;
+		background : #ffffff;
+  }
+  #left {
+		position : relative;
+		#border : #00f 1px solid;
+		width : 350px;
+		height : 300px;
+		left : -100px;
+  }
+  #right {
+		position : relative;
+		display : inline-block;
+		#border : #00f 1px solid;
+		width : 310px;
+		height : 330px;
+		top : 80px;
+		right : 0px;
+  }
+  #box {
+		position : relative;
+		display : inline-block;
+		#border : #00f 1px solid;
+		width : 310px;
+		height : 55px;
+		top : 10px;
+		left : 0px;
+  }
+  #box1,#box2,#box3,#box4,#box5 {
+		position : absolute;                            /*放输入，选择框*/
+		width : 305px;
+		height : 45px;
+		line-height : 34px;
+		#border : #00f 1px solid;
+		left : 50px;
+		top : 5px;
+  }
+  #box2 {
+		top : 10px;
+  }
+  #box3 {
+		height : 45px;
+		width : 300px;
+		top : 10px;
+		left : 8px;
+  }
+  #box4 {
+		width : 100px;
+		height : 30px;
+		top : 3px;
+		color : #696969;
+		#border : #00f 1px solid;
+  }
+  #box5 {
+		width : 130px;
+		height : 30px;
+		top : 6px;
+		color : #696969;
+		font-size : 12px;
+		#border : #00f 1px solid;
+		left :180px;
+  }
+  #box a {                                            /*去处超链接文字下面的下划线效果，及设置字体的颜色*/
+		text-decoration: none;
+		color : #ff9966;
+  }
+  #box a:hover {
+		text-decoration : underline;
+  }
+  #box3 .butto {
+		display: inline-block;
+		height : 45px;
+		width : 300px;
+		border: 0 none;
+		font-size : 25px;
+		background : #ff6666;
+		background-position: 0 0;
+		color: #fff;
+		cursor : pointer;
+  }
+  #box1 .txt,#box2 .txt {
+		border : #888888 1px solid;
+		padding : 7px 5px;
+		height : 25px;
+		line-height : 25px;
+		width : 246px;
+		float : left;
+		font-size : 14px;
+		outline : 0 none;
+		border-radius : 2px; 
+		margin : 1px;
+  }
+  #boxd1,#boxd2 {
+		position : relative;
+		#border : #00f 1px solid;
+		width : 60px;
+		height : 60px;
+		padding-top : 10px;
+		font-size: 20px;
+		font-family : 黑体;
+		color : FFFFFF;
+  }
+  #boxd2 {
+		padding-top : 15px;
+		height : 35px;
+  }
+#topmain a{ border:0px;     color:#f9f5ff;
+ }
