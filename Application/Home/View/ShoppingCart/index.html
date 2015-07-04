@@ -15,7 +15,7 @@
 		</div>
 		<div class="header">
 			<div class="logo">
-				<a href="">
+				<a href="./">
 					<img src="__PUBLIC__/img/logo.png" />
 				</a>
 				<a href="">
@@ -40,6 +40,49 @@
 		<div class="mid_but">
 			
 		</div>-->
+		<input type="button" value="点击" onclick="clearMsg();" />
 		
+	<table style="width:990px">
+		<tr>
+			<th>留言内容</th>
+			<th>留言时间</th>
+		</tr>
+		<tbody id="show"></tbody>
+	</table>
 	</body>
 </html>
+
+<script type="text/javascript">
+		// 加载留言信息
+		var loadMsg = function()
+		{
+			var tb = document.getElementById("show");
+			// 清空原来显示的内容。
+			tb.innerHTML = "";
+			// 遍历所有留言信息
+			for(var i = 0 ; i < localStorage.length ; i++)
+			{
+				var row = tb.insertRow(i);
+				// 添加第一个单元格，并显示留言内容
+				row.insertCell(0).innerHTML = "13456";
+				// 添加第二个单元格，并显示留言内容。
+				row.insertCell(1).innerHTML = "111444";
+			}
+		}
+		var add = function()
+		{
+			var time = new Date().getTime();
+			// 以当前时间为key来保存留言信息
+			localStorage.setItem(time , "13456");
+			alert("数据已保存。");
+			loadMsg();
+		}
+		function clearMsg()
+		{
+			// 清空Local Storage里保存的数据。
+			localStorage.clear();
+			alert("全部留言信息已被清除。");
+			loadMsg();
+		}
+		window.onload = loadMsg();
+	</script>
