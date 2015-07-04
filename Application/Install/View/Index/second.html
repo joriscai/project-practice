@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link href="../../../Public/pulish.css" rel="stylesheet">
+		 <script src="../../../Public/jquery-1.7.2.min.js"></script>
+		<style>
+			/*div{
+				border:1px solid;
+				margin: 0px auto;
+				width: 990px;
+			}*/
+			#head_text{
+				color: #656565;
+				position: absolute;
+				right: 15px;
+				bottom: 5px;
+				
+			}
+			#header{
+				position: relative;
+				width: 700px;
+				margin: 0px auto;
+				height: 80px;
+				margin-top: 15px;
+				border: 1px solid #ccc;
+				background: url(../../../Public/Install/img/head_bg.jpg) repeat-x;
+			}
+			#head_logo{
+				background: url(../../../Public/Install/img/head_logo.png);
+				width: 260px;
+				height: 50px;
+				position: absolute;
+				left: 15px;
+				top: 15px;
+			}
+			#main{
+				margin: 0px auto;
+				width: 700px;
+				/*height: 100px;*/
+				border: 1px solid #ccc;
+				background-color: #F1F7FA;
+				/*text-align: center;*/
+				color: #656565;
+				padding: 10px 100px;
+				box-sizing:border-box;
+			}
+			#foot{
+				margin: 0px auto;
+				width: 700px;
+				height: 40px;
+				border: 1px solid #ccc;
+				background: rgba(240, 243, 250, 1);
+				text-align: center;
+				color: #656565;
+				font-size: 15px;
+			}
+			a{
+				border: 1px solid #ccc;
+				padding: 1px 4px;
+				background: #fff;
+				margin: 10px;
+			}
+			a:hover{
+				cursor: pointer;
+			}
+			
+			ul{
+				list-style: none;
+				width: 300px;
+			}
+			ul li{
+				margin: 0px 0px 15px 0px;
+				
+				text-align: right;
+			}
+			
+			ul li:last-child{
+				text-align: center;
+			}
+			.title{
+				text-align: left;
+				color: #000;
+			}
+		</style>
+		<script>
+			$(function(){
+				$("#next").click(function(){
+					$('#msg').empty();
+					var form=$('form:first');
+					var host=$('#host'),
+					name=$('#name'),
+					pwd=$('#pwd');
+					console.log(host.val(),name.val())
+					if(!host.val()){
+						host.after("<span id='msg'>请先输入服务器地址</span>");
+						return 0;
+					}
+					if(!name.val()){
+						name.after("<span>请先输入mysql用户名</span>");
+						return 0;
+					}
+					form.submit();
+				})
+				
+				
+			})
+		</script>
+	</head>
+	<body>
+		<div id="header">
+			<div id="head_logo"></div>
+			<div id='head_text'>梦想商城-V1</div>
+		</div>
+		<div id="main">
+			<form method="post" action="{:U('Install/Index/thirst_show')}">
+				<ul>
+					<li class="title">数据库设置：</li>
+					<li>数据库主机地址：<input name="host_db" id='host' value="localhost"><br /></li>
+					<li>数据库用户名：<input name="name_db" id='name' value="root"/><br /></li>
+					<li>数据库密码：<input name="pwd_db" id='pwd'/><br /></li>
+					<li class="title">管理员账户设置：</li>
+					<li>用户名：<input /><br /></li>
+					<li>密码：<input /><br /></li>
+					<li>确认密码：<input /><br /><br /></li>
+					<li><a href="{:U('Install/Index/first_show')}">上一步</a>
+					<a  id="next">下一步</a></li>
+				</ul>
+			</form>
+			
+		</div>
+		<div id='foot'>
+			<p>梦想小组版权所有</p>
+		</div>
+	</body>
+</html>
