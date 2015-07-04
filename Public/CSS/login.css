@@ -4,104 +4,102 @@ body {
 		background : #ffffff;
   }
   #top {
-		position : relative;
-		#border : #00 f 1px solid;
+		position : absolute;
+		*border : #00f 1px solid;
 		height : 100px;
-		background : #ffffff;
+		background : #000000;
   }
   #topmain {                                       
-		position : relative;
-		#border : #00f 1px solid;
+		position : absolute;
+		*border : #00f 1px solid;
 		width : 170px;
 		height : 60px;
 		top : 15px;
-		left : 10%;                              
+		left : 30px;                              
   }
   #main {
-		position : relative;
-		#border : #00f 1px solid;
+		position : absolute;
+		*border : #00f 1px solid;
+		width: 1440px;
 		height : 475px;
-		top : 0px;
 		background : #5e8f36;
+		top :90px;
   }
   #mainleft {
-		position : relative;
+		position : absolute;
 		display : inline-block;
-		#border : #00f 1px solid;
-		width : 350px;
-		height : 300px;
-		left : -176px;
+		*border : #00f 1px solid;
+		height : 20px;
+		left: 250px;
   }
   #mainright {
 		position : absolute;
 		display : inline-block;
-		#border : #00f 1px solid;
+		*border : #00f 1px solid;
 		width : 350px;
 		height : 300px;
-		left : 840px;
+		left : 800px;
 		top :80px;
 		background : #ffffff;
   }
   #left {
-		position : relative;
-		#border : #00f 1px solid;
+		position : absolute;
+		*border : #00f 1px solid;
 		width : 350px;
 		height : 300px;
-		left : -100px;
   }
   #right {
-		position : relative;
+		position : absolute;
 		display : inline-block;
-		#border : #00f 1px solid;
+		*border : #00f 1px solid;
 		width : 310px;
 		height : 330px;
-		top : 80px;
-		right : 0px;
   }
   #box {
-		position : relative;
+		position : absolute;
 		display : inline-block;
-		#border : #00f 1px solid;
+		*border : #00f 1px solid;
 		width : 310px;
 		height : 55px;
 		top : 10px;
 		left : 0px;
   }
   #box1,#box2,#box3,#box4,#box5 {
-		position : absolute;                            /*放输入，选择框*/
+		position : absolute;                            
 		width : 305px;
 		height : 45px;
 		line-height : 34px;
-		#border : #00f 1px solid;
-		left : 50px;
-		top : 5px;
+		*border : #00f 1px solid;
+		top: 80px;
+		right: 110px;
   }
   #box2 {
-		top : 10px;
+		top : 135px;
   }
   #box3 {
 		height : 45px;
 		width : 300px;
-		top : 10px;
-		left : 8px;
+		top : 195px;
+		right: 155px;
   }
   #box4 {
 		width : 100px;
 		height : 30px;
-		top : 3px;
+		top : 250px;
+		right: 350px;
 		color : #696969;
-		#border : #00f 1px solid;
+		*border : #00f 1px solid;
   }
   #box5 {
 		width : 130px;
 		height : 30px;
-		top : 6px;
+		top : 250px;
+		right: 180px;
 		color : #696969;
 		font-size : 12px;
-		#border : #00f 1px solid;
-		left :180px;
+		*border : #00f 1px solid;
   }
-  #box a {                                            /*去处超链接文字下面的下划线效果，及设置字体的颜色*/
+  #box a {                                            
 		text-decoration: none;
 		color : #ff9966;
   }
@@ -131,19 +129,29 @@ body {
 		border-radius : 2px; 
 		margin : 1px;
   }
-  #boxd1,#boxd2 {
-		position : relative;
-		#border : #00f 1px solid;
+  #boxd1 {
+		position : absolute;
+		*border : #00f 1px solid;
 		width : 60px;
 		height : 60px;
 		padding-top : 10px;
 		font-size: 20px;
 		font-family : 黑体;
 		color : FFFFFF;
+		top: 75px;
+		right: 400px;
   }
   #boxd2 {
+  	    position : absolute;
+		*border : #00f 1px solid;
+		width : 60px;
+		font-size: 20px;
+		font-family : 黑体;
+		color : FFFFFF;
 		padding-top : 15px;
 		height : 35px;
+		top: 125px;
+		right: 400px;
   }
 #topmain a{ border:0px;     color:#f9f5ff;
  }
