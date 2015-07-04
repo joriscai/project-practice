@@ -3,6 +3,10 @@
 	border: 1px solid red;
 }
 */
+.w{
+	width:990px;
+	margin: 0 auto;
+}
 .tToolbar{
 			background-color: #F1F1F1;
 			height: 30px;
@@ -33,7 +37,7 @@
 }
 .search button{
 	height: 31px;
-	width: 50px;
+	width: 70px;
 	border:2px solid #B61D1D;
 	background: #B61D1D;
 	color: white;
@@ -62,10 +66,11 @@
 	margin: 0px;
 }
 .nav{
-	width:990px;
+	width:800px;
 	margin: 0px auto;
 	line-height: 38px;
 	height: auto;
+	float: left;
 }
 .nav ul{
 	float: left;
@@ -127,5 +132,64 @@
 .slider{
 	width: 590px;
 	position: relative;
-	left: 430px;
+	left: 210px;
+
+}
+.slider ul{
+	width: 590px;
+	list-style: none;
+}
+.slider ul li{
+	display: list-item;
+	display: inline-block;
+}
+.slider-extra{
+	width: 590px;
+	position: relative;
+	left: 210px;
+}
+.slider-item{
+	display: inline-block;
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	background-color: #666;
+	color: white;
+}
+.news-serv{
+	width: 190px;
+	position: relative;
+	margin-top: -120px;
+	left: 800px;
+	top: 0px;
+	float: left;
+}
+.news{
+	
+}
+.nt{
+	
+}
+.nc{
+	
+}
+.lifeserv{
+	
+}
+
+.youlike{
+	
+}
+.p-img{
+	
+}
+.p-info{
+	
+}
+.p-name{
+	
+}
+.p-price{
+	
 }
