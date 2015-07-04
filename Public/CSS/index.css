@@ -6,13 +6,9 @@
 .w{
 	width:990px;
 	margin: 0 auto;
+	height: 300px;
 }
-.tToolbar{
-			background-color: #F1F1F1;
-			height: 30px;
-			line-height: 30px;
 
-		}
 .logosearch{
 	margin: 0px auto;
 	width: 990px;
@@ -133,15 +129,18 @@
 	width: 590px;
 	position: relative;
 	left: 210px;
-
+	height: 260px;
 }
 .slider ul{
 	width: 590px;
 	list-style: none;
+	height: 260px;
 }
 .slider ul li{
 	display: list-item;
 	display: inline-block;
+	width: 590px;
+	height: 250px;
 }
 .slider-extra{
 	width: 590px;
@@ -160,36 +159,73 @@
 .news-serv{
 	width: 190px;
 	position: relative;
-	margin-top: -120px;
+	margin-top: -280px;
 	left: 800px;
 	top: 0px;
 	float: left;
+	border: 1px solid #E8E8E7;
+	height: 260px;
+	color: #666;
+	background-color: rgba(255,255,255,.85);
 }
 .news{
-	
+	border-bottom:1px dashed #E8E8E7;
 }
 .nt{
-	
+	border-bottom:1px solid #E8E8E7;
+	line-height: 50px;
 }
 .nc{
 	
 }
 .lifeserv{
+	overflow: hidden;
+}
+.lifeserv li{
+	width: 60px;
+	height: 30px;
+	display: inline;
+	overflow: hidden;
+	line-height: 40px;
+	border-bottom:1px solid #E8E8E7;
+	border-right:1px solid #E8E8E7;
+}
+.lifeserv li span{
+	line-height: 40px;
+	border-right:1px solid #E8E8E7;
+}
+.youlike{
+	width:990px;
+	margin: 20px auto;
+	font-size: 25px;
 	
 }
-
-.youlike{
-	
+.youlike ul{
+	width: 990px;
+	height: 200px;
+	border: 1px solid #E8E8E7;
+	float: left;
+}
+.youlike ul li{
+	width: 200px;
+	height: 215px;
+	float: left;
 }
 .p-img{
+
 	
 }
 .p-info{
-	
+	border-right: 1px solid #E8E8E7;
+	height: 60px;
 }
 .p-name{
 	
 }
 .p-price{
-	
+	color: #b51d1a;
+	font-size: 18px;
+}
+.noborder{
+	border: 0px;
 }
