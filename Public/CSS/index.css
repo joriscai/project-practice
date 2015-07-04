@@ -1,6 +1,8 @@
+/*
 *{
 	border: 1px solid red;
 }
+*/
 .tToolbar{
 			background-color: #F1F1F1;
 			height: 30px;
@@ -31,7 +33,7 @@
 }
 .search button{
 	height: 31px;
-	width: 150px;
+	width: 50px;
 	border:2px solid #B61D1D;
 	background: #B61D1D;
 	color: white;
@@ -63,6 +65,7 @@
 	width:990px;
 	margin: 0px auto;
 	line-height: 38px;
+	height: auto;
 }
 .nav ul{
 	float: left;
@@ -84,10 +87,45 @@
 	color: white;
 	padding: 0 10px;
 }
+.dd{
+	
+	font-size:14px; 
+	width: 800px;
+	height: 260px;
+}
+.dd-inner{
+	width: 210px;
+	float: left;
+}
 .dt{
 	padding: 0 10px;
 }
 #navitems{
 	margin: 0px;
 	padding: 0px;
+}
+
+.item{
+	background: #c81623;
+	margin: 0px;
+	padding: 0px;
+	height: 30px;
+	width: 210px;
+}
+.item h3{
+	font-weight: normal;
+	margin: 0px;
+	padding: 0px;
+	line-height: 30px;
+}
+.dorpdown-layer{
+	position: relative;
+	top:0px;
+	height: 100px;
+	display: none;
+}
+.slider{
+	width: 590px;
+	position: relative;
+	left: 430px;
 }
