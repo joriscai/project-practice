@@ -1,7 +1,16 @@
+*{
+	font-family: arial,"Hiragino Sans GB","Hiragino Sans GB W3",\5b8b\4f53; 
+}
 body{
 	margin: 0px;
 	padding: 0px;
 	min-width: 990px;
+}
+.tToolbar{
+	background-color: #F1F1F1;
+	height: 30px;
+	line-height: 30px;
+
 }
 a{
 	color: black;
@@ -25,4 +34,8 @@ a:active{
 }
 ul{
 	list-style: none;
+	padding: 0px;
+	margin-top: 0px;
+}
+li{
 }
