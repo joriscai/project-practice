@@ -7,56 +7,125 @@
 		 <script src="__PUBLIC__/jquery-1.7.2.min.js"></script>
 		<script>
 			$(function(){
+
 				$('#next').click(function(){
+					
+					if(!$('#name').val().length){
+						
+						alert('用户名不能为空');
+						$('#name').focus();
+						return 0;
+					}
+					
+					if(!$('#pwd').val().length){
+						alert('密码不能为空');
+						$('#pwd').focus();
+						return 0;
+					}
+					
+					if(!$('input[name=check_pwd]').val().length){
+						alert('请先确认密码');
+						$('input[name=check_pwd]').focus();
+						return 0;
+					}
+					
+					if(!$('input[name=email').val().length){
+						alert('请先填写邮箱');
+						$('input[name=email').focus();
+						return 0;
+					}
+					
+					if(!chk_name()){
+						$('#name').focus();
+						return 0;
+					}
+					
+					if(!chk_pwd()){
+						$('#pwd').focus();
+						return 0;
+					}
+					
+					if(!chk_repwd()){
+
+						$('input[name=check_pwd]').focus();
+						return 0;
+					}
+					
+					if(!chk_email()){
+					 	$('input[name=email').focus();
+					 	return 0;
+					 }
+					if(!chk_email()){
+					 	$('input[name=email').focus();
+					 	return 0;
+					 }
+					
+					
+					
 					$('form:first').submit();
 				})
 				//英文字母，数字或者下划线，长度为4-16个字符
-				$('#name').focusout(function(){
+				$('#name').on('keyup change',function(){
 					$('#msg_n').empty();
-					var t=new RegExp('[a-z0-9_]{4,16}'),
-					content=$('#name').val();
-					if(!t.test(content)){
+					if(!chk_name()){
 						$('#name').after('<span id="msg_n">英文字母，数字或者下划线，长度为4-16个字符</span>');
 						
 					}
-					
-					
 				})
+				function chk_name(){
+					var t=new RegExp('[a-z0-9_]{4,16}'),
+					content=$('#name').val();
+					return t.test(content);
+				}
+				
 //				//6-16个字符的字母或者数字组成
-				$('#pwd').focusout(function(){
+				$('#pwd').on('keyup change',function(){
 					$('#msg_p').empty();
+					if(!chk_pwd()){
+						$('#pwd').after('<span id="msg_p">6-16个字符的字母或者数字组成</span>');
+					}
+				})
+				//密码检查
+				function chk_pwd(){
 					var t=new RegExp('[a-z0-9]{6,16}'),
 					content=$('#pwd').val();
-					if(!t.test(content)){
-						$('#pwd').after('<span id="msg_p">6-16个字符的字母或者数字组成</span>');
-						
-					}
-				})
+					return t.test(content);
+				}
+				
 				
 				//两次密码检查
-				$('input[name=check_pwd]').focusout(function(){
+				$('input[name=check_pwd]').on('keyup change',function(){
 					$('#msg_ck').empty();
-					var content=$('input[name=pwd]').val(),
-					check=$(this);
-					if(content !== check.val()){
-						check.after('<span id="msg_ck">两次输入密码不一致</span>');
+					
+					if(!chk_repwd()){
+
+						$('input[name=check_pwd]').after('<span id="msg_ck">两次输入密码不一致</span>');
 					}
 					
 				})
+				//两次密码检查
+				function chk_repwd(){
+					var content=$('input[name=pwd]').val(),
+					check=$('input[name=check_pwd]');
+					return content == check.val();
+				}
 				
 				//邮箱验证
-				$('input[name=email').focusout(function(){
+				$('input[name=email]').on('keyup change',function(){
 					$('#msg_e').empty();
-					var t= new RegExp("([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})"),
-					content=$('input[name=email').val();
-					
-					 if(!t.test(content)){
-					 	$('input[name=email').after('<span id="msg_e">邮箱格式错误</span>');
+
+					 if(!chk_email()){
+					 	$('input[name=email]').after('<span id="msg_e">邮箱格式错误</span>');
 					 }
 			
 					
 				})
-				
+				function chk_email(){
+					var t= new RegExp("[a-z0-9_\.-]+@[\da-z\.-]+\.[a-z\.]{2,6}"),
+					content=$('input[name=email]').val();
+					return t.test(content);
+				}
+
 				
 				
 			})
