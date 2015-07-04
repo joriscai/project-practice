@@ -55,6 +55,24 @@
 				color: #656565;
 				font-size: 15px;
 			}
+			a{
+				border: 1px solid #ccc;
+				padding: 1px 4px;
+				background: #fff;
+			}
+			a:hover{
+				cursor: pointer;
+			}
+			ul{
+				list-style: none;
+			}
+			ul li{
+				margin: 0px 0px 15px 0px;
+			}
+			
+			ul li:last-child{
+				text-align: center;
+			}
 		</style>
 	</head>
 	<body>
@@ -63,15 +81,15 @@
 			<div id='head_text'>梦想商城-V1</div>
 		</div>
 		<div id="main">
-			<p><center><strong>版权声明</strong></center><br />欢迎使用由梦想小组独立开发的梦想商城。<br />
-				为了使你正确并合法的使用本软件，请你在使用前务必阅读清楚下面的协议条款：<br />
-				1/有限担保和免责声明<br />
-				2/协议许可的权利 
-			</p>
-			<center>
-				<input value="同意" type="button" onclick="window.location='{:U(\'Install/Index/first_show\')}'"/>
-				<input value="不同意" type="button"/>
-			</center>
+			<ul>
+				<li>环境检测：<br /></li>
+				<li>操作系统：{$os}<br /></li>
+				<li>PHP版本：{$php}<br /></li>
+				<li>Mysql版本：<br /></li>
+				<li>权限检查：<br /></li>
+				<li><a href="{:U('Install/Index/second_show')}">下一步</a></li>
+			</ul>
+			
 		</div>
 		<div id='foot'>
 			<p>梦想小组版权所有</p>
