@@ -1,0 +1,111 @@
+
+a {
+	text-decoration: none;
+	text-decoration-color: -moz-use-text-color;
+	text-decoration-line: none;
+	text-decoration-style: solid;
+}
+
+.tToolbar{
+			background-color: #F1F1F1;
+			height: 30px;
+			line-height: 30px;
+
+		}
+		
+.header {
+	position: relative;
+	border: 0px #00f solid;
+	width: 990px;
+	height: 70px;
+	margin: 0px auto;
+	top: 10px;
+}
+.logo {
+	float: left;
+	border: 0px #00f solid;
+	margin-top: 5px;
+	width: 270px;
+	height: 60px;
+	margin-left: 2px;
+}
+
+.logo .link2 {
+	float: right;
+	right: 0px;
+	/*background-color: #31B0D5;*/
+	width: 100px;
+	height: 60px;
+	font-size: 25px;
+	text-align: center;
+	line-height: 55px;
+}
+
+.search{
+	margin-top: 18px;
+	float: right;
+}
+#searchtext{
+	display: inline;
+	height: 28px;
+	width: 274px;
+	border:2px solid #B61D1D;
+	font-size:18px;
+	float: left;
+	padding-left: 4px;
+}
+.search button{
+	height: 34px;
+	width: 60px;
+	border:2px solid #B61D1D;
+	background: #B61D1D;
+	color: white;
+	font-size: 15px;
+	margin-right: 3px;
+}
+.min {
+	position: relative;
+	background-image: url(../../img/Shopping_bg.png);
+	top: 10px;
+	margin: 0px auto;
+	border: 0px #00f solid;
+	width: 990px;
+	height: 400px;
+}
+
+.middle {
+	position: relative;
+	border: 0px #00f solid;
+	top: 155px;
+	left: 345px;
+	width: 320px;
+	height: 70px;
+	font-size: 25px;
+/*	text-align: center;*/
+	line-height: 65px;
+	color: #807f80;
+}
+
+.mid_b {
+	position: relative;
+	border: 1px #00f solid;
+	margin: 0px auto;
+	width: 990px;
+	height: 27px;
+}
+.mid_but {
+	position: relative;
+	border: 1px #00f solid;
+	margin: 0px auto;
+	width: 990px;
+	height: 200px;
+}
+
+.midd {
+	position: relative;
+	top: 10px;
+	margin: 0px auto;
+	border: 1px #00f solid;
+	width: 990px;
+	height: 700px;
+}
