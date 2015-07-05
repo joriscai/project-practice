@@ -44,7 +44,7 @@
    		$(function(){
    			$(".dd .item").hover(function(){
 
-   				$(".dorpdown-layer").fadeIn();
+   				$(".dorpdown-layer").fadeIn().css("z-index","50");
    				var index=$(this).index(".dd-inner .item");
    				$(this).addClass("hover").siblings().removeClass("hover");
    				
@@ -60,56 +60,62 @@
 			});
 		
    		})
+//-------------------结束---导航栏效果代码---------------------//
 
-//-------- 图片轮播效果代码--------------------------------------------//
 
-   		$(function() { 
+//-------------------- 图片轮播效果代码--------------------------------//
+
+   		
+		
+		$(function() { 
 			/* 自动调整高度*/
-			var aheight=window.screen.availHeight;//取出屏幕的工作区
-			$(".main").css("height",aheight/1.82);
-			$(".picture").css("height",aheight/3.8);
-
-
+			var awidth=window.screen.availWidth;//取出屏幕的工作区
+			$(".slider-img").find("img").css("width",awidth/2.44);
 			/*自动播放*/
 			var curIndex=0;
 			var nextIndex=1;
-			var countOfImg=5;
+			var countOfImg=6;
 
 			autoTurn=function(){
-				$("#"+"ppt"+curIndex).fadeOut(10);
-				$("#"+"ppt"+nextIndex).fadeIn(10);
-				$("#"+curIndex).removeClass("selected")
-				$("#"+nextIndex).addClass("selected");
+				$("#img"+curIndex).fadeOut(10);
+				$("#img"+nextIndex).fadeIn(10);
+				$("#img-item"+nextIndex).css("background","red").siblings().css("background","#666");
 				curIndex=nextIndex;
 				nextIndex=(nextIndex+1)%countOfImg;
 			};
 
-			var timeTurn=setInterval("autoTurn()",3000);//设置定时器
+			var timeTurn=setInterval("autoTurn()",2000);//设置定时器
 
 
-			$(".pptb,.selected").mouseover(function(){
+			$(".slider-item").mouseover(function(){
 				if(timeTurn != 0){
 					clearInterval(timeTurn);
 					timeTurn=0;
 				}
 
-				if(curIndex==this.id) {return;}
-				else{
-					$("#"+"ppt"+this.id).fadeIn(10);
-					$("#"+"ppt"+curIndex).fadeOut(10);
-					$("#"+curIndex).removeClass("selected")
-					$("#"+this.id).addClass("selected");
-					curIndex=this.id;
-					nextIndex=(this.id+1)%countOfImg;
-			}
+				var index2=$(this).index(".slider-item");
+				$(this).css("background","red").siblings().css("background","#666");
+				$($(".slider-img")[index2]).css("display","block").siblings().css("display","none");
+
 			});
 
-			$(".button-list").mouseout(function(){
+			$(".slider-item").mouseout(function(){
 
-				timeTurn=setInterval("autoTurn()",3000);
+				timeTurn=setInterval("autoTurn()",2000);
 			});
 
-			}); 
+		}); 
+//----------------结束---- 图片轮播效果代码--------------------------------//
+
+//-------------------- 生活服务效果代码--------------------------------//	
+	$(function(){
+		$(".servmenu").hover(function(){
+			$("")
+		});
+	})
+
+
+//----------------结束---- 生活服务效果代码--------------------------------//				
    </script>
 </head>
 <body>
@@ -169,6 +175,15 @@
 					   	<div class="item" >
 							<h3><a target="_blank" href="#">电脑产品4</a></h3>
 					   	</div>
+					   	<div class="item" >
+							<h3><a target="_blank" href="#">电脑产品5</a></h3>
+					   	</div>
+					   	<div class="item" >
+							<h3><a target="_blank" href="#">电脑产品6</a></h3>
+					   	</div>
+					   	<div class="item" >
+							<h3><a target="_blank" href="#">电脑产品7</a></h3>
+					   	</div>
 					</div>
 					<div class="dorpdown-layer" >	
 						<div class="dorpdown-layerin">家电脑城顶替枯无可奈何花落去枯燥轩辕丧权辱国是置顶帖</div>
@@ -201,36 +216,43 @@
 		</div>
 
 		<div class="slider">
-			<ul class="">
-				<li class="">
-					<a href=""><img src=""></a>
+			<ul class="slider-list">
+				<li class="slider-img" id="img0" style="display:block;">
+					<a href=""><img src="__PUBLIC__/img/1.jpg"></a>
 				</li>
-				<li class="">
-					<a href=""><img src=""></a>
+				<li class="slider-img" id="img1">
+					<a href=""><img src="__PUBLIC__/img/2.jpg"></a>
 				</li>
-				<li class="">
-					<a href=""><img src=""></a>
+				<li class="slider-img" id="img2">
+					<a href=""><img src="__PUBLIC__/img/3.jpg"></a>
 				</li>
-				<li class="">
-					<a href=""><img src=""></a>
+				<li class="slider-img" id="img3">
+					<a href=""><img src="__PUBLIC__/img/4.jpg"></a>
 				</li>
-
+				<li class="slider-img" id="img4">
+					<a href=""><img src="__PUBLIC__/img/5.jpg"></a>
+				</li>
+				<li class="slider-img" id="img5">
+					<a href=""><img src="__PUBLIC__/img/6.jpg"></a>
+				</li>
 			</ul>
 
 		</div>
-		<div class="slider-extra">				
-			<ul class="slider-nav">
-				<li class="slider-item">1</li>
-				<li class="slider-item">2</li>
-				<li class="slider-item slider-selected">3</li>
-				<li class="slider-item">4</li>
-				<li class="slider-item">5</li>
-				<li class="slider-item">6</li>
-			</ul>
+		<div class="slider-extra">
 			<div class="slider-page" style="display: block;">						
 				<a href="javascript:void(0)" class="slider-prev">&lt;</a>
 				<a href="javascript:void(0)" class="slider-next">&gt;</a> 				
-			</div>							
+			</div>
+			<div class="slider-list">					
+				<ul class="slider-nav">
+					<li class="slider-item" id="img-item0" style="background:red;">1</li>
+					<li class="slider-item" id="img-item1">2</li>
+					<li class="slider-item" id="img-item2">3</li>
+					<li class="slider-item" id="img-item3">4</li>
+					<li class="slider-item" id="img-item4">5</li>
+					<li class="slider-item" id="img-item5">6</li>
+				</ul>
+			</div>						
 		</div>
 		<div class="news-serv">
 			<div class="news">
@@ -263,6 +285,17 @@
 								</a>
 						</li>
 					</ul>
+					<div class="serv-list">
+						<div class="serv">
+							123
+						</div>
+						<div class="serv">
+							321
+						</div>
+						<div class="serv">
+							1234
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

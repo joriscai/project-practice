@@ -1,3 +1,4 @@
+@charset "UTF-8";
 a{
 	color: black;
 	text-decoration: none;
@@ -25,10 +26,12 @@ a:active{
 }
 .hover{
 	background-color: red;
+	z-index: 50;
 }
 .show{
-	display: block;
+	display: inline-block;
 }
+/*---LOGO、搜索栏、购物车样式---*/
 .logosearch{
 	margin: 0px auto;
 	width: 990px;
@@ -81,9 +84,10 @@ a:active{
 	padding: 0px;
 	margin: 0px;
 }
+/*--------导航栏样式----------------------------*/
 .nav{
 	width:800px;
-
+	position: relative;
 	line-height: 38px;
 	height: auto;
 
@@ -105,17 +109,17 @@ a:active{
 	padding: 0 10px;
 }
 .dd{
-	z-index: 1;
+	//z-index: 1;
 	font-size:14px; 
 	width: 800px;
-	height: 260px;
+	height: 367px;
 	position: relative;
 }
 .dd-inner{
 	width: 210px;
 
 	background: #4a4a4a;
-	z-index: 10;
+	//z-index: 10;
 }
 .dt{
 	padding: 0 10px;
@@ -141,7 +145,7 @@ a:active{
 	color: white;
 	margin: 0px;
 	padding: 0px;
-	height: 30px;
+	height: 34px;
 	width: 210px;
 }
 .item a{
@@ -155,9 +159,9 @@ a:active{
 }
 .dorpdown-layer{
 	position: relative;
-	top:-240px;
+	top:-375px;
 	left: 210px;
-	height: 100px;
+	height: 370px;
 	display: none;
 	margin: 0px;
 	padding: 0px;
@@ -166,9 +170,9 @@ a:active{
 .dorpdown-layerin{
 	display: none;
 	display: inline-block;
-	z-index: 50;
-	height: 240px;
-	background:rgba(0, 0, 0, 0.2);
+	//z-index: 50;
+	height: 370px;
+	background:rgba(255, 255, 255, 0.8);
 	margin: 0px;
 	padding: 0px;
 	width: 590px;
@@ -185,10 +189,11 @@ a:active{
 	width: 590px;
 	list-style: none;
 	height: 260px;
+	position: relative;
 }
 .slider ul li{
-	display: list-item;
-	display: inline-block;
+	display: none;
+	position: relative;
 	width: 590px;
 	height: 250px;
 }
@@ -201,9 +206,8 @@ a:active{
 }
 .slider-page a {
 	position: absolute;
-	top: 40%;
-	margin-top: -105px;
-	z-index: 1;
+	top: -40px;
+	//z-index: 1;
 	display: block;
 	width: 0px;
 	height: 62px;
@@ -228,12 +232,23 @@ a:active{
 	text-align: center;
 	background-color: #666;
 	color: white;
+	position: relative;
+	top:120px;
+	//z-index: 10;
+}
+.slider-list{
+	position: relative;
+	top:0px;
+}
+.slider-nav{
+	position: relative;
+	top:0px;
 }
 .news-serv{
 	width: 191px;
 	position: relative;
 	left: 800px;
-	top: -400px;
+	top: -380px;
 	border: 1px solid #E8E8E7;
 	height: 260px;
 	color: #666;
@@ -266,11 +281,18 @@ a:active{
 	height: 30px;
 	border-right:1px solid #E8E8E7;
 }
+.serv-list{
+
+}
+.serv{
+
+}
 .youlike{
 	width:990px;
 	margin: 20px auto;
 	font-size: 25px;
-	
+	position: relative;
+	top:100px;
 }
 .youlike ul{
 	width: 990px;
