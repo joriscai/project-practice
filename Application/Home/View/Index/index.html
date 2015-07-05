@@ -13,28 +13,102 @@
 		
    </style>
    <script type="text/javascript">
-   		$(function(){
-   			$(".dd-inner .item").hover(function(){
+//----------------------------导航栏效果代码-----------------------//
+   		/*$(function(){
+   			$(".item").hover(function(){
+
    				$(".dorpdown-layer").fadeIn();
    				var index=$(this).index(".dd-inner .item");
 
-   				if (!($(this).hasClass("hover"))) {	
+   				if (!($(this).hasClass("hover"))) {
+
    				}
+   				else{}
+
    				$(this).addClass("hover").siblings().removeClass("hover");
    				
-   				$($(".dorpdown-layerin")[index]).fadeIn().siblings().fadeOut();
+   				$($(".dorpdown-layerin")[index]).css("display","block").siblings().css("display","none");
 
    			},function(){
 			});
    			$(".dd-inner").mouseleave(function(){
 			$(".dorpdown-layer").fadeOut();
-			/*$(".dorpdown-layerin").fadeOut();*/
-			$(".dd-inner .item").removeClass("menulihover");
+			$(".dorpdown-layerin").fadeOut();
+			$(".dd-inner .item").removeClass("hover");
 
 			});
 		
    		})
-   		
+   		*/
+   		$(function(){
+   			$(".dd .item").hover(function(){
+
+   				$(".dorpdown-layer").fadeIn();
+   				var index=$(this).index(".dd-inner .item");
+   				$(this).addClass("hover").siblings().removeClass("hover");
+   				
+   				$($(".dorpdown-layerin")[index]).fadeIn().siblings().css("display","none");
+
+   			},function(){
+			});
+   			$(".dd").mouseleave(function(){
+			$(".dorpdown-layer").fadeOut();
+			$(".dorpdown-layerin").fadeOut();
+			$(".dd-inner .item").removeClass("hover");
+
+			});
+		
+   		})
+
+//-------- 图片轮播效果代码--------------------------------------------//
+
+   		$(function() { 
+			/* 自动调整高度*/
+			var aheight=window.screen.availHeight;//取出屏幕的工作区
+			$(".main").css("height",aheight/1.82);
+			$(".picture").css("height",aheight/3.8);
+
+
+			/*自动播放*/
+			var curIndex=0;
+			var nextIndex=1;
+			var countOfImg=5;
+
+			autoTurn=function(){
+				$("#"+"ppt"+curIndex).fadeOut(10);
+				$("#"+"ppt"+nextIndex).fadeIn(10);
+				$("#"+curIndex).removeClass("selected")
+				$("#"+nextIndex).addClass("selected");
+				curIndex=nextIndex;
+				nextIndex=(nextIndex+1)%countOfImg;
+			};
+
+			var timeTurn=setInterval("autoTurn()",3000);//设置定时器
+
+
+			$(".pptb,.selected").mouseover(function(){
+				if(timeTurn != 0){
+					clearInterval(timeTurn);
+					timeTurn=0;
+				}
+
+				if(curIndex==this.id) {return;}
+				else{
+					$("#"+"ppt"+this.id).fadeIn(10);
+					$("#"+"ppt"+curIndex).fadeOut(10);
+					$("#"+curIndex).removeClass("selected")
+					$("#"+this.id).addClass("selected");
+					curIndex=this.id;
+					nextIndex=(this.id+1)%countOfImg;
+			}
+			});
+
+			$(".button-list").mouseout(function(){
+
+				timeTurn=setInterval("autoTurn()",3000);
+			});
+
+			}); 
    </script>
 </head>
 <body>
@@ -44,6 +118,7 @@
 			<a href="{:U('Home/User/regedit')}">注  册</a>
 		</div>
 	</div>
+	<div style="clear:both; height:0;"></div>
     <div class="logosearch" style="border:1px solid red;">
 		<div class="logo" style="border:1px solid blue;">
 		</div>
@@ -67,20 +142,22 @@
 				</div>
 				<div class="dd">
 					<div class="dd-inner">
-						<div class="item" id="">
-							<h3><a target="_blank" href="#">家用电器</a></h3>
+						<div class="item" >
+							<h3><a target="_blank" href="#">家用电器12</a></h3>
+							
 					   	</div>
 						<div class="item" >
-							<h3><a target="_blank" href="#">数码产品</a></h3>
+							<h3><a target="_blank" href="#">数码产品12</a></h3>
 					   	</div>
 					   	<div class="item" >
-							<h3><a target="_blank" href="#">服装</a></h3>
+							<h3><a target="_blank" href="#">服装121212121</a></h3>
 					   	</div>
 					   	<div class="item" >
-							<h3><a target="_blank" href="#">电脑产品</a></h3>
+							<h3><a target="_blank" href="#">电脑产品121</a></h3>
 					   	</div>
 						<div class="item" >
 							<h3><a target="_blank" href="#">电脑产品1</a></h3>
+
 					   	</div>
 					   	<div class="item" >
 							<h3><a target="_blank" href="#">电脑产品2</a></h3>
@@ -93,24 +170,29 @@
 					   	</div>
 					</div>
 					<div class="dorpdown-layer" >	
-						<div class=".dorpdown-layerin">家电脑城顶替枯无可奈何花落去枯燥轩辕丧权辱国是置顶帖</div>
-						<div class=".dorpdown-layerin">111家电脑城顶替枯无可奈何花落去枯燥轩辕丧权辱国是置顶帖</div>
-						<div class=".dorpdown-layerin">222家电脑城顶替枯无可奈何花落去枯燥轩辕丧权辱国是置顶帖</div>
+						<div class="dorpdown-layerin">家电脑城顶替枯无可奈何花落去枯燥轩辕丧权辱国是置顶帖</div>
+						<div class="dorpdown-layerin">111家电脑城顶替枯无可奈何花落去枯燥轩辕丧权辱国是置顶帖</div>
+						<div class="dorpdown-layerin">222家电脑城顶替枯无可奈何花落去枯燥轩辕丧权辱国是置顶帖</div>
+						<div class="dorpdown-layerin">33家电脑城顶替枯无可奈何花落去枯燥轩辕丧权辱国是置顶帖</div>
+						<div class="dorpdown-layerin">44家电脑城顶替枯无可奈何花落去枯燥轩辕丧权辱国是置顶帖</div>
+						<div class="dorpdown-layerin">55家电脑城顶替枯无可奈何花落去枯燥轩辕丧权辱国是置顶帖</div>
+						<div class="dorpdown-layerin">66家电脑城顶替枯无可奈何花落去枯燥轩辕丧权辱国是置顶帖</div>
+						<div class="dorpdown-layerin">77家电脑城顶替枯无可奈何花落去枯燥轩辕丧权辱国是置顶帖</div>
 					</div>	
 	        	</div>
 	        </div>
 	        <div id="navitems">
-	        	<ul id="navitems-group1">
-					<li id="nav-fashion" class="fore1">
+	        	<ul id="">
+					<li  class="fore">
 						<a target="_blank" href="http://channel.jd.com/fashion.html">服装城</a>
 					</li>
-					<li id="nav-beauty" class="fore2">
+					<li class="fore">
 						<a target="_blank" href="http://channel.jd.com/beautysale.html">美妆馆</a>
 					</li>
-					<li id="nav-chaoshi" class="fore3">
+					<li class="fore">
 						<a target="_blank" href="http://channel.jd.com/chaoshi.html">美食</a>
 					</li>
-					<li id="nav-jdww" class="fore4">
+					<li class="fore">
 						<a target="_blank" href="http://www.jd.hk/">全球购</a>
 					</li>
 				</ul>
@@ -143,7 +225,11 @@
 				<li class="slider-item">4</li>
 				<li class="slider-item">5</li>
 				<li class="slider-item">6</li>
-			</ul>							
+			</ul>
+			<div class="slider-page" style="display: block;">						
+				<a href="javascript:void(0)" class="slider-prev">&lt;</a>
+				<a href="javascript:void(0)" class="slider-next">&gt;</a> 				
+			</div>							
 		</div>
 		<div class="news-serv">
 			<div class="news">
