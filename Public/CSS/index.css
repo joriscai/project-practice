@@ -3,12 +3,35 @@
 	border: 1px solid red;
 }
 */
+a{
+	color: black;
+	text-decoration: none;
+	padding:0px 20px 0px 0px;
+}
+a:hover{
+	color: red;
+	text-decoration: none;
+	
+}
+a:visited{
+	color: black;
+	text-decoration: none;
+	padding:0px 20px 0px 0px;
+}
+a:active{
+	color: black;
+	text-decoration: none;
+	padding:0px 20px 0px 0px;
+}
 .w{
 	width:990px;
 	margin: 0 auto;
 	height: 300px;
 }
+.hover{
+	background-color: red;
 
+}
 .logosearch{
 	margin: 0px auto;
 	width: 990px;
@@ -82,10 +105,9 @@
 	background-color: #B1191A;
 	height: 44px;
 	width: 210px;
-
+	
 }
 #categorys a{
-	color: white;
 	padding: 0 10px;
 }
 .dd{
@@ -97,21 +119,29 @@
 .dd-inner{
 	width: 210px;
 	float: left;
+	background: #4a4a4a;
 }
 .dt{
 	padding: 0 10px;
 }
+.dt a{
+	color: white;
+}
 #navitems{
-	margin: 0px;
+	margin: 10px;
 	padding: 0px;
 }
 
 .item{
-	background: #c81623;
+	
+	color: white;
 	margin: 0px;
 	padding: 0px;
 	height: 30px;
 	width: 210px;
+}
+.item a{
+	color: white;
 }
 .item h3{
 	font-weight: normal;
@@ -157,7 +187,7 @@
 	color: white;
 }
 .news-serv{
-	width: 190px;
+	width: 191px;
 	position: relative;
 	margin-top: -280px;
 	left: 800px;
@@ -181,10 +211,10 @@
 .lifeserv{
 	overflow: hidden;
 }
-.lifeserv li{
+.servmenu{
 	width: 60px;
 	height: 30px;
-	display: inline;
+	display: inline-block;
 	overflow: hidden;
 	line-height: 40px;
 	border-bottom:1px solid #E8E8E7;
@@ -192,6 +222,7 @@
 }
 .lifeserv li span{
 	line-height: 40px;
+	height: 30px;
 	border-right:1px solid #E8E8E7;
 }
 .youlike{

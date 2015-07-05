@@ -4,13 +4,37 @@
    <title> 实例 - 标题</title>
    <meta charset="UTF-8">
    <!--<link href="__PUBLIC__/bootstrap.min.css" rel="stylesheet">-->
-   <link href="__PUBLIC__/CSS/index.css" rel="stylesheet">
    <link href="__PUBLIC__/pulish.css" rel="stylesheet">
-   <script src="__PUBLIC__/scripts/jquery.min.js"></script>
+   <link href="__PUBLIC__/CSS/index.css" rel="stylesheet">
+   <script src="__PUBLIC__/jquery-1.7.2.min.js"></script>
    <script src="__PUBLIC__/bootstrap/js/bootstrap.min.js"></script>
    <style type="text/css" rel="stylesheet">
 		
    </style>
+   <script type="text/javascript">
+   		$(function(){
+   			$(".dd-inner .item").hover(function(){
+   				$(".dorpdown-layer").fadeIn();
+   				var index=$(this).index(".dd-inner .item");
+
+   				if (!($(this).hasClass("hover"))) {	
+   				}
+   				$(this).addClass("hover").siblings().removeClass("hover");
+   				
+   				$($(".dorpdown-layerin")[index]).fadeIn().siblings().fadeOut();
+
+   			},function(){
+			});
+   			$(".dd-inner").mouseleave(function(){
+			$(".dorpdown-layer").fadeOut();
+			/*$(".dorpdown-layerin").fadeOut();*/
+			$(".dd-inner .item").removeClass("menulihover");
+
+			});
+		
+   		})
+   		
+   </script>
 </head>
 <body>
 	<div class="tToolbar">
@@ -68,7 +92,9 @@
 					   	</div>
 					</div>
 					<div class="dorpdown-layer" >	
-						<div>家电脑城顶替枯无可奈何花落去枯燥轩辕丧权辱国是置顶帖</div>
+						<div class=".dorpdown-layerin">家电脑城顶替枯无可奈何花落去枯燥轩辕丧权辱国是置顶帖</div>
+						<div class=".dorpdown-layerin">111家电脑城顶替枯无可奈何花落去枯燥轩辕丧权辱国是置顶帖</div>
+						<div class=".dorpdown-layerin">222家电脑城顶替枯无可奈何花落去枯燥轩辕丧权辱国是置顶帖</div>
 					</div>	
 	        	</div>
 	        </div>
@@ -133,20 +159,20 @@
 				<div class="nt">生活服务</div>
 				<div class="nc">
 					<ul>
-						<li>
-							<a href="">
-								1231
-							</a>
+						<li class="servmenu">
+								<a href="">
+									1231
+								</a>
 						</li>
-						<li>
-							<a href="">
-								<span>123</span>
-							</a>
+						<li class="servmenu">
+								<a href="">
+									1231
+								</a>
 						</li>
-						<li>
-							<a href="">
-								1231
-							</a>
+						<li class="servmenu"> 
+								<a href="">
+									1231
+								</a>
 						</li>
 					</ul>
 				</div>
