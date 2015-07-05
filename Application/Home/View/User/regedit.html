@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title></title>
-		<link href="__PUBLIC__/pulish.css" rel="stylesheet">
-		 <script src="__PUBLIC__/jquery-1.7.2.min.js"></script>
+<extend name='./Public/tpl/index.html' />
+<block name="head">
 		<script>
 			$(function(){
 
@@ -145,8 +140,8 @@
 				
 			})
 		</script>
-	</head>
-	<body>
+</block>
+	<block name="body">
 		<form method="post" action="{:U('Home/User/regedit_handle')}">
 			用户名：<input name="name" id="name"/><br />
 			密码：<input name="pwd" id="pwd"/><br />
@@ -159,5 +154,4 @@
 			<input type="datetime" />
 			<a id="next">立即注册</a>
 		</form>
-	</body>
-</html>
+</block>
