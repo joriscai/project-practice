@@ -1,4 +1,4 @@
-*{
+html,body,div,span,a{
 	font-family: arial,"Hiragino Sans GB","Hiragino Sans GB W3",\5b8b\4f53; 
 }
 body{
@@ -38,4 +38,8 @@ ul{
 	margin-top: 0px;
 }
 li{
+}
+
+img{
+	border: 0px;
 }

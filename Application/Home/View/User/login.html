@@ -2,11 +2,11 @@
 <head>
   <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
   <title></title>
-
-  <link href="__PUBLIC__/css/login.css" rel="stylesheet">
+	<link href="__PUBLIC__/pulish.css" rel="stylesheet">
+  	<link href="__PUBLIC__/css/login.css" rel="stylesheet">
   <style>
   	#pwd{
-  		padding: 0px 5px;
+  		
   		background: url(__PUBLIC__/image/password.png) no-repeat right;
   	}
   	
@@ -32,18 +32,14 @@
   	ul{
   		padding: 0px;
   		width: 310px;
+  		margin: 0;
   	}
   	
-  	
-  	.center2 {
-	margin: auto;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	height: 220px;
-}
+  	.r input{
+  		width: 180px;
+  		margin: 0px;
+  		padding: 0px;
+  	}
   </style>
  </head>
  <body align="center">
@@ -58,21 +54,23 @@
 						<img src="__PUBLIC__/image/bg.jpg" />
 					</div>
 				</div>
+				
 				<div id="mainright">
 				
-						<ul class="center2">
+						<ul class="">
 							<li class="r">用户名：<input type="text" class="txt" id='name'></li>
 							<li class="r">密码：<input type="password" class="txt" id='pwd'></li>
-							<li><button type="submit" class="butto">登录</li>
+							<li><input type="submit" class="butto" value="登录"></li>
 							<li><input type="checkbox">记住用户名 没有账号？
 								<font color="808080">|</font>
-								<a href="set.html">立即注册</a></li>
+								<a href="set.html" class='link_l'>立即注册</a></li>
 						</ul>
 						
 
 
 					
 				</div>
+				
 		</div>
  </body>
  </html>
