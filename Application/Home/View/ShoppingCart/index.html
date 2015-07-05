@@ -5,6 +5,8 @@
 		<title>我的购物车</title>
 		<link href="__PUBLIC__/CSS/ShoppingCart/ShoppingCart.css" rel="stylesheet">
    		<link href="__PUBLIC__/pulish.css" rel="stylesheet">
+   		<script type="text/javascript" src="__PUBLIC__/jquery-1.7.2.min.js"></script>
+   		<script type="text/javascript" src="__PUBLIC__/JS/ShoppingCart/ShoppingCart.js"></script>
 	</head>
 	<body>
 		<div class="tToolbar">
@@ -28,8 +30,8 @@
 					<input type="text" id="searchtext" name="" placeholder="搜索">
 					<button>搜索</button>
 				</div>
-		<!--</div>
-		<div class="min">
+		</div>
+		<!--<div class="min">
 			<div class="middle">
 				购物车内暂时没有商品
 			</div>
@@ -40,49 +42,12 @@
 		<div class="mid_but">
 			
 		</div>-->
-		<input type="button" value="点击" onclick="clearMsg();" />
+		<div class="mid_top">
+			<input type="button" value="点击增加"  id="a"/>
+			<input type="button" value="点击删除"  id="b"/>
+		</div>
+		<div class="mid_bor" id="c">
 		
-	<table style="width:990px">
-		<tr>
-			<th>留言内容</th>
-			<th>留言时间</th>
-		</tr>
-		<tbody id="show"></tbody>
-	</table>
+		</div>
 	</body>
 </html>
-
-<script type="text/javascript">
-		// 加载留言信息
-		var loadMsg = function()
-		{
-			var tb = document.getElementById("show");
-			// 清空原来显示的内容。
-			tb.innerHTML = "";
-			// 遍历所有留言信息
-			for(var i = 0 ; i < localStorage.length ; i++)
-			{
-				var row = tb.insertRow(i);
-				// 添加第一个单元格，并显示留言内容
-				row.insertCell(0).innerHTML = "13456";
-				// 添加第二个单元格，并显示留言内容。
-				row.insertCell(1).innerHTML = "111444";
-			}
-		}
-		var add = function()
-		{
-			var time = new Date().getTime();
-			// 以当前时间为key来保存留言信息
-			localStorage.setItem(time , "13456");
-			alert("数据已保存。");
-			loadMsg();
-		}
-		function clearMsg()
-		{
-			// 清空Local Storage里保存的数据。
-			localStorage.clear();
-			alert("全部留言信息已被清除。");
-			loadMsg();
-		}
-		window.onload = loadMsg();
-	</script>
