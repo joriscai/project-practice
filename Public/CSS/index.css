@@ -184,7 +184,8 @@
 .lifeserv li{
 	width: 60px;
 	height: 30px;
-	display: inline;
+	display: inline-block;
+	box-sizing:border-box;
 	overflow: hidden;
 	line-height: 40px;
 	border-bottom:1px solid #E8E8E7;

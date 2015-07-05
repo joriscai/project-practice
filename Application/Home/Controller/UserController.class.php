@@ -8,7 +8,7 @@ class UserController extends Controller{
 	}
 	
 	public function login(){
-		$this->show('越杨上传了吗？');
+		$this->display('User/Login');
 	}
 	
 	public function regedit_handle(){
