@@ -1,9 +1,6 @@
 
 a {
 	text-decoration: none;
-	text-decoration-color: -moz-use-text-color;
-	text-decoration-line: none;
-	text-decoration-style: solid;
 }
 
 .tToolbar{
@@ -25,20 +22,24 @@ a {
 	float: left;
 	border: 0px #00f solid;
 	margin-top: 5px;
-	width: 270px;
+	width: 280px;
 	height: 60px;
 	margin-left: 2px;
+}
+
+.logo img {
+	border: 0px;
 }
 
 .logo .link2 {
 	float: right;
 	right: 0px;
-	background-color: #31B0D5;
-	width: 100px;
+	/*background-color: #31B0D5;*/
+	width: 90px;
 	height: 60px;
 	font-size: 25px;
 	text-align: center;
-	line-height: 55px;
+	line-height: 60px;
 }
 
 .search{
@@ -63,7 +64,7 @@ a {
 	font-size: 15px;
 	margin-right: 3px;
 }
-.min {
+/*.min {
 	position: relative;
 	background-image: url(../../img/Shopping_bg.png);
 	top: 10px;
@@ -81,7 +82,7 @@ a {
 	width: 320px;
 	height: 70px;
 	font-size: 25px;
-/*	text-align: center;*/
+	text-align: center;
 	line-height: 65px;
 	color: #807f80;
 }
@@ -108,4 +109,31 @@ a {
 	border: 1px #00f solid;
 	width: 990px;
 	height: 700px;
+}*/
+.mid_top {
+	position: relative;
+	top: 20px;
+	margin: 0px auto;
+	border: 1px #00f solid;
+	width: 990px;
+	height: 50px;
+	text-align: center;
+}
+
+.mid_bor {
+	position: relative;
+	top: 20px;
+	margin: 0px auto;
+	border: 0px #00f solid;
+	width: 990px;
+	height: auto;
+}
+
+.mid_main {
+	position: relative;
+	top: 5px;
+	margin: 0px auto;
+	border: 1px #00f solid;
+	width: 990px;
+	height: 100px;
 }
