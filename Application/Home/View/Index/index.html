@@ -14,8 +14,8 @@
    </style>
    <script type="text/javascript">
    		$(function(){
-   			$(".dd-inner .item").hover(function(){
-   				$(".dorpdown-layer").fadeIn();
+   			$(".item").hover(function(){
+   				$(".dorpdown-layer").attr('display','inline-block');
    				var index=$(this).index(".dd-inner .item");
 
    				if (!($(this).hasClass("hover"))) {	
