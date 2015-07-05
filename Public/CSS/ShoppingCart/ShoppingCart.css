@@ -64,7 +64,7 @@ a {
 	font-size: 15px;
 	margin-right: 3px;
 }
-/*.min {
+.min {
 	position: relative;
 	background-image: url(../../img/Shopping_bg.png);
 	top: 10px;
@@ -72,9 +72,29 @@ a {
 	border: 0px #00f solid;
 	width: 990px;
 	height: 400px;
+	text-align: left;
+	font-size: 15px;
 }
 
-.middle {
+.min .show_text {
+	position: relative;
+	top: 175px;
+	width: 300px;
+	height: auto;
+	margin: 0px auto;
+	border: 0px #00f solid;
+}
+
+.show_text a {
+	color: #00f;
+	font-size: 12px;
+}
+.show_text a:hover {
+	color: #ff0000;
+	text-decoration: underline;
+}
+
+/*.middle {
 	position: relative;
 	border: 0px #00f solid;
 	top: 155px;
@@ -130,6 +150,7 @@ a {
 }
 
 .mid2 {
+	position: relative;
 	margin: 20px auto 0px;
 	width: 990px;
 	height: 40px;
@@ -142,6 +163,9 @@ a {
 }
 
 .mid2 .m_checkbox {
+	position: absolute;
+	left: 0px;
+	top: 0px;
 	width: 122px;
 	height: 18px;
 	line-height: 18px;
@@ -151,65 +175,67 @@ a {
 }
 
 .mid2 .m_goods {
-	position: relative;
+	position: absolute;
 	display: inline-block;
 	width: 280px;
-	left: 98px;
-	top: -34px;
+	height: 28px;
+	left: 133px;
+	top: 0px;
 	border: 0px #00f solid;
+	line-height: 38px;
 }
 .mid2 .m_props {
-	position: relative;
+	position: absolute;
 	display: inline-block;
 	width: 100px;
-	height: 30px;
-	left: 113px;
-	top: -23px;
+	height: 28px;
+	left: 414px;
+	top: 0px;
 	border: 0px #00f solid;
 }
 .mid2 .m_price {
-	position: relative;
+	position: absolute;
 	display: inline-block;
 	width: 100px;
-	height: 30px;
-	left: 120px;
-	top: -35px;
+	height: 28px;
+	left: 515px;
+	top: 0px;
 	border: 0px #00f solid;
 	text-align: right;
-	line-height: 30px;
+	line-height: 38px;
 }
 .mid2 .m_quantity {
-	position: relative;
+	position: absolute;
 	display: inline-block;
 	width: 120px;
-	height: 30px;
-	left: 116px;
-	top: -35px;
+	height: 28px;
+	left: 616px;
+	top: 0px;
 	border: 0px #00f solid;
 	text-align: center;
-	line-height: 30px;
+	line-height: 38px;
 }
 .mid2 .m_sum {
-	position: relative;
+	position: absolute;
 	display: inline-block;
 	width: 120px;
-	height: 30px;
-	left: 112px;
-	top: -35px;
+	height: 28px;
+	left: 737px;
+	top: 0px;
 	border: 0px #00f solid;
 	text-align: right;
-	line-height: 30px;
+	line-height: 38px;
 }
 .mid2 .m_action {
-	position: relative;
+	position: absolute;
 	display: inline-block;
 	width: 100px;
-	height: 30px;
-	left: 108px;
-	top: -35px;
+	height: 28px;
+	left: 858px;
+	top: 0px;
 	border: 0px #00f solid;
 	text-align: center;
-	line-height: 30px;
+	line-height: 38px;
 }
 
 .m_checkbox .che {
@@ -239,9 +265,77 @@ a {
 
 .mid_buttom {
 	position: relative;
+	border: 1px #f0f0f0 solid;
+	margin: 0px auto;
+	width: 990px;
+	height: 50px;
+	top: 15px;
+	font-size: 13px;
+	color: #666;
+}
+
+.mid_buttom .m_checkbox{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 60px;
+	height: 18px;
+	line-height: 18px;
+	padding-top: 17px;
+	padding-left: 10px;
+	border: 0px #00f solid;
+}
+.mid_buttom .deleGood {
+	position: absolute;
+	display: inline-block;
+	left: 90px;
+	top: 18px;
+	width: 300px;
+	height: 20px;
+	border: 0px #00f solid;
+}
+.deleGood a {
+	color: #666;
+}
+.deleGood a:hover {
+	color: #ff0000;
+}
+
+.mid_buttom .account_button {
+	position: absolute;
+	display: inline-block;
+	top: 0px;
+	right: 0px;
+	width: 90px;
+	height: 50px;
+	background-color: #f72f2f;
+	text-align: center;
+	font-size: 22px;
+	line-height: 50px;
+}
+.account_button a {
+	color: #fff;
+}
+
+.mid_buttom .acc_text {
+	position: absolute;
+	display: inline-block;
+	top: 0px;
+	right: 110px;
+	width: 400px;
+	height: 50px;
+	/*background-color: #31B0D5;*/
+	text-align: right;
+	font-size: 13px;
+	line-height: 50px;
+}
+
+.buttom {
+	position: relative;
 	border: 1px #00f solid;
 	margin: 0px auto;
 	width: 990px;
-	height: 200px;
-	top: 15px;
+	height: 100px;
+	top: 25px;
 }
+
