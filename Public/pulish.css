@@ -13,24 +13,17 @@ body{
 
 }
 a{
-	color: black;
 	text-decoration: none;
-	padding:0px 0px 0px 0px;
 }
 a:hover{
-	color: red;
 	text-decoration: none;
 	
 }
 a:visited{
-	color: black;
 	text-decoration: none;
-	padding:0px 20px 0px 0px;
 }
 a:active{
-	color: black;
 	text-decoration: none;
-	padding:0px 20px 0px 0px;
 }
 ul{
 	list-style: none;
