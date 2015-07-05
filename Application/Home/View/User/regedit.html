@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title></title>
-		<link href="__PUBLIC__/pulish.css" rel="stylesheet">
-		 <script src="__PUBLIC__/jquery-1.7.2.min.js"></script>
+<extend name='./Public/tpl/index.html' />
+<block name="head">
 		<script>
 			$(function(){
 
@@ -81,9 +76,9 @@
 				})
 				//英文字母，数字或者下划线，长度为4-16个字符
 				$('#name').on('keyup change',function(){
-					$('#msg_n').empty();
+					$('#msg_n').remove();
 					if(!chk_name()){
-						$('#name').after('<span id="msg_n">英文字母，数字或者下划线，长度为4-16个字符</span>');
+						$('#name').after('<span id="msg_n"  class="msg">英文字母，数字或者下划线，长度为4-16个字符</span>');
 						
 					}
 				})
@@ -95,9 +90,9 @@
 				
 //				//6-16个字符的字母或者数字组成
 				$('#pwd').on('keyup change',function(){
-					$('#msg_p').empty();
+					$('#msg_p').remove();
 					if(!chk_pwd()){
-						$('#pwd').after('<span id="msg_p">6-16个字符的字母或者数字组成</span>');
+						$('#pwd').after('<span id="msg_p"  class="msg">6-16个字符的字母或者数字组成</span>');
 					}
 				})
 				//密码检查
@@ -110,11 +105,11 @@
 				
 				//两次密码检查
 				$('input[name=check_pwd]').on('keyup change',function(){
-					$('#msg_ck').empty();
+					$('#msg_ck').remove();
 					
 					if(!chk_repwd()){
 
-						$('input[name=check_pwd]').after('<span id="msg_ck">两次输入密码不一致</span>');
+						$('input[name=check_pwd]').after('<span id="msg_ck"  class="msg">两次输入密码不一致</span>');
 					}
 					
 				})
@@ -127,10 +122,10 @@
 				
 				//邮箱验证
 				$('input[name=email]').on('keyup change',function(){
-					$('#msg_e').empty();
+					$('#msg_e').remove();
 
 					 if(!chk_email()){
-					 	$('input[name=email]').after('<span id="msg_e">邮箱格式错误</span>');
+					 	$('input[name=email]').after('<span id="msg_e" class="msg">邮箱格式错误</span>');
 					 }
 			
 					
@@ -145,19 +140,130 @@
 				
 			})
 		</script>
-	</head>
-	<body>
-		<form method="post" action="{:U('Home/User/regedit_handle')}">
-			用户名：<input name="name" id="name"/><br />
-			密码：<input name="pwd" id="pwd"/><br />
-			确认密码：<input name="check_pwd"/><br />
-			邮箱：<input  name="email"/><br />
-			出生日期：
-			国家：
-			省份:
-			验证码：<input name="token"/><br />
-			<input type="datetime" />
-			<a id="next">立即注册</a>
-		</form>
-	</body>
-</html>
+		<style>
+
+			
+			#main_r{
+				background: #F0F0F0;
+				width: 640px;
+				margin: 40px auto;
+				border: 1px dashed #ccc;
+				padding: 60px 300px 40px 50px;
+				
+				
+			}
+			
+			#reg{
+				width: 640px;
+			}
+			
+			#reg li{
+				/*margin: 20px 0px;*/
+				height: 50px;
+				/*text-align: right;*/
+				
+			}
+			#reg li label{
+				display: inline-block;
+				width: 100px;
+				text-align: right;
+			}
+			
+			.msg{
+				font-size: 12px;
+				color: red;
+				background: #CCCCCC;
+				padding: 8px 10px 5px 10px;
+				border: 1px dashed #666666;
+				line-height: 23px;
+				margin-left: 10px;
+			}
+			
+			p{
+				margin: 0px;
+			}
+			
+			#reg .next_li{
+				text-align: center;
+			}
+			
+			/*#next{
+				padding: 10px 20px;
+				background: red;
+				border-radius: 5%;
+				width: 150px;
+				height: 20px;
+				display: inline-block;
+				line-height: 20px;
+				cursor: pointer;
+			}
+			#next:hover{
+				background: #CE8483;
+				cursor: pointer;
+			}*/
+			
+			
+			.btn {
+				border: 1px solid #CCCCCC;
+				background-color: #FFFFFF;
+				text-decoration: none;
+				cursor: pointer;
+				padding: 8px;
+				border-radius: 4px;
+				width: 100px;
+				display: inline-block;
+			}
+			.btn:hover {
+				background-color: #C0C0C0;
+			}
+			.btn:active {
+				-webkit-box-shadow: inset 0 6px 6px rgba(0, 0, 0, 0.125);
+				box-shadow: inset 0 6px 6px rgba(0, 0, 0, 0.125);
+			}
+			
+			.text {
+				width: 150px;
+				padding: 6px 12px;
+				line-height: 1.45;
+				color: #555555;
+				background-color: #FFFFFF;
+				border: 1px solid #CCCCCC;
+				border-radius: 4px;
+				-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+				box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+				-webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+				-o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+				transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+			}
+			.text:focus {
+				border-color: #66afe9;
+				outline: 0;
+				-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+				box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+			}
+			
+			
+		</style>
+</block>
+<block name="title">
+	注册
+</block>
+	<block name="body">
+		<div id='main_r'>
+			<form method="post" action="{:U('Home/User/regedit_handle')}">
+			<ul id="reg">
+				<li><label>用户名：</label><input name="name" id="name" class="text"/><br /></li>
+				<li><label>密码：</label><input type="password" name="pwd" id="pwd" class="text"/><br /></li>
+				<li><label>确认密码：</label><input name="check_pwd" class="text"/><br /></li>
+				<li><label>邮箱：</label><input  name="email" class="text"/><br /></li>
+				<li><label>出生日期：</label><input  name="" class="text"/></li>
+				<li><label>国家：</label><input  name="" class="text"/></li>
+				<li><label>省份：</label><input  class="text"/></li>
+				<li><label>验证码：</label><input name="token" class="text"/><br /></li>
+				<li class="next_li"><a id="next" class='btn'>立即注册</a></li>	
+			</ul>
+			</form>
+		
+		</div>
+		
+</block>

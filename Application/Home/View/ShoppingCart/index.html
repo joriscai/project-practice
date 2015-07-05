@@ -11,8 +11,8 @@
 	<body>
 		<div class="tToolbar">
 			<div style="float:right;">
-				<a href="{:U('Home/User/login')}">login</a>
-				<a href="{:U('Home/User/regedit')}">setup</a>
+				<a href="{:U('Home/User/login')}">登录</a>
+				<a href="{:U('Home/User/regedit')}">注册</a>
 			</div>
 		</div>
 		<div class="header">
@@ -31,22 +31,12 @@
 					<button>搜索</button>
 				</div>
 		</div>
-		<!--<div class="min">
-			<div class="middle">
-				购物车内暂时没有商品
-			</div>
-		</div>
-		<div class="mid_b">
-			
-		</div>
-		<div class="mid_but">
-			
-		</div>-->
 		<div class="mid_top">
-			<div class="all_shop">
-				<b>全部商品   0</b>
+			<!--显示购物车内有多少件商品的div-->
+			<div class="all_shop" id="all">
 			</div>
 		</div>
+		<!--商品表头-->
 		<div class="mid2">
 			<div class="m_checkbox">
 				<div class="che">
@@ -71,11 +61,30 @@
 				操作
 			</div>
 		</div>
-		<div class="mid_bor" id="c">
+		<!--显示商品-->
+		<div id="show">
 		</div>
 		<div class="mid_buttom">
-			<input type="button" value="添加商品"  id="a"/>
-			<input type="button" value="删除商品 "  id="b"/>
+			<div class="m_checkbox">
+				<div class="che">
+					<input type="checkbox" checked="checked" />
+				</div>
+				全选
+			</div>
+			<div class="deleGood">
+				<a id="detelegood" href="#none">删除所选商品</a>
+			</div>
+			<!--显示商品总价-->
+			<div class="acc_text" id = "ac">
+				
+			</div>
+			<div class="account_button">
+				<a id="account" href="#none"><b>去结算</b></a>
+			</div>
+		</div>
+		<div class="buttom">
+			<input type="button" value="添加商品"  id="addGoods"/>
+			<input type="button" value="删除商品 "  id="deteleGoods"/>
 		</div>
 	</body>
 </html>
