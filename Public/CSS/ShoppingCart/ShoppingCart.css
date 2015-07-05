@@ -112,28 +112,136 @@ a {
 }*/
 .mid_top {
 	position: relative;
-	top: 20px;
+	top: 15px;
 	margin: 0px auto;
-	border: 1px #00f solid;
+	border: 0px #00f solid;
 	width: 990px;
-	height: 50px;
+	height: 40px;
+	font-size: 18px;
+	color: #FF0000;
+}
+
+.all_shop {
+	border-bottom: 2px #FF0000 solid;
+	width: 112px;
+	height: auto;
+	padding-top: 12px;
+	padding-bottom: 8px;
+}
+
+.mid2 {
+	margin: 20px auto 0px;
+	width: 990px;
+	height: 40px;
+	border-color: -moz-use-text-color #E9E9E9 #E9E9E9;
+	border-style: none solid solid;
+	border-width: 0px 1px 1px;
+	background: #F3F3F3 none repeat scroll 0% 0%;
+	font-size: 12px;
+	color: #666;
+}
+
+.mid2 .m_checkbox {
+	width: 122px;
+	height: 18px;
+	line-height: 18px;
+	padding-top: 10px;
+	padding-left: 10px;
+	border: 0px #00f solid;
+}
+
+.mid2 .m_goods {
+	position: relative;
+	display: inline-block;
+	width: 280px;
+	left: 98px;
+	top: -34px;
+	border: 0px #00f solid;
+}
+.mid2 .m_props {
+	position: relative;
+	display: inline-block;
+	width: 100px;
+	height: 30px;
+	left: 113px;
+	top: -23px;
+	border: 0px #00f solid;
+}
+.mid2 .m_price {
+	position: relative;
+	display: inline-block;
+	width: 100px;
+	height: 30px;
+	left: 120px;
+	top: -35px;
+	border: 0px #00f solid;
+	text-align: right;
+	line-height: 30px;
+}
+.mid2 .m_quantity {
+	position: relative;
+	display: inline-block;
+	width: 120px;
+	height: 30px;
+	left: 116px;
+	top: -35px;
+	border: 0px #00f solid;
 	text-align: center;
+	line-height: 30px;
+}
+.mid2 .m_sum {
+	position: relative;
+	display: inline-block;
+	width: 120px;
+	height: 30px;
+	left: 112px;
+	top: -35px;
+	border: 0px #00f solid;
+	text-align: right;
+	line-height: 30px;
+}
+.mid2 .m_action {
+	position: relative;
+	display: inline-block;
+	width: 100px;
+	height: 30px;
+	left: 108px;
+	top: -35px;
+	border: 0px #00f solid;
+	text-align: center;
+	line-height: 30px;
+}
+
+.m_checkbox .che {
+	position: relative;
+	float: left;
+	margin-right: 5px;
 }
 
 .mid_bor {
-	position: relative;
-	top: 20px;
+	/*position: relative;
+	top: 20px;*/
 	margin: 0px auto;
+	margin-top: 25px;
 	border: 0px #00f solid;
 	width: 990px;
 	height: auto;
 }
 
 .mid_main {
-	position: relative;
-	top: 5px;
 	margin: 0px auto;
-	border: 1px #00f solid;
+	margin-top: 10px;
+	border-top: 2px #aaa solid;
 	width: 990px;
 	height: 100px;
+	background-color: #fff4e8;
+}
+
+.mid_buttom {
+	position: relative;
+	border: 1px #00f solid;
+	margin: 0px auto;
+	width: 990px;
+	height: 200px;
+	top: 15px;
 }

@@ -1,7 +1,6 @@
-/*
-*{
+html,body,div,span,a{
 	font-family: arial,"Hiragino Sans GB","Hiragino Sans GB W3",\5b8b\4f53; 
-}*/
+}
 body{
 	margin: 0px;
 	padding: 0px;
@@ -33,6 +32,8 @@ ul{
 }
 li{
 }
+
 img{
 	border: 0px;
 }
+

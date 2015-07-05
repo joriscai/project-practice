@@ -60,9 +60,24 @@
 					 	return 0;
 					 }
 					
-					
-					
-					$('form:first').submit();
+					//ajax注册用户
+					$.ajax({
+						type:"post",
+						url:"{:U('Home/User/regedit_handle')}",
+						async:true,
+						data:{
+							name:$('#name').val(),/*用户字段*/
+							pwd:$('#pwd').val(),/*密码字段*/
+							email:$('input[name=email]').val(),/*邮箱字段*/
+							city:$('#name').val(),/*城市字段*/
+							province:$('#name').val(),/*省份字段*/
+							token:$('#name').val()/*验证码字段*/
+						},
+						success:function(msg){
+							alert(msg)
+						}
+					});
+					//$('form:first').submit();
 				})
 				//英文字母，数字或者下划线，长度为4-16个字符
 				$('#name').on('keyup change',function(){
