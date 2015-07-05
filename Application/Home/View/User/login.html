@@ -4,6 +4,7 @@
   <title></title>
 	<link href="__PUBLIC__/pulish.css" rel="stylesheet">
   	<link href="__PUBLIC__/css/login.css" rel="stylesheet">
+  	<script src="__PUBLIC__/jquery-1.7.2.min.js"></script>
   <style>
   	#pwd{
   		
@@ -41,6 +42,29 @@
   		padding: 0px;
   	}
   </style>
+  <script>
+  	$(function(){
+  		$('#login').click(function(){
+  			$('form:first').submit(function(){return false});
+  			$.ajax({
+						type:"post",
+						url:"{:U('Home/User/login_handle')}",
+						async:true,
+						data:{
+							name:$('#name').val(),/*用户字段*/
+							pwd:$('#pwd').val()/*密码字段*/
+						},
+						success:function(msg){
+							alert(msg);
+							if('登陆成功'==msg){
+								window.location="{:U('Home/Index/index')}";
+							}
+						}
+					});
+				
+  		})
+  	})
+  </script>
  </head>
  <body align="center">
 		<div id="top">
@@ -56,16 +80,16 @@
 				</div>
 				
 				<div id="mainright">
-				
+						<form>
 						<ul class="">
 							<li class="r">用户名：<input type="text" class="txt" id='name'></li>
 							<li class="r">密码：<input type="password" class="txt" id='pwd'></li>
-							<li><input type="submit" class="butto" value="登录"></li>
+							<li><input type="submit" class="butto" value="登录" id='login'></li>
 							<li><input type="checkbox">记住用户名 没有账号？
 								<font color="808080">|</font>
-								<a href="set.html" class='link_l'>立即注册</a></li>
+								<a href="{:U('Home/User/regedit')}" class='link_l'>立即注册</a></li>
 						</ul>
-						
+						</form>
 
 
 					
