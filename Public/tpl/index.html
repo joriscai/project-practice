@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+   		<link href="__PUBLIC__/pulish.css" rel="stylesheet">
+   		<link href="__PUBLIC__/CSS/ShoppingCart/ShoppingCart.css" rel="stylesheet">
+   		<link href="__PUBLIC__/css/footer.css" rel="stylesheet">
+   		<script type="text/javascript" src="__PUBLIC__/jquery-1.7.2.min.js"></script>
+   		<block name="head"></block>
+	</head>
+	<body>
+		<div class="tToolbar">
+			<div style="float:right;">
+				<a href="{:U('Home/User/login')}">login</a>
+				<a href="{:U('Home/User/regedit')}">setup</a>
+			</div>
+		</div>
+		<div class="header">
+			<div class="logo">
+				<a href="./">
+					<img src="__PUBLIC__/img/logo.png" />
+				</a>
+				<a href="">
+					<div class="link2">
+						购物车
+					</div>
+				</a>
+			</div>
+				<div class="search">
+					<input type="text" id="searchtext" name="" placeholder="搜索">
+					<button>搜索</button>
+				</div>
+		</div>
+		<block name="body"></block>
+		<include file="./Public/tpl/footer.html" />
+	</body>
+</html>

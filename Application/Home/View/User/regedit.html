@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title></title>
-		<link href="__PUBLIC__/pulish.css" rel="stylesheet">
-		 <script src="__PUBLIC__/jquery-1.7.2.min.js"></script>
+<extend name='./Public/tpl/index.html' />
+<block name="head">
 		<script>
 			$(function(){
 
@@ -60,9 +55,24 @@
 					 	return 0;
 					 }
 					
-					
-					
-					$('form:first').submit();
+					//ajax注册用户
+					$.ajax({
+						type:"post",
+						url:"{:U('Home/User/regedit_handle')}",
+						async:true,
+						data:{
+							name:$('#name').val(),/*用户字段*/
+							pwd:$('#pwd').val(),/*密码字段*/
+							email:$('input[name=email]').val(),/*邮箱字段*/
+							city:$('#name').val(),/*城市字段*/
+							province:$('#name').val(),/*省份字段*/
+							token:$('#name').val()/*验证码字段*/
+						},
+						success:function(msg){
+							alert(msg)
+						}
+					});
+					//$('form:first').submit();
 				})
 				//英文字母，数字或者下划线，长度为4-16个字符
 				$('#name').on('keyup change',function(){
@@ -130,8 +140,8 @@
 				
 			})
 		</script>
-	</head>
-	<body>
+</block>
+	<block name="body">
 		<form method="post" action="{:U('Home/User/regedit_handle')}">
 			用户名：<input name="name" id="name"/><br />
 			密码：<input name="pwd" id="pwd"/><br />
@@ -144,5 +154,4 @@
 			<input type="datetime" />
 			<a id="next">立即注册</a>
 		</form>
-	</body>
-</html>
+</block>
