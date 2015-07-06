@@ -29,6 +29,18 @@ class UserController extends Controller{
 
 	}
 	
+	public function verify() {
+		$conf = array('seKey' => 'cy', 
+					'imageH' => 40, 
+					'imageW' => 80, 
+					'length' => 3, 
+					'useCurve' => FALSE, 
+					'codeSet' => '123456789', 
+					'fontSize' => 21);
+		$show = new \Think\Verify($conf);
+		$show -> entry();
+}
+	
 	public function regedit_handle(){
 		//var_dump($_POST);
 //		  'name' => string '123456' (length=6)
