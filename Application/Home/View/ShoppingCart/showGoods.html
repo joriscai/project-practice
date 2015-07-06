@@ -11,14 +11,14 @@
 		<div class="mid_top">
 			<!--显示购物车内有多少件商品的div-->
 			<div class="all_shop" id="all">
-				<b>全部商品 0</b>
+				<b>全部商品 {$goods|count}</b>
 			</div>
 		</div>
 		<!--商品表头-->
 		<div class="mid2">
 			<div class="m_checkbox">
 				<div class="che">
-					<input type="checkbox" checked="checked" id="check_all"/>
+					<input type="checkbox" checked="checked" id="check_all" onclick="iselect(1)"/>
 				</div>
 				全选
 			</div>
@@ -41,25 +41,50 @@
 		</div>
 		<!--显示商品-->
 		<div id="show">
-			<div class='min' id='none'>
-				<div class='show_text'>
-				<ul>
-					<?php if(!session('user_name')){ ?>
-					<li>购物车内暂时没有商品，登录后将显示您之前加入的商品 </li>
-					<li><button >登录</button><a href='../'>去购物></a></li>
-					<?php }else{ ?>
-					<li>购物车空空的哦~，去看看心仪的商品吧~</li>
-					<li><a href='../'>去购物></a></li>
-					<?php } ?>
-					
-				</ul>
+			<foreach name="goods" item="good">
+			<div class="mid_main" id="1">
+				<div class="g_checkbox">
+					<input type="checkbox" <?php echo $good['isselect']==0?'':'checked'; ?> name="chgoods"/>
+				</div>
+				<div class="g_img">
+					<img src="__PUBLIC__/img/{$good['imgpath']}" />
+				</div>
+				<div class="g_name">
+					{$good['shopname']}<br />商品
+				</div>
+				<div class="g_price">
+					{$good['price']}
+				</div>
+				<div class="g_quantity">
+					<div class="g_add">
+						<a href="javascript:void(0);" onclick="acount(-1)">
+							<div class='go_add_re'>
+								-
+							</div>
+						</a>
+						<input type="text" class="go_text" id="shopid" value="{$good['number']}"></input>
+						<a href="javascript:void(0);" onclick="acount(1)">
+							<div class="go_add_re">
+								+
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="g_sum">
+					<?php echo $good['price']*$good['number']; ?>
+				</div>
+				<div class="g_action">
+					<a href="javascript:void(0);">
+						删除
+					</a>
 				</div>
 			</div>
+			</foreach>
 		</div>
 		<div class="mid_buttom">
 			<div class="m_checkbox">
 				<div class="che">
-					<input type="checkbox" checked="checked" id="check_al"/>
+					<input type="checkbox" checked="checked" id="check_al" onclick="iselect(2)"/>
 				</div>
 				全选
 			</div>
@@ -69,9 +94,9 @@
 			<!--显示商品总价-->
 			<div class="acc_text" id = "ac">
 				已选择  
-				<span style="color: #ff0000;">1</span>  
+				<span style="color: #ff0000;">{$gdcount['s_count']}</span>  
 				件商品  --- 总价  : 
-				<span style="color: #ff0000; font-size: 18px;">¥ 00.00</span>
+				<span style="color: #ff0000; font-size: 18px;">¥ {$gdcount['p_count']}</span>
 			</div>
 			<a id="account" href="">
 				<div class="account_button" style="color: #fff;">

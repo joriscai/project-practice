@@ -22,6 +22,24 @@ class UserController extends Controller{
 	public function login(){
 		$this->display('User/Login');
 	}
+
+	public function loginout(){
+		session('[destroy]');
+		$this->display('Index/index');
+
+	}
+	
+	public function verify() {
+		$conf = array('seKey' => 'cy', 
+					'imageH' => 40, 
+					'imageW' => 80, 
+					'length' => 3, 
+					'useCurve' => FALSE, 
+					'codeSet' => '123456789', 
+					'fontSize' => 21);
+		$show = new \Think\Verify($conf);
+		$show -> entry();
+}
 	
 	public function regedit_handle(){
 		//var_dump($_POST);
@@ -120,6 +138,7 @@ class UserController extends Controller{
 		
 		//登陆成功，记录信息，并且跳转到主页
 		session('user_name',$name);
+		session('user_id',$data[0]['id']);
 		$this->ajaxReturn('登陆成功','eval');
 		
 		
