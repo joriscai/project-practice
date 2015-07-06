@@ -29,36 +29,56 @@ class UserController extends Controller{
 
 	}
 	
+	//生成验证码
 	public function verify() {
 		$conf = array('seKey' => 'cy', 
-					'imageH' => 40, 
+					'imageH' => 30, 
 					'imageW' => 80, 
 					'length' => 3, 
 					'useCurve' => FALSE, 
 					'codeSet' => '123456789', 
-					'fontSize' => 21);
+					'fontSize' => 15);
 		$show = new \Think\Verify($conf);
 		$show -> entry();
-}
+	}
+	
+	//验证码检测
+	public function ajax_verify(){
+		$code=I('code');
+		$conf = array('seKey' => 'cy');
+		$verify = new \Think\Verify($conf);
+		if($verify -> check($code)){
+			$this->ajaxReturn('1','EVAL'); 
+		}
+		$this->ajaxReturn('0','EVAL'); 
+
+	}
 	
 	public function regedit_handle(){
 		//var_dump($_POST);
-//		  'name' => string '123456' (length=6)
-//'pwd' => string '1234561' (length=7)
-//'check_pwd' => string '1234561' (length=7)
-//'email' => string '707039333@qq.com' (length=16)
-//'token' => string '' (length=0)
+		//		  'name' => string '123456' (length=6)
+		//'pwd' => string '1234561' (length=7)
+		//'check_pwd' => string '1234561' (length=7)
+		//'email' => string '707039333@qq.com' (length=16)
+		//'token' => string '' (length=0)
 		//
 		
-		$name=I('name');
-		$pwd=I('pwd');
+		$name=I('name');//用户名
+		$pwd=I('pwd');//密码
 		//check_pwd取代name
-		$email=I('email');
-		$token=I('token');
+		$email=I('email');//邮箱
+		$token=I('code');//验证码
+		$city=I('city');//城市
+		$pro=I('pro');//省份
+		$birth=I('birth');//省份
+		
+		
+		
+		
 		//测试的数据
 
 		//不为空检查
-		if(!($name && $pwd && $email  && $token) ){
+		if(!($name && $pwd && $email  && $token && $city && $pro && $birth) ){
 			
 			$this->ajaxReturn("必填字段不能留空!",'EVAL');
 		}
@@ -66,6 +86,13 @@ class UserController extends Controller{
 		$user=M('user');
 		
 		//验证码是否正确验证
+		$code=I('code');
+		$conf = array('seKey' => 'cy');
+		$verify = new \Think\Verify($conf);
+		
+		if(!$verify -> check($code)){
+			$this->ajaxReturn('验证码错误，请重新注册!','EVAL');
+		}
 		
 		//邮箱是否唯一检查
 		$data=$user->limit(1)->where("email='$email'")->select();
@@ -85,9 +112,9 @@ class UserController extends Controller{
 		'sex'=>1,//为完成字段，0为男，1为女
 		'pwd'=>md5($pwd),
 		'email'=>$email,
-		'birth'=>1,
-		'city'=>'1',
-		'province'=>'1',
+		'birth'=>strtotime($birth),
+		'city'=>$city,
+		'province'=>$pro,
 		);
 		
 		if(!$user->add($info)){

@@ -65,9 +65,10 @@
 							name:$('#name').val(),/*用户字段*/
 							pwd:$('#pwd').val(),/*密码字段*/
 							email:$('input[name=email]').val(),/*邮箱字段*/
-							city:$('#name').val(),/*城市字段*/
-							province:$('#name').val(),/*省份字段*/
-							token:$('#name').val()/*验证码字段*/
+							city:$('#city').val(),/*城市字段*/
+							pro:$('#pro').val(),/*省份字段*/
+							birth:$('#birth').val(),//生日字段
+							code:$('#ve_input').val()/*验证码字段*/
 						},
 						success:function(msg){
 							alert(msg)
@@ -157,6 +158,23 @@
 						}
 					})
 				})
+				
+				$('#verify').click(function(){
+					$('#verify').attr('src',"{:U('Home/User/verify')}?"+Math.random())
+				})
+				
+				$('#ve_input').keyup(function(){
+					$('#msg_v').remove();
+					if($('#ve_input').val().length==3){
+					$.post("{:U('Home/User/ajax_verify')}",{code:$('#ve_input').val()},function(data){
+					if(data==1){
+						$('#verify').after('<span id="msg_v" class="msg">对勾</span>');
+					}else{
+						$('#verify').after('<span id="msg_v" class="msg">验证码错误</span>');
+					}
+				})
+		}
+	})
 
 				
 				
@@ -264,6 +282,19 @@
 				box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
 			}
 			
+			#ve_input{
+				width: 65px;
+				vertical-align: middle;
+			}
+			
+			#verify{
+				vertical-align: middle;
+			}
+			
+			.pc{
+				width:170px;
+			}
+			
 			
 		</style>
 </block>
@@ -278,9 +309,9 @@
 				<li><label>密码：</label><input type="password" name="pwd" id="pwd" class="text"/><br /></li>
 				<li><label>确认密码：</label><input name="check_pwd" class="text"/><br /></li>
 				<li><label>邮箱：</label><input  name="email" class="text"/><br /></li>
-				<li><label>出生日期：</label><input  name="" class="text" onClick="WdatePicker()"/></li>
+				<li><label>出生日期：</label><input id="birth" class="text" onClick="WdatePicker()"/></li>
 				<li><label>国家：</label>
-				<select id='pro' class='text'>
+				<select id='pro' class='text pc'>
 					<foreach name="prodata" item="pro" >
 						<option value ="{$pro.proid}">{$pro.proname}</option>
 					</foreach>
@@ -288,12 +319,12 @@
 				</li>
 				
 				<li><label>省份：</label>
-				<select id='city' class='text'>
+				<select id='city' class='text pc'>
 						
 				</select>
 				</li>
-				<li><label>验证码：</label><input name="token" class="text"/>
-					<img id='verify' src="{:U('Home/User/verify')}"><br /></li>
+				<li><label>验证码：</label><input name="token" class="text" id="ve_input"/>
+					<img id='verify' src="{:U('Home/User/verify')}" ><br /></li>
 				<li class="next_li"><a id="next" class='btn'>立即注册</a></li>	
 			</ul>
 			</form>
