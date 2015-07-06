@@ -137,4 +137,8 @@
 //}
 //
 
-
+var acount = function(m)
+{
+	var id = document.getElementById("shopid");
+	id.value += m;
+}
