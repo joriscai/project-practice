@@ -7,6 +7,7 @@ if($db_act=='create_db'){
 }elseif($db_act=='create_table'){
 	return 
 	"use $db_name;
+	set names 'utf8';
 	create table user(
 	id int(10) not null primary key auto_increment,
 	name varchar(32) not null unique,
