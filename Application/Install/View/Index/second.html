@@ -92,7 +92,6 @@
 					var host=$('#host'),
 					name=$('#name'),
 					pwd=$('#pwd');
-					console.log(host.val(),name.val())
 					if(!host.val()){
 						host.after("<span id='msg'>请先输入服务器地址</span>");
 						return 0;
@@ -101,6 +100,7 @@
 						name.after("<span>请先输入mysql用户名</span>");
 						return 0;
 					}
+					
 					form.submit();
 				})
 				

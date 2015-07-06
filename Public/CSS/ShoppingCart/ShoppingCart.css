@@ -94,42 +94,6 @@ a {
 	text-decoration: underline;
 }
 
-/*.middle {
-	position: relative;
-	border: 0px #00f solid;
-	top: 155px;
-	left: 345px;
-	width: 320px;
-	height: 70px;
-	font-size: 25px;
-	text-align: center;
-	line-height: 65px;
-	color: #807f80;
-}
-
-.mid_b {
-	position: relative;
-	border: 1px #00f solid;
-	margin: 0px auto;
-	width: 990px;
-	height: 27px;
-}
-.mid_but {
-	position: relative;
-	border: 1px #00f solid;
-	margin: 0px auto;
-	width: 990px;
-	height: 200px;
-}
-
-.midd {
-	position: relative;
-	top: 10px;
-	margin: 0px auto;
-	border: 1px #00f solid;
-	width: 990px;
-	height: 700px;
-}*/
 .mid_top {
 	position: relative;
 	top: 15px;
@@ -154,10 +118,10 @@ a {
 	margin: 20px auto 0px;
 	width: 990px;
 	height: 40px;
-	border-color: -moz-use-text-color #E9E9E9 #E9E9E9;
+	border-color: #E9E9E9;
 	border-style: none solid solid;
 	border-width: 0px 1px 1px;
-	background: #F3F3F3 none repeat scroll 0% 0%;
+	background: #F3F3F3;
 	font-size: 12px;
 	color: #666;
 }
@@ -244,23 +208,116 @@ a {
 	margin-right: 5px;
 }
 
-.mid_bor {
-	/*position: relative;
-	top: 20px;*/
-	margin: 0px auto;
-	margin-top: 25px;
-	border: 0px #00f solid;
-	width: 990px;
-	height: auto;
-}
-
 .mid_main {
+	position: relative;
 	margin: 0px auto;
 	margin-top: 10px;
 	border-top: 2px #aaa solid;
 	width: 990px;
 	height: 100px;
 	background-color: #fff4e8;
+}
+
+.mid_main .g_checkbox {
+	position: absolute;
+	top: 38px;
+	left: 8px;
+	width: 15px;
+	height: 30px;
+	border: 0px #00f solid;
+}
+.mid_main .g_img {
+	position: absolute;
+	width: 85px;
+	height: 85px;
+	top: 6px;
+	left: 36px;
+	border: 0px #00f solid;
+}
+.mid_main .g_name {
+	position: absolute;
+	width: 280px;
+	height: 85px;
+	left: 133px;
+	top: 6px;
+	font-size: 15px;
+	line-height: 35px;
+	border: 0px #00f solid;
+	
+}
+.mid_main .g_price {
+	position: absolute;
+	width: 100px;
+	height: 85px;
+	left: 515px;
+	top: 6px;
+	font-size: 15px;
+	line-height: 35px;
+	text-align: right;
+	border: 0px #00f solid;
+}
+.mid_main .g_quantity {
+	position: absolute;
+	width: 120px;
+	height: 85px;
+	left: 616px;
+	top: 6px;
+	font-size: 15px;
+	text-align: center;
+	border: 0px #00f solid;
+}
+.g_quantity .g_add {
+	position: absolute;
+	width: 80px;
+	height: 18px;
+	left: 20px;
+	top: 8px;
+	font-size: 15px;
+	border: 0px #00f solid;
+}
+.g_add .go_add_re {
+	position: relative;
+	float: left;
+	width: 18px;
+	height: 18px;
+	border: 1px #666 solid;
+	color: #666;
+	background-color: #fff;
+}
+.g_add .go_text {
+	position: relative;
+	float: left;
+	width: 34px;
+	height: 16px;
+	font-size: 15px;
+	border-top: 1px #666 solid;
+	border-bottom: 1px #666 solid;
+	border-left: 0px;
+	border-right: 0px;
+	text-align: center;
+}
+.mid_main .g_sum {
+	position: absolute;
+	width: 120px;
+	height: 85px;
+	left: 737px;
+	top: 6px;
+	font-size: 15px;
+	text-align: right;
+	line-height: 35px;
+	border: 0px #00f solid;
+}
+.mid_main .g_action {
+	position: absolute;
+	width: 100px;
+	height: 85px;
+	left: 858px;
+	top: 6px;
+	font-size: 12px;
+	text-align: center;
+	line-height: 35px;
+	color: #666;
+	border: 0px #00f solid;
 }
 
 .mid_buttom {
@@ -294,10 +351,10 @@ a {
 	height: 20px;
 	border: 0px #00f solid;
 }
-.deleGood a {
+.deleGood a, .g_action a {
 	color: #666;
 }
-.deleGood a:hover {
+.deleGood a:hover, .g_action a:hover {
 	color: #ff0000;
 }
 
@@ -336,6 +393,6 @@ a {
 	margin: 0px auto;
 	width: 990px;
 	height: 100px;
-	top: 25px;
+	top: 28px;
 }
 

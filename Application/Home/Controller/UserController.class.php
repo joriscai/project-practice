@@ -4,8 +4,19 @@ use Think\Controller;
 
 class UserController extends Controller{
 	public function regedit(){
-		
+		//查询数据库，获取国家名
+		$pro=M('promary');
+		$this->assign('prodata',$pro->select());
 		$this->display('User/regedit');
+	}
+
+	public function ajax_getcity(){
+		$pro=I('proid');
+		$con=M('city');
+		
+		//获取城市
+		$city=$con->where("proID=$pro")->select();
+		$this->ajaxReturn($city);
 	}
 	
 	public function login(){

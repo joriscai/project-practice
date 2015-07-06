@@ -1,5 +1,6 @@
 <extend name='./Public/tpl/index.html' />
 <block name="head">
+		<script language="javascript" type="text/javascript" src="__PUBLIC__/JS/date/WdatePicker.js"></script>
 		<script>
 			$(function(){
 
@@ -136,6 +137,27 @@
 					return t.test(content);
 				}
 
+				$('#pro').change(function(){
+					
+					$.ajax({
+						type:"post",
+						url:"{:U('Home/User/ajax_getcity')}",
+						async:true,
+						data:{
+							proid:$('#pro').val()/*省份字段*/
+						},
+						success:function(msg){
+							$('#city').empty();
+							for (var i=0;i<msg.length;i++)
+							{
+								$('#city').append("<option value ="+msg[i].cityid+">"+msg[i].cityname+"</option>")
+							}
+
+							
+						}
+					})
+				})
+
 				
 				
 			})
@@ -256,9 +278,20 @@
 				<li><label>密码：</label><input type="password" name="pwd" id="pwd" class="text"/><br /></li>
 				<li><label>确认密码：</label><input name="check_pwd" class="text"/><br /></li>
 				<li><label>邮箱：</label><input  name="email" class="text"/><br /></li>
-				<li><label>出生日期：</label><input  name="" class="text"/></li>
-				<li><label>国家：</label><input  name="" class="text"/></li>
-				<li><label>省份：</label><input  class="text"/></li>
+				<li><label>出生日期：</label><input  name="" class="text" onClick="WdatePicker()"/></li>
+				<li><label>国家：</label>
+				<select id='pro' class='text'>
+					<foreach name="prodata" item="pro" >
+						<option value ="{$pro.proid}">{$pro.proname}</option>
+					</foreach>
+				</select>
+				</li>
+				
+				<li><label>省份：</label>
+				<select id='city' class='text'>
+						
+				</select>
+				</li>
 				<li><label>验证码：</label><input name="token" class="text"/><br /></li>
 				<li class="next_li"><a id="next" class='btn'>立即注册</a></li>	
 			</ul>
