@@ -57,13 +57,13 @@
 				</div>
 				<div class="g_quantity">
 					<div class="g_add">
-						<a href="javascript:void(0);">
+						<a href="javascript:void(0);" onclick="acount(-1)">
 							<div class='go_add_re'>
 								-
 							</div>
 						</a>
-						<input type="text" class="go_text" value="{$good['number']}"></input>
-						<a href="javascript:void(0);">
+						<input type="text" class="go_text" id="shopid" value="{$good['number']}"></input>
+						<a href="javascript:void(0);" onclick="acount(1)">
 							<div class="go_add_re">
 								+
 							</div>

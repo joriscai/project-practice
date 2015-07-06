@@ -1,4 +1,8 @@
 <?php
-return array(
-	//'配置项'=>'配置值'
+		return array(
+    			'DB_TYPE'               =>  'mysql',
+    			'DB_HOST'               =>  'localhost',
+    			'DB_NAME'               =>  'drdb', 
+    			'DB_USER'               =>  'root',  
+    			'DB_PWD'				=>	''
 );
