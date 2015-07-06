@@ -4,12 +4,29 @@ use Think\Controller;
 
 class UserController extends Controller{
 	public function regedit(){
-		
+		//查询数据库，获取国家名
+		$pro=M('promary');
+		$this->assign('prodata',$pro->select());
 		$this->display('User/regedit');
+	}
+
+	public function ajax_getcity(){
+		$pro=I('proid');
+		$con=M('city');
+		
+		//获取城市
+		$city=$con->where("proID=$pro")->select();
+		$this->ajaxReturn($city);
 	}
 	
 	public function login(){
 		$this->display('User/Login');
+	}
+
+	public function loginout(){
+		session('[destroy]');
+		$this->display('Index/index');
+
 	}
 	
 	public function regedit_handle(){
@@ -109,6 +126,7 @@ class UserController extends Controller{
 		
 		//登陆成功，记录信息，并且跳转到主页
 		session('user_name',$name);
+		session('user_id',$data[0]['id']);
 		$this->ajaxReturn('登陆成功','eval');
 		
 		

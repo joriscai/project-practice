@@ -177,10 +177,12 @@ a:active{
 	padding: 0px;
 	width: 590px;
 }
+
+/*--------图片轮播样式----------------------------*/
 .slider{
 	width: 590px;
-	position: relative;
-	top:-70px;
+	position: absolute;
+	top:-310px;
 	//border: 1px black solid;
 	left: 210px;
 	height: 240px;
@@ -199,30 +201,57 @@ a:active{
 }
 .slider-extra{
 	width: 590px;
-	position: relative;
+	position: absolute;
 	top:-95px;
 	left: 210px;
 	text-align: center;
+	z-index: 50;
+	height: 62px;
+}
+.slider-page{
+	//display: none;
+	position: relative;
+	z-index: 50;
+	margin-left: 217px;
+	width: 590px;
 }
 .slider-page a {
 	position: absolute;
-	top: -40px;
+	top: 440px;
 	//z-index: 1;
 	display: block;
 	width: 0px;
 	height: 62px;
 	line-height: 62px;
-	background: rgba(0,0,0,0.2);
+	//background: rgba(0,0,0,0.2);
+	background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.2);
 	color: #fff;
 	text-align: center;
 	font-size: 22px;
 	padding-left: 10px;
 }
 .slider-prev{
+	position: relative;
 	left: 0px;
+	z-index: 50;
 }
 .slider-next{
+	position: relative;
 	right: 0px;
+	z-index: 50;
+}
+
+.slider-list{
+	position: absolute;
+	top:500px;
+	left: 217px;
+	width: 590px;
+	text-align: center;
+}
+.slider-nav{
+	position: relative;
+	//top:100px;
+
 }
 .slider-item{
 	display: inline-block;
@@ -236,19 +265,13 @@ a:active{
 	top:120px;
 	//z-index: 10;
 }
-.slider-list{
-	position: relative;
-	top:0px;
-}
-.slider-nav{
-	position: relative;
-	top:0px;
-}
+
+/*--------公告、生活服务样式----------------------------*/
 .news-serv{
-	width: 191px;
+	width: 189px;
 	position: relative;
 	left: 800px;
-	top: -380px;
+	top: -65px;
 	border: 1px solid #E8E8E7;
 	height: 260px;
 	color: #666;
@@ -256,31 +279,32 @@ a:active{
 }
 .news{
 	border-bottom:1px dashed #E8E8E7;
+
 }
 .nt{
 	border-bottom:1px solid #E8E8E7;
 	line-height: 50px;
+	padding-left: 10px;
 }
 .nc{
-	
+	padding-left: 10px;
 }
 .lifeserv{
 	overflow: hidden;
 }
 .servmenu{
-	width: 60px;
+	width: 56px;
 	height: 30px;
 	display: inline-block;
 	overflow: hidden;
 	line-height: 40px;
 	border-bottom:1px solid #E8E8E7;
 	border-right:1px solid #E8E8E7;
+	margin-left:-10px; 
+	padding-left: 10px;
+	text-align: center;
 }
-.lifeserv li span{
-	line-height: 40px;
-	height: 30px;
-	border-right:1px solid #E8E8E7;
-}
+
 .serv-list{
 
 }

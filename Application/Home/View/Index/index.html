@@ -8,7 +8,7 @@
    <link href="__PUBLIC__/pulish.css" rel="stylesheet">
    <link href="__PUBLIC__/CSS/index.css" rel="stylesheet">
    <script src="__PUBLIC__/jquery-1.7.2.min.js"></script>
-   <script src="__PUBLIC__/bootstrap/js/bootstrap.min.js"></script>
+   <!--<script src="__PUBLIC__/bootstrap/js/bootstrap.min.js"></script>-->
    <style type="text/css" rel="stylesheet">
 		
    </style>
@@ -77,12 +77,21 @@
 			var countOfImg=6;
 
 			autoTurn=function(){
-				$("#img"+curIndex).fadeOut(10);
-				$("#img"+nextIndex).fadeIn(10);
-				$("#img-item"+nextIndex).css("background","red").siblings().css("background","#666");
+				$($(".slider-img")[nextIndex]).css("display","block").siblings().css("display","none");
+				/*$("#img"+nextIndex).css("display","block");*/
+				$($(".slider-item")[nextIndex]).addClass("selected").css("background","red").siblings().removeClass("selected").css("background","#666");
+				//alert($(".slider-item")[nextIndex]);
 				curIndex=nextIndex;
 				nextIndex=(nextIndex+1)%countOfImg;
 			};
+
+			/*autoTurn=function(){
+				$("#img"+curIndex).css("display","none");
+				$("#img"+nextIndex).css("display","block");
+				$("#img-item"+nextIndex).addClass("selected").css("background","red").siblings().removeClass("selected").css("background","#666");
+				curIndex=nextIndex;
+				nextIndex=(nextIndex+1)%countOfImg;
+			};*/
 
 			var timeTurn=setInterval("autoTurn()",2000);//设置定时器
 
@@ -95,7 +104,7 @@
 
 				var index2=$(this).index(".slider-item");
 				$(this).css("background","red").siblings().css("background","#666");
-				$($(".slider-img")[index2]).css("display","block").siblings().css("display","none");
+				$($(".slider-img")[index2]).addClass("selected").css("display","block").siblings().removeClass("selected").css("display","none");
 
 			});
 
@@ -103,6 +112,23 @@
 
 				timeTurn=setInterval("autoTurn()",2000);
 			});
+
+			/*
+			$(".slider").hover(function(){
+				$(".slider-page").show();
+			},function(){
+				$(".slider-page").hide();
+			});*/
+
+			/*$(".slider-prev").click(function(){
+				var index3 = $(".slider-img").hasClass("selected").index(".slider-img");
+				alert(index3);
+				if(index3>0){index3=-1;}
+				else{index=5;}
+				$($(".slider-img")[index3]).addClass("selected").css("display","block").siblings().removeClass("selected").css("display","none");
+				$($(".slider-item")[index3]).css("background","red").siblings().css("background","#666");
+			});*/
+
 
 		}); 
 //----------------结束---- 图片轮播效果代码--------------------------------//
@@ -240,8 +266,8 @@
 		</div>
 		<div class="slider-extra">
 			<div class="slider-page" style="display: block;">						
-				<a href="javascript:void(0)" class="slider-prev">&lt;</a>
-				<a href="javascript:void(0)" class="slider-next">&gt;</a> 				
+				<a href="" class="slider-prev">&lt;</a>
+				<a href="" class="slider-next">&gt;</a> 				
 			</div>
 			<div class="slider-list">					
 				<ul class="slider-nav">
