@@ -34,7 +34,7 @@ if($db_act=='create_db'){
 	price float not null,
 	number int not null,
 	user_id int not null
-);"
+	);"
 	;
 }elseif($db_act="insert_data"){
 	return "insert into promary values(1,'北京');
@@ -454,5 +454,7 @@ insert into city values(10,'锡林郭勒盟',33);
 insert into city values(11,'兴安盟',33);
 insert into city values(12,'阿拉善盟',33);
 insert into city values(1,'澳门',34);
-insert into city values(1,'香港',35);";
+insert into city values(1,'香港',35);
+insert shopcat values(1,'陈','goods1.png',1,20,3,1);
+insert shopcat values(2,'456','goods1.png',1,20,3,1);";
 }

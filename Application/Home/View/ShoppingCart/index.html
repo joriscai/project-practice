@@ -41,41 +41,18 @@
 		</div>
 		<!--显示商品-->
 		<div id="show">
-			<div class="mid_main" id="1">
-				<div class="g_checkbox">
-					<input type="checkbox" checked="checked" name="chgoods"/>
-				</div>
-				<div class="g_img">
-					<img src="__PUBLIC__/img/goods1.png" />
-				</div>
-				<div class="g_name">
-					这是商品1<br />商品
-				</div>
-				<div class="g_price">
-					10.00
-				</div>
-				<div class="g_quantity">
-					<div class="g_add">
-						<a href="javascript:void(0);">
-							<div class='go_add_re'>
-								-
-							</div>
-						</a>
-						<input type="text" class="go_text" value="1"></input>
-						<a href="javascript:void(0);">
-							<div class="go_add_re">
-								+
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class="g_sum">
-					10.00
-				</div>
-				<div class="g_action">
-					<a href="javascript:void(0);">
-						删除
-					</a>
+			<div class='min' id='none'>
+				<div class='show_text'>
+				<ul>
+					<?php if(!session('user_name')){ ?>
+					<li>购物车内暂时没有商品，登录后将显示您之前加入的商品 </li>
+					<li><button >登录</button><a href='../'>去购物></a></li>
+					<?php }else{ ?>
+					<li>购物车空空的哦~，去看看心仪的商品吧~</li>
+					<li><a href='../'>去购物></a></li>
+					<?php } ?>
+					
+				</ul>
 				</div>
 			</div>
 		</div>
