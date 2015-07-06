@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <title> 商城首页</title>
+   <title> 顶部</title>
    <meta charset="UTF-8">
    <!--<link href="__PUBLIC__/bootstrap.min.css" rel="stylesheet">-->
 
-   <link href="__PUBLIC__/pulish.css" rel="stylesheet">
-   <link href="__PUBLIC__/CSS/index.css" rel="stylesheet">
-   <script src="__PUBLIC__/jquery-1.7.2.min.js"></script>
+   <link href="../pulish.css" rel="stylesheet">
+   <link href="../CSS/index.css" rel="stylesheet">
+   <script src="../jquery-1.7.2.min.js"></script>
    <!--<script src="__PUBLIC__/bootstrap/js/bootstrap.min.js"></script>-->
    <style type="text/css" rel="stylesheet">
 		
@@ -15,32 +15,7 @@
    <script type="text/javascript">
 
 //----------------------------导航栏效果代码-----------------------//
-   		/*$(function(){
-   			$(".item").hover(function(){
-
-   				$(".dorpdown-layer").fadeIn();
-   				var index=$(this).index(".dd-inner .item");
-
-   				if (!($(this).hasClass("hover"))) {
-
-   				}
-   				else{}
-
-   				$(this).addClass("hover").siblings().removeClass("hover");
-   				
-   				$($(".dorpdown-layerin")[index]).css("display","block").siblings().css("display","none");
-
-   			},function(){
-			});
-   			$(".dd-inner").mouseleave(function(){
-			$(".dorpdown-layer").fadeOut();
-			$(".dorpdown-layerin").fadeOut();
-			$(".dd-inner .item").removeClass("hover");
-
-			});
-		
-   		})
-   		*/
+   		
    		$(function(){
    			$(".dd .item").hover(function(){
 
@@ -78,20 +53,13 @@
 
 			autoTurn=function(){
 				$($(".slider-img")[nextIndex]).css("display","block").siblings().css("display","none");
-				/*$("#img"+nextIndex).css("display","block");*/
+				
 				$($(".slider-item")[nextIndex]).addClass("selected").css("background","red").siblings().removeClass("selected").css("background","#666");
-				//alert($(".slider-item")[nextIndex]);
 				curIndex=nextIndex;
 				nextIndex=(nextIndex+1)%countOfImg;
 			};
 
-			/*autoTurn=function(){
-				$("#img"+curIndex).css("display","none");
-				$("#img"+nextIndex).css("display","block");
-				$("#img-item"+nextIndex).addClass("selected").css("background","red").siblings().removeClass("selected").css("background","#666");
-				curIndex=nextIndex;
-				nextIndex=(nextIndex+1)%countOfImg;
-			};*/
+			
 
 			var timeTurn=setInterval("autoTurn()",2000);//设置定时器
 
@@ -120,14 +88,7 @@
 				$(".slider-page").hide();
 			});
 
-			/*$(".slider-prev").click(function(){
-				var index3 = $(".slider-img").hasClass("selected").index(".slider-img");
-				alert(index3);
-				if(index3>0){index3=-1;}
-				else{index=5;}
-				$($(".slider-img")[index3]).addClass("selected").css("display","block").siblings().removeClass("selected").css("display","none");
-				$($(".slider-item")[index3]).css("background","red").siblings().css("background","#666");
-			});*/
+			
 
 
 		}); 
@@ -175,6 +136,7 @@
 			<div id="categorys" class="dorpdown">
 				<div class="dt" >
 					<a target="_blank" href="#">全部商品分类</a>
+					<div ></div>
 				</div>
 				<div class="dd">
 					<div class="dd-inner">
@@ -244,133 +206,8 @@
 	        </div>
 		</div>
 
-		<div class="slider">
-			<ul class="slider-list">
-				<li class="slider-img" id="img0" style="display:block;">
-					<a href=""><img src="__PUBLIC__/img/1.jpg"></a>
-				</li>
-				<li class="slider-img" id="img1">
-					<a href=""><img src="__PUBLIC__/img/2.jpg"></a>
-				</li>
-				<li class="slider-img" id="img2">
-					<a href=""><img src="__PUBLIC__/img/3.jpg"></a>
-				</li>
-				<li class="slider-img" id="img3">
-					<a href=""><img src="__PUBLIC__/img/4.jpg"></a>
-				</li>
-				<li class="slider-img" id="img4">
-					<a href=""><img src="__PUBLIC__/img/5.jpg"></a>
-				</li>
-				<li class="slider-img" id="img5">
-					<a href=""><img src="__PUBLIC__/img/6.jpg"></a>
-				</li>
-			</ul>
-
-		</div>
-		
-		<div class="slider-extra">
-			<!--
-			<div class="slider-page" style="display: block;">						
-				<a href="" class="slider-prev">&lt;</a>
-				<a href="" class="slider-next">&gt;</a> 				
-			</div>
-			-->
-			<div class="slider-list2">					
-				<ul class="slider-nav">
-					<li class="slider-item" id="img-item0" style="background:red;">1</li>
-					<li class="slider-item" id="img-item1">2</li>
-					<li class="slider-item" id="img-item2">3</li>
-					<li class="slider-item" id="img-item3">4</li>
-					<li class="slider-item" id="img-item4">5</li>
-					<li class="slider-item" id="img-item5">6</li>
-				</ul>
-			</div>						
-		</div>
-		<div class="news-serv">
-			<div class="news">
-				<div class="nt">网站公告</div>
-				<div class="nc">
-					<ul>
-						<li><a href="">[特惠]海飞丝去屑又去油超清爽</a></li>
-						<li><a href="">[公告]优化京东客户端 等你的建议</a></li>
-
-					</ul>
-				</div>
-			</div>
-			<div class="lifeserv">
-				<div class="nt1">生活服务</div>
-				<div class="nc">
-					<div class="serv-bn">
-						<span class="servmenu bn-border ">
-								<a href="">
-									1231
-								</a>
-						</span>
-						<span class="servmenu borderBottom">
-								<a href="">
-									1231
-								</a>
-						</span>
-						<span class="servmenu borderBottom"> 
-								<a href="">
-									1231
-								</a>
-						</span>
-					</div>
-					<div class="serv-list">
-						<div class="serv item-border" style="display:block;" >
-							aass
-						</div>
-						<div class="serv">
-							bbbbbb
-						</div>
-						<div class="serv">
-							ccccccc
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div style="clear:both; height:0;"></div>
-	<div class="youlike">
-		<div class="nt noborder">猜你喜欢</div>
-		<div class="nc">
-			<ul>
-				<li>
-					<div class="p-img">
-						<a href="">
-							<img src="">1
-						</a>
-					</div>
-					<div class="p-info">
-						<div class="p-name">
-							<a href="">sdf sdfsd sd sdsd
-							</a>
-						</div>
-						<div class="p-price">
-							￥38
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="p-img">
-						<a href="">
-							<img src="">2
-						</a>
-					</div>
-					<div class="p-info">
-						<div class="p-name">
-							<a href="">sdf sdfsd sd sdsd
-							</a>
-						</div>
-						<div class="p-price">
-							￥38.00
-						</div>
-					</div>
-				</li>
-			</ul>
-		</div>
-	</div>
+</div>
 </body>
+
 </html>
+

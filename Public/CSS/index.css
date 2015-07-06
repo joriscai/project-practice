@@ -24,9 +24,29 @@ a:active{
 	margin: 0 auto;
 	height: 300px;
 }
+
+/*--------JQ控制效果样式-----------------------------------------*/
 .hover{
 	background-color: red;
 	z-index: 50;
+}
+.bn-border{
+	border-top: 1px solid #ff4400!important;
+	border-left: 1px solid #ff4400!important;
+	border-right: 1px solid #ff4400!important;
+	border-bottom: none!important;
+	//position: relative;
+	z-index: 50;
+}
+.item-border{
+	border-bottom: 1px solid #ff4400;
+	border-left: 1px solid #ff4400;
+	border-right: 1px solid #ff4400;
+	margin-left: -2px;
+	margin-top: -1px;
+}
+.borderBottom{
+	border-bottom: 1px solid #ff4400!important;
 }
 .show{
 	display: inline-block;
@@ -112,32 +132,41 @@ a:active{
 	//z-index: 1;
 	font-size:14px; 
 	width: 800px;
-	height: 367px;
+	height: 375px;
 	position: relative;
 }
 .dd-inner{
 	width: 210px;
-
+	margin-top: -3px;
 	background: #4a4a4a;
 	//z-index: 10;
 }
 .dt{
 	padding: 0 10px;
+	height: 47px;
+	line-height: 47px;
 }
 .dt a{
 	color: white;
 }
 #navitems{
-	margin: 10px;
+	margin: 0px;
+	margin-top: 25px;
+	padding-left: 25px;
 	padding: 0px;
 	position: relative;
 	top:-55px;
 	left:210px;
 	//background-color: #ffd940; 
+	border-bottom: 3px solid red;
+	line-height: 13px;
+	width: 780px;
+	padding-left: 10px;
 }
 #navitems li{
 	display: inline-block;
-	background-color: #ffd940;
+	padding-left: 20px;
+	//background-color: #ffd940;
 }
 
 .item{
@@ -145,7 +174,7 @@ a:active{
 	color: white;
 	margin: 0px;
 	padding: 0px;
-	height: 34px;
+	height: 33px;
 	width: 210px;
 }
 .item a{
@@ -159,11 +188,12 @@ a:active{
 }
 .dorpdown-layer{
 	position: relative;
-	top:-375px;
+	top:-364px;
 	left: 210px;
 	height: 370px;
 	display: none;
 	margin: 0px;
+	
 	padding: 0px;
 	width: 590px;
 }
@@ -171,7 +201,7 @@ a:active{
 	display: none;
 	display: inline-block;
 	//z-index: 50;
-	height: 370px;
+	height: 365px;
 	background:rgba(255, 255, 255, 0.8);
 	margin: 0px;
 	padding: 0px;
@@ -182,15 +212,17 @@ a:active{
 .slider{
 	width: 590px;
 	position: absolute;
-	top:-310px;
+	top:195px;
+	margin-left: 210px;
 	//border: 1px black solid;
-	left: 210px;
-	height: 240px;
+	//left: 210px;
+	height: 380px;
+	padding: 10px;
 }
 .slider ul{
 	width: 590px;
 	list-style: none;
-	height: 260px;
+	//height: 260px;
 	position: relative;
 }
 .slider ul li{
@@ -203,16 +235,16 @@ a:active{
 	width: 590px;
 	position: absolute;
 	top:-95px;
-	left: 210px;
+	//left: 210px;
 	text-align: center;
-	z-index: 50;
+	z-index: 30;
 	height: 62px;
 }
 .slider-page{
 	//display: none;
 	position: relative;
-	z-index: 50;
-	margin-left: 217px;
+	z-index: 40;
+	margin-left: 210px;
 	width: 590px;
 }
 .slider-page a {
@@ -242,16 +274,21 @@ a:active{
 }
 
 .slider-list{
-	position: absolute;
-	top:500px;
-	left: 217px;
 	width: 590px;
 	text-align: center;
+
+}
+.slider-list2{
+	width: 590px;
+	text-align: center;
+	position: absolute;
+	top:600px;
+	margin-left: 210px;
 }
 .slider-nav{
 	position: relative;
 	//top:100px;
-
+	
 }
 .slider-item{
 	display: inline-block;
@@ -262,7 +299,7 @@ a:active{
 	background-color: #666;
 	color: white;
 	position: relative;
-	top:120px;
+	
 	//z-index: 10;
 }
 
@@ -270,10 +307,10 @@ a:active{
 .news-serv{
 	width: 189px;
 	position: relative;
-	left: 800px;
-	top: -65px;
+	left: 801px;
+	top: -45px;
 	border: 1px solid #E8E8E7;
-	height: 260px;
+	//height: 260px;
 	color: #666;
 	background-color: rgba(255,255,255,.85);
 }
@@ -283,25 +320,31 @@ a:active{
 }
 .nt{
 	border-bottom:1px solid #E8E8E7;
-	line-height: 50px;
+	line-height: 40px;
 	padding-left: 10px;
 }
 .nc{
+	padding-left: 2px;
+}
+.nt1{
+	//border-bottom:1px solid #E8E8E7;
+	line-height: 40px;
 	padding-left: 10px;
 }
 .lifeserv{
-	overflow: hidden;
+	//overflow: hidden;
 }
 .servmenu{
-	width: 56px;
-	height: 30px;
+	width: 61px;
+	height: 40px;
 	display: inline-block;
-	overflow: hidden;
+	//overflow: hidden;
 	line-height: 40px;
-	border-bottom:1px solid #E8E8E7;
-	border-right:1px solid #E8E8E7;
-	margin-left:-10px; 
-	padding-left: 10px;
+	border:1px solid #E8E8E7;
+	//border-right:1px solid #E8E8E7;
+	margin: 0px -2px;
+	padding: 0px;
+	left: 3px;
 	text-align: center;
 }
 
@@ -309,8 +352,11 @@ a:active{
 
 }
 .serv{
-
+	display: none;
+	height: 128px;
 }
+
+/*--------猜你喜欢样式----------------------------*/
 .youlike{
 	width:990px;
 	margin: 20px auto;

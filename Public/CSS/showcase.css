@@ -23,25 +23,30 @@ ul li{
 #head{
 	height: 50px;
   background-color: #f66;
-  border: 5px solid #000;
+  /*border: 5px solid #000;*/
   text-align: center;
 }
 
 #container{
 	/*height: 1000px;*/
-  background-color: #ccc;
-  border: 5px solid #000;
+  /*background-color: #ccc;*/
+  border-bottom: 1px solid #999;
+  border-right: 1px solid #999;
+  border-top: 1px solid #999;
   text-align: center;
 }
 
 #footer{
+  position: relative;
+  top: 0px;
 	height: 50px;
   background-color: #09c;
-  border: 5px solid #000;
+  /*border: 5px solid #000;*/
   text-align: center;
 }
 
 .classsifyProgram{
+  position: relative;
   height: 1200px;
   width: 990px;
   /*margin: 30px 0 0 30px;*/
@@ -49,23 +54,53 @@ ul li{
 
 .classsifyProgram li a{
   float: left;
-  width: 247px;
+  border-left: 1px solid #999;
+  border-bottom: 1px solid #999;
+/*  border-top: 1px solid #999;*/
+  width: 246px;
   height: 300px;
   /*margin-left: 20px;*/
   position: relative;
-  /*margin-bottom: 50px;*/
+  /*margin-top: 50px;*/
 }
 
 .programName{
   font: normal 14px "微软雅黑";
-  color: #535353; 
+  color: #333; 
   position:absolute;
-  top: 160px; 
-  left: 0px;
+  top: 230px; 
+  left: 13px;
   font-weight: bold;
   height: auto;
   display: block;
 /*  overflow-y: hidden;*/
-  width: 116px;
+  width: 220px;
+/*  background-color: #666;*/
+  text-align: left;
 }
+
+.programPride{
+  font: normal 24px "微软雅黑";
+  color: #cc3333; 
+  position:absolute;
+  top: 250px; 
+  left: 13px;
+  font-weight: bold;
+  height: auto;
+  display: block;
+/*  overflow-y: hidden;*/
+  width: 220px;
+  text-align: right;
+}
+
+#address{
+  font: normal 10px "微软雅黑";
+  color: #ccc;
+  position: relative;
+  width: 990px;
+  border-left: 1px solid #999;
+  border-bottom: 1px solid #999;
+  text-align: left;
+}
+
 
