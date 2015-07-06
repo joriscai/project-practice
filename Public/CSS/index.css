@@ -35,7 +35,7 @@ a:active{
 	border-left: 1px solid #ff4400!important;
 	border-right: 1px solid #ff4400!important;
 	border-bottom: none!important;
-	//position: relative;
+	/*position: relative;*/
 	z-index: 50;
 }
 .item-border{
@@ -129,7 +129,7 @@ a:active{
 	padding: 0 10px;
 }
 .dd{
-	//z-index: 1;
+	/*z-index: 1;*/
 	font-size:14px; 
 	width: 800px;
 	height: 375px;
@@ -139,7 +139,7 @@ a:active{
 	width: 210px;
 	margin-top: -3px;
 	background: #4a4a4a;
-	//z-index: 10;
+	/*z-index: 10;*/
 }
 .dt{
 	padding: 0 10px;
@@ -157,7 +157,7 @@ a:active{
 	position: relative;
 	top:-55px;
 	left:210px;
-	//background-color: #ffd940; 
+	/*background-color: #ffd940;*/ 
 	border-bottom: 3px solid red;
 	line-height: 13px;
 	width: 780px;
@@ -166,7 +166,8 @@ a:active{
 #navitems li{
 	display: inline-block;
 	padding-left: 20px;
-	//background-color: #ffd940;
+	/*background-color: #ffd940;*/
+	+display: inline;
 }
 
 .item{
@@ -200,7 +201,7 @@ a:active{
 .dorpdown-layerin{
 	display: none;
 	display: inline-block;
-	//z-index: 50;
+	/*z-index: 50;*/
 	height: 365px;
 	background:rgba(255, 255, 255, 0.8);
 	margin: 0px;
@@ -214,15 +215,15 @@ a:active{
 	position: absolute;
 	top:195px;
 	margin-left: 210px;
-	//border: 1px black solid;
-	//left: 210px;
+	/*border: 1px black solid;*/
+	/*left: 210px;*/
 	height: 380px;
 	padding: 10px;
 }
 .slider ul{
 	width: 590px;
 	list-style: none;
-	//height: 260px;
+	/*height: 260px;*/
 	position: relative;
 }
 .slider ul li{
@@ -235,13 +236,13 @@ a:active{
 	width: 590px;
 	position: absolute;
 	top:-95px;
-	//left: 210px;
+	/*left: 210px;*/
 	text-align: center;
 	z-index: 30;
 	height: 62px;
 }
 .slider-page{
-	//display: none;
+	/*display: none;*/
 	position: relative;
 	z-index: 40;
 	margin-left: 210px;
@@ -250,12 +251,12 @@ a:active{
 .slider-page a {
 	position: absolute;
 	top: 440px;
-	//z-index: 1;
+	/*z-index: 1;*/
 	display: block;
 	width: 0px;
 	height: 62px;
 	line-height: 62px;
-	//background: rgba(0,0,0,0.2);
+	/*background: rgba(0,0,0,0.2);*/
 	background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.2);
 	color: #fff;
 	text-align: center;
@@ -284,10 +285,11 @@ a:active{
 	position: absolute;
 	top:600px;
 	margin-left: 210px;
+	left: 0px;
 }
 .slider-nav{
 	position: relative;
-	//top:100px;
+	/*top:100px;*/
 	
 }
 .slider-item{
@@ -299,8 +301,9 @@ a:active{
 	background-color: #666;
 	color: white;
 	position: relative;
+	+display: inline;
 	
-	//z-index: 10;
+	/*z-index: 10;*/
 }
 
 /*--------公告、生活服务样式----------------------------*/
@@ -310,7 +313,7 @@ a:active{
 	left: 801px;
 	top: -45px;
 	border: 1px solid #E8E8E7;
-	//height: 260px;
+	/*height: 260px;*/
 	color: #666;
 	background-color: rgba(255,255,255,.85);
 }
@@ -327,21 +330,21 @@ a:active{
 	padding-left: 2px;
 }
 .nt1{
-	//border-bottom:1px solid #E8E8E7;
+	/*border-bottom:1px solid #E8E8E7;*/
 	line-height: 40px;
 	padding-left: 10px;
 }
 .lifeserv{
-	//overflow: hidden;
+	/*overflow: hidden;*/
 }
 .servmenu{
 	width: 61px;
 	height: 40px;
 	display: inline-block;
-	//overflow: hidden;
+	/*overflow: hidden;*/
 	line-height: 40px;
 	border:1px solid #E8E8E7;
-	//border-right:1px solid #E8E8E7;
+	/*border-right:1px solid #E8E8E7;*/
 	margin: 0px -2px;
 	padding: 0px;
 	left: 3px;
@@ -371,9 +374,14 @@ a:active{
 
 }
 .youlike ul li{
+	display: inline-block;
 	width: 200px;
 	height: 215px;
-	display: inline-block;
+	
+}
+.youlike ul li{
+	+display: inline;
+	
 }
 .p-img{
 
