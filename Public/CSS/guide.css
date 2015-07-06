@@ -1,0 +1,56 @@
+.wapper{
+    position: relative;   /*重要！保证footer是相对于wapper位置绝对*/
+    height: auto;          /* 保证页面能撑开浏览器高度时显示正常*/
+    min-height: 100%;
+}
+.main-content{
+   padding-bottom: 60px; /*重要！给footer预留的空间*/
+   text-align: center;
+}
+.guide {
+   /*border-top: 1px solid #E1E1E1;*/
+   background-color: #F5F5F5;
+   text-align: center;
+}
+.guide a {
+	color: #777;
+    font-size: 16px;
+}
+.guide dt {
+	color: #333;
+    font-size: 18px;
+}
+dl.fore1 {
+	position: absolute;
+    left: 25px	
+}
+dl.fore2 {
+	position: absolute;
+    left: 225px	
+}
+dl.fore3 {
+	position: absolute;
+    left: 425px	
+}
+dl.fore4 {
+	position: absolute;
+    left: 625px	
+}
+dl.fore5 {
+	position: absolute;
+    left: 825px	
+}
+
+
+
+
+/*.guide dl 
+{ 
+    width: 350px; 
+    font-size: 9pt; 
+    line-height: 1.5em; 
+    position:relative; 
+    margin: 0px; 
+    padding: 0px; 
+    left:15px; 
+}*/

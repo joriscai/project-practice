@@ -82,12 +82,12 @@ class IndexController extends Controller {
 		}
 		
 		//插入数据
-//		if(!$this->deal_pre_sql('insert_data', array(
-//		'db_name'=>$db_name,
-//		'con'=>$con
-//		))){
-//			$msg='插入数据失败。';
-//		}
+		if(!$this->deal_pre_sql('insert_data', array(
+		'db_name'=>$db_name,
+		'con'=>$con
+		))){
+			$msg='插入数据失败。';
+		}
 
 		
 
@@ -108,7 +108,7 @@ class IndexController extends Controller {
 			$sql = str_replace("\n", '', $sql);
 			$sql = str_replace("\r", '', $sql);
 			if(!mysql_query($sql, $con)){
-				var_dump($db_name);
+				var_dump($sql);
 				mysql_close($con);
 				return 0;
 			}
