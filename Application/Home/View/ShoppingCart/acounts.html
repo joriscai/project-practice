@@ -1,10 +1,111 @@
-<extend name='./Public/tpl/index.html' />
-<block name="head">
-		<title>我的购物车</title>
-   		<script type="text/javascript" src="__PUBLIC__/JS/ShoppingCart/ShoppingCart.js"></script>
-</block>
-<block name="body">
-		
-	<div class="buttom">
-	</div>
-</block>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>结算页面</title>
+		<link rel="stylesheet" href="../../../../Public/CSS/ShoppingCart/accounts.css" />
+	</head>
+	<body>
+		<div class="main">
+			<div class="m_top">
+					填写收货地址
+			</div>
+			<div class="w_address">
+				<div class="wa_left">
+					<div class="box1"><span style="color: #ff0000;">*</span>所在地区  ： </div>
+					<div class="box2"><span style="color: #ff0000;">*</span>详细地址  ： </div>
+					<div class="box3"><span style="color: #ff0000;">*</span>邮政编码  ： </div>
+					<div class="box4"><span style="color: #ff0000;">*</span>收货人姓名  ： </div>
+					<div class="box5"><span style="color: #ff0000;">*</span>手机号码  ： </div>
+				</div>
+				<div class="wa_right">
+					<div class="ribox1">
+						<a href="javascript:;">
+							<div class="button1">
+								<div class="left">中国大陆</div>
+								<div class="right"></div>
+							</div>
+						</a>
+						<a href="javascript:;">
+							<div class="button2">
+								<div class="left"></div>
+								<div class="right"></div>
+							</div>
+						</a>
+					</div>
+					<div class="ribox2">
+						<textarea cols="40px" rows="2px" placeholder="建议您如实填写详细收货地址，例如街道名称，门牌号，楼层和房间号等信息"></textarea>
+					</div>
+					<div class="ribox3">
+						<input type="text" name="zipcode" id="zipcode" placeholder="如果不清楚邮编，请填写000000" />
+					</div>
+					<div class="ribox4">
+						<input type="text" name="name" id="name" placeholder="填写收货人姓名" />
+					</div>
+					<div class="ribox5">
+						<input type="text" name="tel" id="tel" placeholder="填写收货人手机号码" />
+					</div>
+				</div>
+			</div>
+			<div class="m_top">
+				确认订单信息
+			</div>
+			<div class="sh_top">
+				<div class="p_goods">
+					商品
+				</div>
+				<div class="p_price">
+					单价(元)
+				</div>
+				<div class="p_count">
+					数量
+				</div>
+				<div class="p_youhui">
+					优惠方式
+				</div>
+				<div class="p_xcount">
+					小计(元)
+				</div>
+			</div>
+			<div class="goods_message">
+				<div class="show">
+					订单信息
+				</div>
+				<div class="all_mess">
+					<div class="a_top">
+						<div class="at_left">
+							<div class="atl_top">
+								<div class="te">
+									给卖家留言  ：
+								</div>
+								<div class="in">
+									<textarea cols="35" rows="4" placeholder="123"></textarea>
+								</div>
+							</div>
+						</div>
+						<div class="at_right">
+							<div class="ri1">
+								1
+							</div>
+							<div class="ri2">
+								2
+							</div>
+							<div class="ri3">
+								3
+							</div>
+							<div class="ri4">
+								4
+							</div>
+						</div>
+					</div>
+					<div class="a_bottom">
+						12
+					</div>
+				</div>
+				<div class="commit">
+					提交订单
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
