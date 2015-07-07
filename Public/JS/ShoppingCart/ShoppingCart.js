@@ -137,8 +137,51 @@
 //}
 //
 
-var acount = function(m)
-{
-	var id = document.getElementById("shopid");
-	id.value += m;
-}
+$(function(){
+	$(".num_ad").click(
+		function()
+		{
+			$(this).prev().val(parseInt($(this).prev().val())+1);
+		}
+	)
+	$(".num_re").click(
+		function()
+		{
+			if(parseInt($(this).next().val())-1 <= 0)
+			{
+				$(this).next().val(1);
+			}
+			else
+			{
+				$(this).next().val(parseInt($(this).next().val())-1);
+			}
+		}
+	)
+	$(".shopid").keyup(
+		function()
+		{
+			var regx=/^[0-9]{1,20}$/;
+			if(!regx.exec($(this).val()))
+			{
+				$(this).val(1);
+			}
+		}
+	)
+	$(".chec").click(
+		function()
+		{
+			if($(this).get(0).checked)
+			{
+				$(this).parent().parent().removeClass("mid_main2");
+				$(this).parent().parent().addClass("mid_main1");
+			}
+			else
+			{
+				$(this).parent().parent().removeClass("mid_main1");
+				$(this).parent().parent().addClass("mid_main2");
+			}
+			
+		}
+	)
+})
+
