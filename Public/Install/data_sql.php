@@ -15,8 +15,8 @@ if($db_act=='create_db'){
 	pwd char(32) not null,
 	email varchar(20) not null unique,
 	birth int(10) not null,
-	city varchar(12) not null,
-	province varchar(12) not null
+	city int(10) not null,
+	province int(10) not null
 	);
 	create table promary(
 	proID int primary key,

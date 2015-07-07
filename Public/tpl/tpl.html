@@ -1,49 +1,284 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <title> 商城首页</title>
+   <title> 顶部</title>
    <meta charset="UTF-8">
    <!--<link href="__PUBLIC__/bootstrap.min.css" rel="stylesheet">-->
 
-   <link href="__PUBLIC__/pulish.css" rel="stylesheet">
-   <link href="__PUBLIC__/CSS/index.css" rel="stylesheet">
-   <script src="__PUBLIC__/jquery-1.7.2.min.js"></script>
+   <link href="../pulish.css" rel="stylesheet">
+   <!--<link href="../CSS/index.css" rel="stylesheet">-->
+   <script src="../jquery-1.7.2.min.js"></script>
    <!--<script src="__PUBLIC__/bootstrap/js/bootstrap.min.js"></script>-->
    <style type="text/css" rel="stylesheet">
-		
+		.nav-bn2{
+			width: 20px;
+			height: 20px;
+			background-position: -65px 0px;
+			background-image: url(../img/A_2.png);
+			background-repeat: no-repeat;
+			z-index: 50;
+			position: relative;
+			top:12px;
+			float: right;
+		}
+		.nav-bn1{
+			width: 20px;
+			height: 20px;
+			background-position: -65px -25px;
+			background-image: url(../img/A_2.png);
+			background-repeat: no-repeat;
+			z-index: 50;
+			position: relative;
+			top:12px;
+			float: right;
+		}
+		a{
+			color: black;
+			text-decoration: none;
+			padding:0px 20px 0px 0px;
+		}
+		a:hover{
+			color: red;
+			text-decoration: none;
+			
+		}
+		a:visited{
+			
+			text-decoration: none;
+			padding:0px 20px 0px 0px;
+		}
+		a:active{
+			
+			text-decoration: none;
+			padding:0px 20px 0px 0px;
+		}
+		.overWidth{
+			//width:990px;
+			height: 40px;
+			background-color: #E4393C;
+			margin: 0 auto;
+			//height: 300px;
+		}
+
+		/*--------JQ控制效果样式-----------------------------------------*/
+		.hover{
+			background-color: red;
+			z-index: 50;
+		}
+		.bn-border{
+			border-top: 1px solid #ff4400!important;
+			border-left: 1px solid #ff4400!important;
+									border-right: 1px solid #ff4400!important;
+			border-bottom: none!important;
+			//position: relative;
+			z-index: 50;
+		}
+		.item-border{
+			border-bottom: 1px solid #ff4400;
+			border-left: 1px solid #ff4400;
+			border-right: 1px solid #ff4400;
+			margin-left: -2px;
+			margin-top: -1px;
+		}
+		.borderBottom{
+			border-bottom: 1px solid #ff4400!important;
+		}
+		.show{
+			display: inline-block;
+		}
+		/*---LOGO、搜索栏、购物车样式---*/
+		.logosearch{
+			margin: 0px auto;
+			width: 990px;
+			height:100px;	
+		}
+		.logo{
+			float: left;
+			width:300px;
+			height:100px;
+		}
+		.search{
+			margin: 30px;
+			float: left;
+			}
+		#searchtext{
+			display: inline;
+			height: 25px;
+			width: 300px;
+			border:2px solid #B61D1D;
+			font-size:23px;
+			float: left;
+		}
+		.search button{
+			height: 31px;
+			width: 80px;
+			border:2px solid #B61D1D;
+			background: #B61D1D;
+			color: white;
+			font-size: 17px;
+			}
+
+		.shopbar{
+			width: 130px;
+			float: left;
+			margin-top: 30px;
+			text-align: center;
+			line-height: 38px;
+			background-color: #F9F9F9;
+			border:1px solid #DFDFDF;
+			font-size: 14px;
+		}
+		.shopl{
+			float: left;
+			margin:10px;
+			width: 18px;
+			height: 18px;
+			background: url(../img/jd2015img.png) 0 -58px no-repeat;
+		}
+		.shop a{
+			padding: 0px;
+			margin: 0px;
+		}
+		/*--------导航栏样式----------------------------*/
+		.nav{
+			width:990px;
+			position: relative;
+			line-height: 38px;
+			height: auto;
+			margin: 0 auto;
+			font-size:  14px;
+			font-weight: bolder;
+		}
+		.nav ul{
+			list-style: none;
+		}
+		.nav ul li{
+			list-style: none;
+		}
+		#categorys{
+			margin-top:15px;
+			//background-color: #CD2A2C;
+			height: 44px;
+			//width: 210px;
+			
+		}
+		#categorys a{
+			padding: 0 10px;
+			color: white;
+		}
+		.dd{
+			//z-index: 1;
+			font-size:13px; 
+			width: 800px;
+			height: 375px;
+			position: relative;
+			display: none;
+		}
+		.dd-inner{
+			width: 210px;
+			//margin-top: -3px;
+			background: #4a4a4a;
+			//z-index: 10;
+		}
+		.dt{
+			padding: 0 10px;
+			height: 40px;
+			line-height: 40px;
+			width: 190px;
+			background-color: #CD2A2C;
+		}
+		.dt a{
+			color: white;
+		}
+		#navitems{
+			margin: 0px;
+			//margin-top: 23px;
+			padding: 0px;
+			position: relative;
+			top:-44px;
+			left:210px;
+			background-color: #E4393C; 
+			//border-bottom: 3px solid red;
+			line-height: 40px;
+			height: 40px;
+			width: 780px;
+			//padding-left: 10px;
+
+		}
+		#navitems a{	
+			color: white;
+		}
+		#navitems li:hover{	
+			background-color: #a40000;
+		}
+		#navitems li{
+			display: inline-block;
+			padding-left: 20px;
+			width: 85px;
+			text-align: center;
+			//background-color: #ffd940;
+
+		}
+
+		.item{
+			
+			color: white;
+			margin: 0px;
+			padding: 0px;
+			height: 33px;
+			width: 210px;
+		}
+		.item a{
+			color: white;
+		}
+		.item h3{
+			font-weight: normal;
+			margin: 0px;
+			padding: 0px;
+			line-height: 30px;
+		}
+		.dorpdown-layer{
+			position: relative;
+			top:-363px;
+			left: 210px;
+			height: 370px;
+			display: none;
+			margin: 0px;
+			
+			padding: 0px;
+			width: 590px;
+		}
+		.dorpdown-layerin{
+			display: none;
+			display: inline-block;
+			//z-index: 50;
+			height: 365px;
+			background:rgba(255, 255, 255, 0.8);
+			margin: 0px;
+			padding: 0px;
+			width: 590px;
+		}
    </style>
    <script type="text/javascript">
 
 //----------------------------导航栏效果代码-----------------------//
-   		/*$(function(){
-   			$(".item").hover(function(){
-
-   				$(".dorpdown-layer").fadeIn();
-   				var index=$(this).index(".dd-inner .item");
-
-   				if (!($(this).hasClass("hover"))) {
-
-   				}
-   				else{}
-
-   				$(this).addClass("hover").siblings().removeClass("hover");
-   				
-   				$($(".dorpdown-layerin")[index]).css("display","block").siblings().css("display","none");
-
-   			},function(){
-			});
-   			$(".dd-inner").mouseleave(function(){
-			$(".dorpdown-layer").fadeOut();
-			$(".dorpdown-layerin").fadeOut();
-			$(".dd-inner .item").removeClass("hover");
-
-			});
-		
-   		})
-   		*/
+   		
    		$(function(){
-   			$(".dd .item").hover(function(){
+   			//控制出现列菜单栏
+   			$(".dt ").hover(function(){
+   				$(".dd").fadeIn();
+   				$("#nav-flag").removeClass("nav-bn1").addClass("nav-bn2");
+   			},function(){
+   				//$(".dorpdown").find(".dd").fadeOut();	
+   			});
+   			$("#categorys").mouseleave(function(){
+				$(".dorpdown").find(".dd").fadeOut();
+				$("#nav-flag").removeClass("nav-bn2").addClass("nav-bn1");
+			});
 
+   			//控制出现子菜单栏
+   			$(".dd .item").hover(function(){
+   				
    				$(".dorpdown-layer").fadeIn().css("z-index","50");
    				var index=$(this).index(".dd-inner .item");
    				$(this).addClass("hover").siblings().removeClass("hover");
@@ -53,11 +288,12 @@
    			},function(){
 			});
    			$(".dd").mouseleave(function(){
-			$(".dorpdown-layer").fadeOut();
-			$(".dorpdown-layerin").fadeOut();
-			$(".dd-inner .item").removeClass("hover");
-
+				$(".dorpdown-layer").fadeOut();
+				$(".dorpdown-layerin").fadeOut();
+				$(".dd-inner .item").removeClass("hover");
 			});
+
+			
 		
    		})
 //-------------------结束---导航栏效果代码---------------------//
@@ -65,33 +301,26 @@
 
 //-------------------- 图片轮播效果代码--------------------------------//
 
-   		
+   		/*
 		
 		$(function() { 
-			/* 自动调整高度*/
+			
 			var awidth=window.screen.availWidth;//取出屏幕的工作区
 			$(".slider-img").find("img").css("width",awidth/2.55);
-			/*自动播放*/
+			
 			var curIndex=0;
 			var nextIndex=1;
 			var countOfImg=6;
 
 			autoTurn=function(){
 				$($(".slider-img")[nextIndex]).css("display","block").siblings().css("display","none");
-				/*$("#img"+nextIndex).css("display","block");*/
+				
 				$($(".slider-item")[nextIndex]).addClass("selected").css("background","red").siblings().removeClass("selected").css("background","#666");
-				//alert($(".slider-item")[nextIndex]);
 				curIndex=nextIndex;
 				nextIndex=(nextIndex+1)%countOfImg;
 			};
 
-			/*autoTurn=function(){
-				$("#img"+curIndex).css("display","none");
-				$("#img"+nextIndex).css("display","block");
-				$("#img-item"+nextIndex).addClass("selected").css("background","red").siblings().removeClass("selected").css("background","#666");
-				curIndex=nextIndex;
-				nextIndex=(nextIndex+1)%countOfImg;
-			};*/
+			
 
 			var timeTurn=setInterval("autoTurn()",2000);//设置定时器
 
@@ -120,21 +349,14 @@
 				$(".slider-page").hide();
 			});
 
-			/*$(".slider-prev").click(function(){
-				var index3 = $(".slider-img").hasClass("selected").index(".slider-img");
-				alert(index3);
-				if(index3>0){index3=-1;}
-				else{index=5;}
-				$($(".slider-img")[index3]).addClass("selected").css("display","block").siblings().removeClass("selected").css("display","none");
-				$($(".slider-item")[index3]).css("background","red").siblings().css("background","#666");
-			});*/
+			
 
 
-		}); 
+		}); */
 //----------------结束---- 图片轮播效果代码--------------------------------//
 
 //-------------------- 生活服务效果代码--------------------------------//	
-	$(function(){
+	/*$(function(){
 		$(".servmenu").hover(function(){
 			$(this).addClass("bn-border").removeClass("borderBottom").siblings().addClass("borderBottom").removeClass("bn-border");
 			var index4 = $(this).index(".servmenu");
@@ -142,7 +364,7 @@
 			
 		});
 	})
-
+	*/
 
 //----------------结束---- 生活服务效果代码--------------------------------//				
    </script>
@@ -165,16 +387,19 @@
 		<div class="shopbar"style="">
 			<div class="shop">
 				<div class="shopl"></div>
-				<a target="_blank" href="{:U('Home/Shop/Index')}">我的购物车</a>
+				<a target="_blank" href="http://cart.jd.com/cart/cart.html">我的购物车</a>
 			</div>
 		</div>
 	</div>
 	<div style="clear:both; height:0;"></div>
-	<div class="w">
+	<div class="overWidth">
 		<div class="nav">
 			<div id="categorys" class="dorpdown">
 				<div class="dt" >
 					<a target="_blank" href="#">全部商品分类</a>
+					<div id="nav-flag" class="nav-bn1">
+						
+					</div>
 				</div>
 				<div class="dd">
 					<div class="dd-inner">
@@ -229,6 +454,9 @@
 	        <div id="navitems">
 	        	<ul id="">
 					<li  class="fore">
+						<a target="_blank" href="">首页</a>
+					</li>
+					<li  class="fore">
 						<a target="_blank" href="">服装城</a>
 					</li>
 					<li class="fore">
@@ -244,133 +472,8 @@
 	        </div>
 		</div>
 
-		<div class="slider">
-			<ul class="slider-list">
-				<li class="slider-img" id="img0" style="display:block;">
-					<a href=""><img src="__PUBLIC__/img/1.jpg"></a>
-				</li>
-				<li class="slider-img" id="img1">
-					<a href=""><img src="__PUBLIC__/img/2.jpg"></a>
-				</li>
-				<li class="slider-img" id="img2">
-					<a href=""><img src="__PUBLIC__/img/3.jpg"></a>
-				</li>
-				<li class="slider-img" id="img3">
-					<a href=""><img src="__PUBLIC__/img/4.jpg"></a>
-				</li>
-				<li class="slider-img" id="img4">
-					<a href=""><img src="__PUBLIC__/img/5.jpg"></a>
-				</li>
-				<li class="slider-img" id="img5">
-					<a href=""><img src="__PUBLIC__/img/6.jpg"></a>
-				</li>
-			</ul>
-
-		</div>
-		
-		<div class="slider-extra">
-			<!--
-			<div class="slider-page" style="display: block;">						
-				<a href="" class="slider-prev">&lt;</a>
-				<a href="" class="slider-next">&gt;</a> 				
-			</div>
-			-->
-			<div class="slider-list2">					
-				<ul class="slider-nav">
-					<li class="slider-item" id="img-item0" style="background:red;">1</li>
-					<li class="slider-item" id="img-item1">2</li>
-					<li class="slider-item" id="img-item2">3</li>
-					<li class="slider-item" id="img-item3">4</li>
-					<li class="slider-item" id="img-item4">5</li>
-					<li class="slider-item" id="img-item5">6</li>
-				</ul>
-			</div>						
-		</div>
-		<div class="news-serv">
-			<div class="news">
-				<div class="nt">网站公告</div>
-				<div class="nc">
-					<ul>
-						<li><a href="">[特惠]海飞丝去屑又去油超清爽</a></li>
-						<li><a href="">[公告]优化京东客户端 等你的建议</a></li>
-
-					</ul>
-				</div>
-			</div>
-			<div class="lifeserv">
-				<div class="nt1">生活服务</div>
-				<div class="nc">
-					<div class="serv-bn">
-						<span class="servmenu bn-border ">
-								<a href="">
-									1231
-								</a>
-						</span>
-						<span class="servmenu borderBottom">
-								<a href="">
-									1231
-								</a>
-						</span>
-						<span class="servmenu borderBottom"> 
-								<a href="">
-									1231
-								</a>
-						</span>
-					</div>
-					<div class="serv-list">
-						<div class="serv item-border" style="display:block;" >
-							aass
-						</div>
-						<div class="serv">
-							bbbbbb
-						</div>
-						<div class="serv">
-							ccccccc
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div style="clear:both; height:0;"></div>
-	<div class="youlike">
-		<div class="nt noborder">猜你喜欢</div>
-		<div class="nc">
-			<ul>
-				<li>
-					<div class="p-img">
-						<a href="">
-							<img src="">1
-						</a>
-					</div>
-					<div class="p-info">
-						<div class="p-name">
-							<a href="">sdf sdfsd sd sdsd
-							</a>
-						</div>
-						<div class="p-price">
-							￥38
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="p-img">
-						<a href="">
-							<img src="">2
-						</a>
-					</div>
-					<div class="p-info">
-						<div class="p-name">
-							<a href="">sdf sdfsd sd sdsd
-							</a>
-						</div>
-						<div class="p-price">
-							￥38.00
-						</div>
-					</div>
-				</li>
-			</ul>
-		</div>
-	</div>
+</div>
 </body>
+
 </html>
+
