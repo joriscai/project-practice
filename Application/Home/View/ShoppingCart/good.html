@@ -182,6 +182,90 @@
 			color: red;
 			font-size: 13px;
 		}
+		.msg_box{
+			border: 1px solid #ccc;
+			width: 190px;
+			height: 140px;
+			margin-bottom: 10px;
+			
+		}
+		.msg_box p{
+			color: #000000;
+			font-weight:bolder;
+			margin:10px 20px;
+			padding-bottom: 10px;
+			font-size: 20px;
+			border-bottom: 2px dashed #ccc;
+			
+		}
+		.msg_box ul{
+			font-size: 14px;
+			color: #000000;
+			margin: 10px;
+		}
+		.msg_box li{
+			margin: 10px 10px 5px 10px;
+			font-size: 12px;
+			color: #C0A16B;
+		}
+		.msg_box span{
+			margin-left: -5px;
+			font-weight: bolder;
+			font-size: 14px;
+		}
+		.bleft{
+			display: inline-block;
+			+display: inline;
+			float: left;
+		}
+		.bright{
+			display: inline-block;
+			+display: inline;
+			margin-left: 10px;
+			
+			width: 780px;
+			float: left;
+			border: 1px solid #ccc;
+
+		}
+		.main_b{
+			position: relative;
+		}
+		.bright .title{
+			border: 1px solid #C0C0C0;
+			background: #fff;
+			padding: 5px;
+			margin: 0px;
+			font-size: 15px;
+			display: inline-block;
+			width: 100px;
+			height: 20px;
+			margin-right: -5px;
+			text-align: center;
+			cursor: pointer;
+
+		}
+		.bright .title:hover{
+			color: red;
+		}
+		.bright .chose{
+			background: #CCCCCC;
+			cursor: default;
+		}
+		.bright .chose:hover{
+			color: #000;
+		}
+		.info td{
+			width: 250px;
+			font-size: 13px;
+			color: #5E5E5E;
+		}
+		.info table{
+			margin: 10px 0px 10px 10px;
+		}
+		.info img{
+			max-width: 780px;
+		}
 	</style>
 </block>
 <block name="body">
@@ -269,4 +353,93 @@
 			<div class="house"><span>进入店铺</span><span>收藏店铺</span></div>
 		</div>
 	</div>
+	<div class="contain main_b">
+		
+		
+		<div class="bleft">
+			<div class="msg_box">
+				<p>在线客服</p>
+				<ul>
+					<li>在线客服</li>
+					<li><span>工作时间</span></li>
+					<li>周一至周日</li>
+				</ul>
+			</div>
+			
+			<div class="msg_box">
+				<p>相关分类</p>
+				<ul>
+					<li>裙子</li>
+					<li>套装</li>
+					<li>内衣</li>
+				</ul>
+			</div>
+			
+			<div class="msg_box">
+				<p>相关品牌</p>
+				<ul>
+					<li>米奇丁当</li>
+					<li>苗飒</li>
+					<li>小小妞</li>
+				</ul>
+			</div>
+
+		</div>
+		<div class="bright">
+			<span class="title chose">商品详情</span>
+			<span class="title">商品评论</span>
+			<span class="title">商品问答</span>
+			<div class="info">
+				<table>
+					<tr>
+						<td>品牌：马甲卡</td>
+						<td>型号：52320071</td>
+						<td>季节：夏</td>
+					</tr>
+					<tr>
+						<td>材质：棉</td>
+						<td>适用年龄：15岁以下</td>
+						<td>品类：连衣裙</td>
+					</tr>
+					<tr>
+						<td>领型：圆领</td>
+						<td>厚度：薄款</td>
+						<td>袖型：无袖</td>
+					</tr>
+				</table>
+				
+				<ul>
+					<li><img src="__PUBLIC__/img/good/show3.jpg"></li>
+					<li><img src="__PUBLIC__/img/good/show1.jpg"></li>
+					<li><img src="__PUBLIC__/img/good/show2.jpg"></li>
+					<li><img src="__PUBLIC__/img/good/show2.jpg"></li>
+				</ul>
+			</div>
+			
+			
+
+		</div>
+		
+		
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 </block>
