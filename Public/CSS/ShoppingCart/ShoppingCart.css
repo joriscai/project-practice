@@ -208,7 +208,7 @@ a {
 	margin-right: 5px;
 }
 
-.mid_main {
+.mid_main1,.mid_main2 {
 	position: relative;
 	margin: 0px auto;
 	margin-top: 10px;
@@ -217,8 +217,14 @@ a {
 	height: 100px;
 	background-color: #fff4e8;
 }
+.mid_main2 {
+	background-color: #FFF;
+	border-bottom: 1px #aaa solid;
+	border-left: 1px #aaa solid;
+	border-right: 1px #aaa solid;
+}
 
-.mid_main .g_checkbox {
+.mid_main1 .g_checkbox, .mid_main2 .g_checkbox {
 	position: absolute;
 	top: 38px;
 	left: 8px;
@@ -226,7 +232,7 @@ a {
 	height: 30px;
 	border: 0px #00f solid;
 }
-.mid_main .g_img {
+.mid_main1 .g_img, .mid_main2 .g_img {
 	position: absolute;
 	width: 85px;
 	height: 85px;
@@ -234,7 +240,7 @@ a {
 	left: 36px;
 	border: 0px #00f solid;
 }
-.mid_main .g_name {
+.mid_main1 .g_name, .mid_main2 .g_name {
 	position: absolute;
 	width: 280px;
 	height: 85px;
@@ -245,7 +251,7 @@ a {
 	border: 0px #00f solid;
 	
 }
-.mid_main .g_price {
+.mid_main1 .g_price, .mid_main2 .g_price {
 	position: absolute;
 	width: 100px;
 	height: 85px;
@@ -256,7 +262,7 @@ a {
 	text-align: right;
 	border: 0px #00f solid;
 }
-.mid_main .g_quantity {
+.mid_main1 .g_quantity, .mid_main2 .g_quantity {
 	position: absolute;
 	width: 120px;
 	height: 85px;
@@ -296,7 +302,7 @@ a {
 	border-right: 0px;
 	text-align: center;
 }
-.mid_main .g_sum {
+.mid_main1 .g_sum, .mid_main2 .g_sum {
 	position: absolute;
 	width: 120px;
 	height: 85px;
@@ -307,7 +313,7 @@ a {
 	line-height: 35px;
 	border: 0px #00f solid;
 }
-.mid_main .g_action {
+.mid_main1 .g_action, .mid_main2 .g_action{
 	position: absolute;
 	width: 100px;
 	height: 85px;
@@ -389,7 +395,8 @@ a {
 
 .buttom {
 	position: relative;
-	border: 1px #00f solid;
+	border: 0px #00f solid;
+	background-image: url(../../img/buttom.gif);
 	margin: 0px auto;
 	width: 990px;
 	height: 100px;

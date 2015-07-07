@@ -3,6 +3,10 @@ namespace Home\Controller;
 use Think\Controller;
 
 class ShopController extends Controller{
+	public function show(){
+		$this->display('ShoppingCart/good');
+	}
+
 	public function index(){
 
 		//取出用户ID

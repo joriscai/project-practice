@@ -1,7 +1,7 @@
 <extend name='./Public/tpl/index.html' />
 <block name="head">
 		<title>我的购物车</title>
-   		<script type="text/javascript" src="__PUBLIC__/JS/ShoppingCart/ShoppingCart2.js"></script>
+   		<script type="text/javascript" src="__PUBLIC__/JS/ShoppingCart/ShoppingCart.js"></script>
    		<script>
    			var path = "__PUBLIC__";
    			var islogin = 1;
@@ -44,9 +44,9 @@
 		<!--显示商品-->
 		<div id="show">
 			<foreach name="goods" item="good">
-			<div class="mid_main" id="1">
+			<div class="mid_main1" id="1">
 				<div class="g_checkbox">
-					<input type="checkbox" <?php echo $good['isselect']==0?'':'checked'; ?> name="chgoods"/>
+					<input type="checkbox" class="chec" <?php echo $good['isselect']==0?'':'checked'; ?> name="chgoods"/>
 				</div>
 				<div class="g_img">
 					<img src="__PUBLIC__/img/{$good['imgpath']}" />
@@ -59,13 +59,13 @@
 				</div>
 				<div class="g_quantity">
 					<div class="g_add">
-						<a href="javascript:void(0);" onclick="acount(-1)">
-							<div class='go_add_re'>
+						<a href="javascript:void(0);" class="num_re">
+							<div class="go_add_re">
 								-
 							</div>
 						</a>
-						<input type="text" class="go_text" id="shopid" value="{$good['number']}"></input>
-						<a onclick="acount(1)" class="num">
+						<input type="text" class="go_text shopid" value="{$good['number']}"></input>
+						<a href="javascript:void(0);" class="num_ad">
 							<div class="go_add_re">
 								+
 							</div>
@@ -86,7 +86,7 @@
 		<div class="mid_buttom">
 			<div class="m_checkbox">
 				<div class="che">
-					<input type="checkbox" checked="checked" id="check_al" onclick="iselect(2)"/>
+					<input type="checkbox" class="allcheck" checked="checked" id="check_al" onclick="iselect(2)"/>
 				</div>
 				全选
 			</div>
