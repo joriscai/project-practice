@@ -4,7 +4,7 @@
 a{
 	color: black;
 	text-decoration: none;
-	padding:0px 20px 0px 0px;
+
 }
 a:hover{
 	color: red;
@@ -14,12 +14,12 @@ a:hover{
 a:visited{
 	
 	text-decoration: none;
-	padding:0px 20px 0px 0px;
+
 }
 a:active{
 	
 	text-decoration: none;
-	padding:0px 20px 0px 0px;
+
 }
 .w{
 	width:990px;
@@ -132,7 +132,7 @@ a:active{
 }
 .dd{
 	/*z-index: 1;*/
-	font-size:14px; 
+	font-size:13px; 
 	width: 800px;
 	position: relative;
 }
@@ -152,16 +152,15 @@ a:active{
 }
 #navitems{
 	margin: 0px;
-	margin-top: 25px;
-	padding-left: 25px;
 	padding: 0px;
 	position: relative;
-	top:-55px;
+	top:-50px;
 	left:210px;
 	/*background-color: #ffd940;*/ 
 	border-bottom: 3px solid red;
-	line-height: 13px;
-	width: 780px;
+	line-height: 47px;
+	height: 47px;
+	width: 770px;
 	padding-left: 10px;
 }
 #navitems li{
@@ -190,35 +189,91 @@ a:active{
 }
 .dorpdown-layer{
 	position: relative;
-	top:-361px;
+	top:-363px;
 	left: 210px;
-	height: 370px;
+	/*height: 370px;*/
 	display: none;
 	margin: 0px;
-	
+	background:rgba(247, 247, 247, 1);
 	padding: 0px;
-	width: 590px;
+	width: 580px;
+	border-right: 1px solid red;
+	border-bottom: 1px solid red;
 }
 .dorpdown-layerin{
-	display: none;
+
 	display: inline-block;
 	/*z-index: 50;*/
-	height: 365px;
-	background:rgba(255, 255, 255, 0.8);
+	height: 347px;
+	
 	margin: 0px;
+	margin-top: 15px;
 	padding: 0px;
-	width: 590px;
+	width: 580px;
+
+}
+.fore{
+	display: inline-block;
+	margin-top:-5px;
+	width: 580px;
+	height: 53px;
 }
 
+.fore .dt1 {
+	width: 110px;
+	margin-top:-8px;
+	//padding: 0px 10px 0 0;
+	text-align: right;
+	float: left;
+	display: inline-block;
+	position: relative;
+	//height: 20px;
+}
+.fore .dt1 a{
+	color: black;
+	font-weight: bold;
+	font-size: 15px;
+	line-height: 15px;
+}
+.fore .dt1 a:hover{
+	color: red;
+}
+.fore .dd1 {
+	width: 455px;
+	//padding-top: 15px;
+	//left: 100px;
+	position: relative;
+	display: inline-block;
+	//float: left;
+	border-bottom: 1px solid black;
+	padding-bottom: 7px ;
+}
+
+.fore .dd1 a{
+	color: black;
+	margin: 1px auto;
+	font-size: 12px;
+	border-left: 2px solid #eee;
+	float: left;
+	line-height: 16px;
+	height: 16px;
+	//margin-top: 1px;
+	text-align: center;
+	
+}
+.fore .dd1 a:hover{
+	color: red;
+	
+}
 /*--------图片轮播样式----------------------------*/
 .slider{
-	width: 590px;
+	width: 570px;
 	position: absolute;
-	top:195px;
+	top:190px;
 	margin-left: 210px;
 	/*border: 1px black solid;*/
 	/*left: 210px;*/
-	height: 380px;
+	
 	padding: 10px;
 }
 .slider ul{
@@ -234,7 +289,7 @@ a:active{
 
 }
 .slider-extra{
-	width: 590px;
+	width: 570px;
 	position: absolute;
 	top:-95px;
 	/*left: 210px;*/
@@ -277,7 +332,7 @@ a:active{
 
 .slider-list{
 	width: 590px;
-	text-align: center;
+	/*text-align: center;*/
 
 }
 .slider-list2{
@@ -312,7 +367,7 @@ a:active{
 	width: 189px;
 	position: relative;
 	left: 801px;
-	top: -45px;
+	top: -42px;
 	border: 1px solid #E8E8E7;
 	/*height: 260px;*/
 	color: #666;
@@ -330,6 +385,15 @@ a:active{
 .nc{
 	padding-left: 2px;
 }
+.news .nc{
+	font-size: 12px;
+	height: 90px;
+}
+.news .nc li{
+	line-height: 18px;
+	margin: 5px;
+	margin-right: 0px;
+}
 .nt1{
 	/*border-bottom:1px solid #E8E8E7;*/
 	line-height: 40px;
@@ -337,6 +401,7 @@ a:active{
 }
 .lifeserv{
 	/*overflow: hidden;*/
+	font-size: 13px;
 }
 .servmenu{
 	width: 61px;
@@ -359,43 +424,84 @@ a:active{
 	display: none;
 	height: 128px;
 }
-
+.form-top{
+	padding:20px 0px 0px 10px;
+}
+.input-phone{
+	width: 110px;
+}
+.form-bottom {
+	padding: 10px;
+}
+.btn-wrap{
+	padding-left: 10px;
+}
+.btn-submit{
+	background-color: red;
+	width: 67px;
+	height: 26px;
+	border: 0px;
+	color: #fff;
+	text-align: center;
+}
 /*--------猜你喜欢样式----------------------------*/
 .youlike{
 	width:990px;
-	margin: 10px auto;
+	margin: -10px auto;
 	font-size: 25px;
 	position: relative;
 	
 }
+.youlike h3{
+	
+	display: inline;
+	line-height: 30px;
+	font-size: 20px;
+	padding-right: 228px;
+	background: url(../img/homebg.png) 90px -95px;
+	font-family: "幼圆";
+	font-weight: normal;
+}
 .youlike ul{
 	width: 990px;
-	height: 200px;
+	height: 220px;
 	border: 1px solid #E8E8E7;
 
 }
 .youlike ul li{
 	display: inline-block;
-	width: 200px;
+	width: 192px;
 	height: 215px;
 	
 }
 .youlike ul li{
-	+display: inline;
+
 	
 }
 .p-img{
-
+	margin-top: 20px;
+	text-align: center;
 	
 }
 .p-info{
 	border-right: 1px solid #E8E8E7;
 	height: 60px;
+	text-align: center;
 }
 .p-name{
-	
+	font-size: 12px;
+	width: 123px;
+	height: 30px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.p-name a{
+	font-size: 12px;
+	height: 36px;
+	overflow: hidden;
 }
 .p-price{
+	margin: 5px auto;
 	color: #b51d1a;
 	font-size: 18px;
 }
