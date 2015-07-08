@@ -87,7 +87,7 @@
 			width: 990px;
 			height: 300px;
 			margin: 5px auto;
-			border: 1px solid;
+			border: 0px solid;
 		}
 		.se_top_mes {
 			position: relative;
@@ -96,8 +96,91 @@
 			line-height: 40px;
 			font-size: 15px;
 			padding-left: 10px;
-			margin: 5px auto;
+			margin: 25px auto;
+			margin-bottom: 5px;
 			border-bottom: 1px dashed;
+		}
+		a {
+			color: #666;
+			text-decoration: none;
+		}
+		a:hover {
+			color: #ff0000;
+		}
+		.se_mess .messtop {
+			position: relative;
+			width: 990px;
+			height: 145px;
+			background-image: url(../../../../Public/img/welcome.png);
+		}
+		.se_mess .messbut {
+			position: relative;
+			width: 990px;
+			height: 155px;
+			border: 0px solid;
+		}
+		.messbut .zheng,.messbut .shi,.messbut .cheng,.messbut .qi {
+			position: absolute;
+			width: 180px;
+			height: 125px;
+			text-align: right;
+			font-size: 20px;
+			line-height: 115px;
+			top: 15px;
+			left: 10px;
+			border: 0px solid;
+		}
+		.messbut .shi {
+			left: 245px;
+		}
+		.messbut .cheng {
+			left: 480px;
+		}
+		.messbut .qi {
+			width: 240px;
+			left: 715px;
+		}
+		.zheng .zheng_img {
+			position: absolute;
+			width: 49px;
+			height: 49px;
+			top: 30px;
+			left: 25px;
+			background-image: url("../../../../Public/img/zheng.png");
+			transition: all 0.5s ease 0s;
+		}
+		.shi .shi_img {
+			position: absolute;
+			width: 49px;
+			height: 49px;
+			top: 30px;
+			left: 25px;
+			border: 0px solid;
+			background-image: url("../../../../Public/img/shi.png");
+			transition: all 0.5s ease 0s;
+		}
+		.cheng .cheng_img {
+			position: absolute;
+			width: 49px;
+			height: 49px;
+			top: 30px;
+			left: 25px;
+			border: 0px solid;
+			background-image: url("../../../../Public/img/cheng.png");
+			transition: all 0.5s ease 0s;
+		}
+		.qi .qi_img {
+			position: absolute;
+			width: 49px;
+			height: 49px;
+			top: 30px;
+			left: 25px;
+			border: 0px solid;
+			background-image: url("../../../../Public/img/qi.png");
+			transition: all 0.5s ease 0s;
+		}
+		.zheng_img:hover,.shi_img:hover,.cheng_img:hover,.qi_img:hover {
+			transform:rotate(720deg);
 		}
 	</style>
 	
@@ -105,7 +188,7 @@
 		<div class="se_top_mes">
 			店铺 ：<a href="">xxxxxxxx</a>&nbsp;
 			<img src="../../../../Public/image/password.png" />
-			<img src="../../../../Public/image/password.png" />&nbsp&nbsp;
+			<img src="../../../../Public/image/password.png" />&nbsp;&nbsp;&nbsp;&nbsp;
 			<img src="../../../../Public/img/flower.png" />
 			[&nbsp;描述：<span style="color: #ff0000;">4.8</span>
 			 &nbsp;服务：<span style="color: #ff0000;">4.8</span>
@@ -120,45 +203,49 @@
 			<!--商品展示-->
 			<div class="big_pict">
 				<div class="first">
-					<div class="good_tup">
-						<img src="../../../../Public/img/good_img.png" />
-					</div>
-					<div class="good_href">
-						<a href="">商品链接商品链接<br />商品链接</a>
-					</div>
+					<a href="">
+						<div class="good_tup">
+							<img src="../../../../Public/img/good_img.png" style="border: 0px;"/>
+						</div>
+						<div class="good_href">商品链接商品链接<br />商品链接
+						</div>
+					</a>
 					<div class="good_pric">
 						<span style="font-size: 25px;">￥</span>10.00
 					</div>
 				</div>
 				<div class="second">
-					<div class="good_tup">
-						<img src="../../../../Public/img/good_img.png" />
-					</div>
-					<div class="good_href">
-						<a href="">商品链接商品链接<br />商品链接</a>
-					</div>
+					<a href="">
+						<div class="good_tup">
+							<img src="../../../../Public/img/good_img.png" style="border: 0px;"/>
+						</div>
+						<div class="good_href">商品链接商品链接<br />商品链接
+						</div>
+					</a>
 					<div class="good_pric">
 						<span style="font-size: 25px;">￥</span>10.00
 					</div>
 				</div>
 				<div class="third">
-					<div class="good_tup">
-						<img src="../../../../Public/img/good_img.png" />
-					</div>
-					<div class="good_href">
-						<a href="">商品链接商品链接<br />商品链接</a>
-					</div>
+					<a href="">
+						<div class="good_tup">
+							<img src="../../../../Public/img/good_img.png" style="border: 0px;"/>
+						</div>
+						<div class="good_href">商品链接商品链接<br />商品链接
+						</div>
+					</a>
 					<div class="good_pric">
 						<span style="font-size: 25px;">￥</span>10.00
 					</div>
 				</div>
 				<div class="forth">
-					<div class="good_tup">
-						<img src="../../../../Public/img/good_img.png" />
-					</div>
-					<div class="good_href">
-						<a href="">商品链接商品链接<br />商品链接</a>
-					</div>
+					<a href="">
+						<div class="good_tup">
+							<img src="../../../../Public/img/good_img.png" style="border: 0px;"/>
+						</div>
+						<div class="good_href">商品链接商品链接<br />商品链接
+						</div>
+					</a>
 					<div class="good_pric">
 						<span style="font-size: 25px;">￥</span>10.00
 					</div>
@@ -167,7 +254,27 @@
 		</div>
 		<!--结束-->
 		<div class="se_mess">
-			
+			<div class="messtop"></div>
+			<div class="messbut">
+				<b>
+					<div class="zheng">
+						<div class="zheng_img"></div>
+							正品保障
+					</div>
+					<div class="shi">
+						<div class="shi_img"></div>
+							如实描述
+					</div>
+					<div class="cheng">
+						<div class="cheng_img"></div>
+							诚信服务
+					</div>
+					<div class="qi">
+						<div class="qi_img"></div>
+							七天无理由退换
+					</div>
+				</b>
+			</div>
 		</div>
 	</body>
 </html>

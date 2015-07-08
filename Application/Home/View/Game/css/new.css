@@ -6,9 +6,23 @@ body{
 
 .game {
 	position: relative;
-	top: 100px;
-	left: 20%;
-	width: 720px;
-	height: 420px;
+	width: auto;
+	height: 500px;
 	background-color: #000000;
+}
+.shuoming {
+	position: relative;
+	width: auto;
+	text-align: center;
+	height: 100px;
+	line-height: 90px;
+	background-color: #555;
+}
+.shuoming button {
+	border: 1px #00f solid;
+	width: 100px;
+	height: 30px;
+	font-size: 20px;
+	color: #fff;
+	background-color: #00f;
 }
