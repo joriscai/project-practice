@@ -84,6 +84,9 @@ class ShopController extends Controller{
 		
 		
 	}
+	public function good_acount(){
+		$this->display('ShoppingCart/acounts');
+	}
 
 	//购物车首页
 	public function index(){
