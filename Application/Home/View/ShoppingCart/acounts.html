@@ -7,9 +7,7 @@
 	</head>
 	<body>
 		<div class="main">
-			<div class="m_top">
-					填写收货地址
-			</div>
+			<div class="m_top">填写收货地址</div>
 			<div class="w_address">
 				<div class="wa_left">
 					<div class="box1"><span style="color: #ff0000;">*</span>所在地区  ： </div>
@@ -34,43 +32,48 @@
 						</a>
 					</div>
 					<div class="ribox2">
-						<textarea cols="40px" rows="2px" placeholder="建议您如实填写详细收货地址，例如街道名称，门牌号，楼层和房间号等信息"></textarea>
+						<textarea cols="40px" rows="2px" onFocus="if(value==defaultValue){value='';this.style.color='#000'}" onBlur="if(!value){value=defaultValue;this.style.color='#999'}" style="color:#999999">建议您如实填写详细收货地址，例如街道名称，门牌号，楼层和房间号等信息</textarea>
 					</div>
 					<div class="ribox3">
-						<input type="text" name="zipcode" id="zipcode" placeholder="如果不清楚邮编，请填写000000" />
+						<input type="text" name="zipcode" id="zipcode" value="如果不清楚邮编，请填写000000" onFocus="if(value==defaultValue){value='';this.style.color='#000'}" onBlur="if(!value){value=defaultValue;this.style.color='#999'}" style="color:#999999" />
 					</div>
 					<div class="ribox4">
-						<input type="text" name="name" id="name" placeholder="填写收货人姓名" />
+						<input type="text" name="name" id="name" value="请输入收货人姓名" onFocus="if(value==defaultValue){value='';this.style.color='#000'}" onBlur="if(!value){value=defaultValue;this.style.color='#999'}" style="color:#999999" />
 					</div>
 					<div class="ribox5">
-						<input type="text" name="tel" id="tel" placeholder="填写收货人手机号码" />
+						<input type="text" name="tel" id="tel" value="请输入收货人手机号码" onFocus="if(value==defaultValue){value='';this.style.color='#000'}" onBlur="if(!value){value=defaultValue;this.style.color='#999'}" style="color:#999999" />
 					</div>
 				</div>
 			</div>
-			<div class="m_top">
-				确认订单信息
-			</div>
+			<div class="m_top">确认订单信息</div>
 			<div class="sh_top">
-				<div class="p_goods">
-					商品
-				</div>
-				<div class="p_price">
-					单价(元)
-				</div>
-				<div class="p_count">
-					数量
-				</div>
-				<div class="p_youhui">
-					优惠方式
-				</div>
-				<div class="p_xcount">
-					小计(元)
-				</div>
+				<div class="p_goods">商品</div>
+				<div class="p_price">单价(元)</div>
+				<div class="p_count">数量</div>
+				<div class="p_youhui">优惠方式</div>
+				<div class="p_xcount">小计(元)</div>
 			</div>
 			<div class="goods_message">
 				<div class="show">
-					订单信息
+					<div class="go_img">
+						<img src="adv.jpg" width="65px" height="65px"/>
+					</div>
+					<div class="go_mes">商品信息商品信息商品信息商品信息<br>123</div>
+					<div class="go_pri">10.00</div>
+					<div class="go_cou">1</div>
+					<div class="go_yh">
+						<div class="yh">
+							<select>
+								<option>不使用优惠</option>
+								<option>暂无优惠</option>
+							</select>
+						</div>
+					</div>
+					<div class="go_sum">
+						<span style="color: #ff0000;">10.00</span>
+					</div>
 				</div>
+				
 				<div class="all_mess">
 					<div class="a_top">
 						<div class="at_left">
@@ -79,31 +82,70 @@
 									给卖家留言  ：
 								</div>
 								<div class="in">
-									<textarea cols="35" rows="4" placeholder="123"></textarea>
+									<textarea cols="35" rows="4" onFocus="if(value==defaultValue){value='';this.style.color='#000'}" onBlur="if(!value){value=defaultValue;this.style.color='#999'}" style="color:#999999">给卖家留言</textarea>
 								</div>
 							</div>
 						</div>
 						<div class="at_right">
 							<div class="ri1">
-								1
+								<div class="ar_left">店铺优惠 : </div>
+								<div class="ar_middle">
+									<select>
+										<option>包邮活动</option>
+									</select>
+								</div>
+								<div class="ar_right">-0.00</div>
 							</div>
 							<div class="ri2">
-								2
+								<div class="ar_left">运送方式 : </div>
+								<div class="ar_middle">
+									<input type="radio" checked="checed"/>普通配送
+									<select>
+										<option>快递  免邮</option>
+									</select>
+								</div>
+								<div class="ar_right">0.00</div>
 							</div>
 							<div class="ri3">
-								3
+								<div class="ar_left">发货时间 : </div>
+								<div class="ar_middle">卖家承诺订单在买家付款后, 24小时内发货</div>
+								<div class="ar_right"></div>
 							</div>
 							<div class="ri4">
-								4
+								<div class="ar_left">运费险 : </div>
+								<div class="ar_middle">
+									<input type="checkbox"/>购买运费险，退货可赔付9元
+								</div>
+								<div class="ar_right">10.40</div>
 							</div>
 						</div>
 					</div>
 					<div class="a_bottom">
-						12
+						店铺合计(含运费) : ￥<span style="color: #ff0000;">10.40</span>
 					</div>
 				</div>
 				<div class="commit">
-					提交订单
+					<div class="co_right">
+						<div class="co_ri_top">
+							<div class="top_top">
+								实付款：<span style="color: #666; font-size: 25px;">￥</span>
+								<span style="color: #ff0000; font-size: 25px;">10.40</span>
+							</div>
+							<div class="top_bot">
+								<div class="bot1">
+									寄送至 : <span style="color: #444;">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</span>
+								</div>
+								<div class="bot1">
+									收货人 : <span style="color: #444;">xxx xxxxxxxxxxx</span>
+								</div>
+							</div>
+						</div>
+						<a href="">
+							<div class="co_ri_bot">
+								提交订单
+							</div>
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
