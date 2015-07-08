@@ -1,0 +1,135 @@
+body{
+  width: 990px;
+  margin: auto;
+}
+
+
+a {
+  text-decoration:none; 
+  color: #666;
+} 
+
+#head{
+	height: 50px;
+  background-color: #f66;
+  border: 5px solid #000;
+  text-align: center;
+}
+
+#container{
+	height: 100%;
+  min-height: 550px;
+  text-align: center;
+  background-color: #eee;
+}
+
+#footer{
+  position: relative;
+  top: 0px;
+	height: 50px;
+  background-color: #09c;
+  border: 5px solid #000;
+  text-align: center;
+}
+
+#address{
+  width: 990px;
+  height: 50px;
+  text-align: left;
+  font: normal 10px "微软雅黑";
+  color: #ccc;
+}
+
+#sign{
+  width: 200px;
+  position: relative;
+  top: 0px;
+  height: 100%;
+  min-height: 500px;
+}
+
+#centre{
+  width: 780px;
+  position: absolute;
+  left: 200px;
+  top: 0px;
+  background-color: #fff;
+  bottom: 10px;
+  height: 100%;
+  min-height: 500px;
+}
+
+.box0{
+  position: relative;
+  top: 0px;
+  text-align: left;
+  width: 200px;
+  font: normal 14px "微软雅黑";
+  color: #222;
+  text-indent: 28px;
+  line-height: 50px;
+  height: 50px;
+  background-color: #ddd;  
+}
+
+.box1 a{
+  font-weight: bold;
+  color: #c33;
+}
+
+.box1{
+  position: relative;
+  top: 10px;
+  left: 20px;
+  text-align: left;
+  width: 160px;
+  font: normal 14px "微软雅黑";
+  color: #036;
+  text-indent: 8px;
+  line-height: 35px;
+  height: 35px;
+}
+
+.box2{
+  position: relative;
+  top: 10px;
+  left: 20px;
+  text-align: left;
+  width: 160px;
+  font: normal 14px "微软雅黑";
+  color: #036;
+  text-indent: 8px;
+  line-height: 35px;
+  height: 35px;
+}
+
+.box3{
+  position: relative;
+  top: 10px;
+  left: 20px;
+  text-align: left;
+  width: 160px;
+  font: normal 14px "微软雅黑";
+  color: #036;
+  text-indent: 8px;
+  line-height: 35px;
+  height: 35px;
+}
+
+.box4{
+  position: relative;
+  top: 10px;
+  left: 20px;
+  text-align: left;
+  width: 160px;
+  font: normal 14px "微软雅黑";
+  color: #036;
+  text-indent: 8px;
+  line-height: 35px;
+  height: 35px;
+}
+
+#bottom{
+  height: 10px;
+  background-color: #eee;
+}
