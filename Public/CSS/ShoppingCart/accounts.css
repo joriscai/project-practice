@@ -93,35 +93,26 @@
 	padding: 3px 3px;
 	border: 1px #aaa solid;
 	font-size: 13px;
-	background-color: #F9F5FF;
+	/*background-color: #F9F5FF;*/
 	width: 100px;
 	height: 20px;
-	border: 1px #aaa solid;
+	border: 0px #aaa solid;
 }
 .ribox1 .button2 {
-	left: 113px;
+	left: 133px;
 	width: 200px;
 }
-.button1 .left,.button2 .left {
+.button1 select,.button2 select {
 	position: absolute;
 	text-align: left;
-	width: 80px;
+	width: 120px;
 	height: 26px;
 	padding: 3px 4px;
 	top: 0px;
 	left: 0px;
 }
-.button2 .left {
+.button2 select {
 	width: 180px;
-}
-
-.button1 .right,.button2 .right {
-	position: absolute;
-	width: 20px;
-	height: 26px;
-	top: 0px;
-	right: 0px;
-	background-image: url(../../img/selete.png);
 }
 
 .main .sh_top {
