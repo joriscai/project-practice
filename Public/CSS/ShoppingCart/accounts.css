@@ -1,0 +1,260 @@
+.main {
+	position: relative;
+	width: 990px;
+	height: auto;
+	margin: 5px auto;
+	border: 0px #00f solid;
+}
+.main .m_top {
+	position: relative;
+	width: 990px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 16px;
+	color: #666;
+	padding-left: 5px;
+	border-bottom: 1px #aaa solid;
+	background-color: #e5f9be;
+}
+.main .w_address {
+	position: relative;
+	width: 960px;
+	height: 260px;
+	border: 1px #aaa solid;
+	margin: 10px auto;
+	background-color: #eaf7fc;
+}
+.w_address .wa_left {
+	position: absolute;
+	display: inline-block;
+	top: 20px;
+	width: 100px;
+	height: 230px;
+	left: 70px;
+	border: 0px #00f solid;
+}
+.wa_left .box1,.wa_left .box2,.wa_left .box3,.wa_left .box4,.wa_left .box5 {
+	position: relative;
+	width: 100px;
+	height: 20px;
+	margin: 20px -10px;
+	font-size: 13px;
+	text-align: right;
+	color: #333;
+	border: 0px #00f solid;
+}
+.wa_left .box1 {
+	margin: 5px -10px;
+}
+.wa_left .box3 {
+	margin: 50px 0px 20px -10px;
+}
+
+.w_address .wa_right {
+	position: absolute;
+	display: inline-block;
+	top: 20px;
+	width: 740px;
+	height: 230px;
+	left: 170px;
+	border: 0px #00f solid;
+}
+.wa_right .ribox1,.wa_right .ribox2,.wa_right .ribox3,.wa_right .ribox4,.wa_right .ribox5 {
+	position: relative;
+	width: 760px;
+	height: 20px;
+	border: 0px #00f solid;
+	margin: 16px auto;
+	color: #222;
+	font-size: 13px;
+	text-align: left;
+}
+.wa_right .ribox1 {
+	margin: 3px 0px;
+}
+.wa_right .ribox2 {
+	height: 60px;
+}
+.ribox5 input,.ribox4 input,.ribox3 input {
+	border: 1px #aaa solid;
+	padding: 3px 3px;
+	width: 190px;
+}
+.ribox2 textarea {
+	font-size: 13px;
+	padding: 3px 3px;
+	border: 1px #aaa solid;
+}
+.ribox1 a {
+	color: #555;
+}
+.ribox1 .button1,.ribox1 .button2 {
+	position: absolute;
+	padding: 3px 3px;
+	border: 1px #aaa solid;
+	font-size: 13px;
+	background-color: #F9F5FF;
+	width: 100px;
+	height: 20px;
+	border: 1px #aaa solid;
+}
+.ribox1 .button2 {
+	left: 113px;
+	width: 200px;
+}
+.button1 .left,.button2 .left {
+	position: absolute;
+	text-align: left;
+	width: 80px;
+	height: 26px;
+	padding: 3px 4px;
+	top: 0px;
+	left: 0px;
+}
+.button2 .left {
+	width: 180px;
+}
+
+.button1 .right,.button2 .right {
+	position: absolute;
+	width: 20px;
+	height: 26px;
+	top: 0px;
+	right: 0px;
+	background-image: url(../../img/selete.png);
+}
+
+.main .sh_top {
+	position: relative;
+	width: 960px;
+	height: 20px;
+	margin: 10px auto;
+	font-size: 13px;
+	border-bottom: 0px #aaa solid;
+}
+
+.sh_top .p_goods,.sh_top .p_price,.sh_top .p_count,.sh_top .p_youhui,.sh_top .p_xcount {
+	position: absolute;
+	display: inline-block;
+	width: 370px;
+	height: auto;
+	text-align: center;
+	border-bottom: 2px #afe4f7 solid;
+}
+.sh_top .p_price {
+	width: 160px;
+	left: 375px;
+}
+.sh_top .p_count {
+	width: 120px;
+	left: 540px;
+}
+.sh_top .p_youhui {
+	width: 170px;
+	left: 665px;
+}
+.sh_top .p_xcount {
+	width: 120px;
+	left: 840px;
+}
+.main .goods_message {
+	position: relative;
+	width: 960px;
+	height: auto;
+	font-size: 15px;
+	border-top: 0px #61CAD0 dashed;
+	margin: 0px auto;
+}
+
+.main .all_mess {
+	position: relative;
+	width: 960px;
+	height: 200px;
+	font-size: 15px;
+	border: 0px #61CAD0 dashed;
+	background-color: #eaf7fc;
+	margin: 6px auto;
+}
+.all_mess .a_top {
+	position: relative;
+	width: 960px;
+	height: 170px;
+	border-bottom: 2px #fff solid;
+	margin: 0px auto;
+}
+.all_mess .a_bottom {
+	position: relative;
+	width: 960px;
+	height: 30px;
+	text-align: right;
+	border-bottom: 0px #fff solid;
+	margin: 4px -6px;
+}
+
+.a_top .at_left {
+	position: absolute;
+	display: inline-block;
+	width: 540px;
+	height: 170px;
+	border-right: 2px #fff solid;
+}
+.a_top .at_right {
+	position: absolute;
+	display: inline-block;
+	width: 420px;
+	height: 170px;
+	left: 540px;
+	line-height: 42px;
+	border: 0px #00f solid;
+}
+.at_right .ri1,.at_right .ri2,.at_right .ri3,.at_right .ri4 {
+	position: relative;
+	width: 420px;
+	height: 42px;
+	top: 0px;
+	border-bottom: 1px #fff solid;
+}
+.at_right .ri4 {
+	border-bottom: 0px;
+}
+
+.at_left .atl_top {
+	position: relative;
+	width: 480px;
+	height: 120px;
+	margin: 0px auto;
+	top: 10px;
+	font-size: 15px;
+	border: 0px #00f solid;
+}
+.atl_top .te {
+	position: absolute;
+	display: inline-block;
+	left: 0px;
+	width: 100px;
+	height: 20px;
+	font-size: 13px;
+	text-align: center;
+	border: 0px #00f solid;
+}
+.atl_top .in {
+	position: absolute;
+	display: inline-block;
+	left: 100px;
+	width: 380px;
+	border: 0px #00f solid;
+}
+.in textarea {
+	border: 1px #aaa solid;
+}
+
+.main .commit {
+	position: relative;
+	width: 960px;
+	height: 200px;
+	top: 5px;
+	font-size: 15px;
+	border: 1px #61CAD0 dashed;
+	margin: 0px auto;
+}
+
