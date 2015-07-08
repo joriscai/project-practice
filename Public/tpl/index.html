@@ -4,15 +4,18 @@
 		<meta charset="utf-8">
 		
    		<link href="__PUBLIC__/pulish.css" rel="stylesheet"><!--通用css-->
+   		<block name="h_css">
 		<link href="__PUBLIC__/CSS/top.css" rel="stylesheet" /><!--head通用css-->
+		</block>
    		<link href="__PUBLIC__/css/footer.css" rel="stylesheet"><!--footer通用css-->
    		<link href="__PUBLIC__/css/guide.css" rel="stylesheet"><!--footer通用css2-->
-   		
+   	
    		<script type="text/javascript" src="__PUBLIC__/jquery-1.7.2.min.js"></script>
    		<script type="text/javascript" src="__PUBLIC__/JS/top.js" ></script>
    		<block name="head"></block>
 	</head>
 	<body>
+		<block name="b_toolbar">
 		<!--最顶端控制条-->
 		<div class="tToolbar">
 			<div style="float:right;">
@@ -25,11 +28,13 @@
 				<?php }?>
 			</div>
 		</div>
+</block>
 		<!--头部-->
+<block name="b_head">
 	<div style="clear:both; height:0;"></div>
     <div class="logosearch" style="">
 		<div class="logo" style="">
-			<img src="../image/23333.png">
+			<img src="__PUBLIC__/image/23333.png">
 		</div>
 		<div class="search">
 			<input type="text" id="searchtext" name="">
@@ -38,10 +43,12 @@
 		<div class="shopbar"style="">
 			<div class="shop">
 				<div class="shopl"></div>
-				<a target="_blank" href="http://cart.jd.com/cart/cart.html">我的购物车</a>
+				<a href="{:U('Home/Shop/index')}">我的购物车</a>
 			</div>
 		</div>
 	</div>
+</block>
+<block name="b_menu">
 	<div style="clear:both; height:0;"></div>
 	<div class="overWidth">
 		<div class="nav">
@@ -1145,26 +1152,26 @@
 	        <div id="navitems">
 	        	<ul id="">
 					<li  class="fore1">
-						<a target="_blank" href="">首页</a>
+						<a href="{:U('Home/Index/index')}">首页</a>
 					</li>
 					<li  class="fore1">
-						<a target="_blank" href="">服装城</a>
+						<a href="">服装城</a>
 					</li>
 					<li class="fore1">
-						<a target="_blank" href="">美妆馆</a>
+						<a href="">美妆馆</a>
 					</li>
 					<li class="fore1">
-						<a target="_blank" href="">美食</a>
+						<a href="">美食</a>
 					</li>
 					<li class="fore1">
-						<a target="_blank" href="">全球购</a>
+						<a href="">全球购</a>
 					</li>
 				</ul>
 	        </div>
 		</div>
 
 </div>
-		</block>
+</block>
 		<!--头部结束-->
 		
 		<!--<div class="header">
@@ -1187,6 +1194,7 @@
 		<!--body-->
 		<block name="body"></block>
 		<!--footer-->
+		<include file="./Public/tpl/guide.html"/>
 		<include file="./Public/tpl/footer.html"/>
 	</body>
 </html>
