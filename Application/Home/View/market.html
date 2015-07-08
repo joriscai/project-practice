@@ -4,29 +4,46 @@
   <title>数码产品</title>
   <link href="../../../Public/pulish.css" rel="stylesheet">
    <link href="../../../Public/CSS/market.css" rel="stylesheet">
-   <script src="../../../jquery-1.7.2.min.js"></script>
+   <script src="../../../Public/jquery-1.7.2.min.js"></script>
    <!--<script src="__PUBLIC__/bootstrap/js/bootstrap.min.js"></script>-->
+   <script type="text/javascript">
+      //-------------------- 选项效果代码--------------------------------// 
+        $(function(){
+          $(".tab-item").hover(function(){
+            $(this).addClass("selected").siblings().removeClass("selected");
+            var index = $(this).index(".tab-item");
+            $($(".spu-list")[index]).show().siblings().hide();
+          });
+        });
+
+
+//----------------结束---- 选项效果代码--------------------------------// 
+   </script>
 </head>
 <body>
+<!--导航栏-->
   <div class="nav">
+  <!-- 横向导航栏-->
     <div class="sm-item-list">
       <div class="market-wrap">
         <ul class="main-list">
           <li>
             <a href="" class="list-index current" ><b>首页</b>
-          </a></li>
+            <b class="marketicon">&nbsp;&nbsp;</b>
+            </a>
+          </li>
           <li>
-            <a  href="//www.taobao.com/market/3c/shouji.php?spm=a217h.1099669.a214da9.11.g5G64M" data-spm-anchor-id="a217h.1099669.a214da9.11"><b>手机</b></a></li>
+            <a  href="//www.taobao.com/market/3c/shouji.php?spm=a217h.1099669.a214da9.11.g5G64M" ><b>手机</b></a></li>
           <li>
-            <a data-tag="foobar" href="//www.taobao.com/market/3c/360camera.php?spm=a217h.1099669.a214da9.12.g5G64M" data-spm-anchor-id="a217h.1099669.a214da9.12"><b>相机单反</b></a></li>
+            <a data-tag="foobar" href="//www.taobao.com/market/3c/360camera.php?spm=a217h.1099669.a214da9.12.g5G64M" ><b>相机单反</b></a></li>
           <li>
-            <a data-tag="foobar" href="//www.taobao.com/market/3c/diannao.php?spm=a217h.1099669.a214da9.13.g5G64M" data-spm-anchor-id="a217h.1099669.a214da9.13"><b>PC电脑</b></a></li>
+            <a data-tag="foobar" href="//www.taobao.com/market/3c/diannao.php?spm=a217h.1099669.a214da9.13.g5G64M" ><b>PC电脑</b></a></li>
           <li>
-            <a data-tag="foo" href="//www.taobao.com/market/3c/3cpeijian.php?spm=a217h.1099669.a214da9.14.g5G64M" data-spm-anchor-id="a217h.1099669.a214da9.14"><b>智能3C馆</b></a></li>
+            <a data-tag="foo" href="//www.taobao.com/market/3c/3cpeijian.php?spm=a217h.1099669.a214da9.14.g5G64M" ><b>智能3C馆</b></a></li>
           <li>
-            <a data-tag="foo" href="//www.taobao.com/market/jiadian/home.php?spm=a217h.1099669.a214da9.15.g5G64M" data-spm-anchor-id="a217h.1099669.a214da9.15"><b>智能家电</b></a></li>
+            <a data-tag="foo" href="//www.taobao.com/market/jiadian/home.php?spm=a217h.1099669.a214da9.15.g5G64M" ><b>智能家电</b></a></li>
           <li>
-            <a data-tag="" href="//www.taobao.com/market/3c/yemian.php?spm=a217h.1099669.a214da9.16.g5G64M" data-spm-anchor-id="a217h.1099669.a214da9.16"><b>二手回收</b></a></li>
+            <a data-tag="" href="//www.taobao.com/market/3c/yemian.php?spm=a217h.1099669.a214da9.16.g5G64M" ><b>二手回收</b></a></li>
           </ul>
         <div class="menu-button ">
           <ul>
@@ -39,11 +56,13 @@
         </div>
       </div>
     </div>
-  
+  <!-- END 横向导航栏-->
+
+  <!--导航栏目-->
   <div class="sm-cat-list">
     <div class="fix-box">
       <div class="market-wrap current">
-        <div class="cat"  style="width:185px;">
+        <div class="cat"  style="">
             <div class="cat-title cat-head">
               <a href="#">手机</a>
             </div>
@@ -134,7 +153,492 @@
               <div class="cat-title"><a href="#">无线键鼠套装</a></div>
             </div>
         </div>
-        </div>   
+      </div> 
+    </div>  
+  </div>
+  <!-- END 导航栏目-->
 </div>
+<!-- END 导航栏-->
+<div class="w">
+  <div class="banner">
+    <div class="block row-2" >
+      <div class="s-banner">
+        <div class="single-img ">
+          <a target="_blank" href="#">
+            <img src="../../../Public/img/T1DawaFLlcXXaCwpjX.png">
+          </a>
+        </div> 
+      </div>
+    </div>
+    <div class="block row-2 " >
+      <div class="s-banner">
+        <div class="single-img ">
+          <a target="_blank" href="#">
+            <img src="../../../Public/img/TB18PX3HpXXXXXTaFXXwu0bFXXX.png">
+          </a>
+        </div> 
+      </div>
+    </div>
+    <div class="block row-2 ">
+      <div class="s-banner">
+        <div class="single-img ">
+          <a target="_blank" href="#">
+            <img src="../../../Public/img/T11F28FRtbXXaCwpjX.png">
+          </a>
+        </div> 
+      </div>
+    </div>
+    <div class="block row-1 ">
+      <div class="h-banner">
+        <div class="single-img ">
+          <a target="_blank" href="#">
+            <img src="../../../Public/img/TB1DDbrGFXXXXazapXXt5fmSXXX-380-100.jpg">
+          </a>
+        </div> 
+      </div>
+    </div>
+    <div class="block row-1 " >
+      <div class="h-banner">
+        <div class="single-img ">
+          <a target="_blank" href="#">
+            <img src="../../../Public/img/TB1LbnPGVXXXXayXXXXt5fmSXXX-380-100.jpg">
+          </a>
+        </div> 
+      </div>
+    </div>
+  </div>
+  <div style="clear:both; height:0;"></div>
+  
+  <div class="banner">
+    
+    <div class="bannerT">近期热卖</div>
+
+      <div class="main-content">
+          <ul class="tab-nav">
+                  <li class="tab-item selected">
+                  手机
+                  </li>
+                  <li class="tab-item">
+                  相机 
+                  </li>
+                  <li class="tab-item">
+                  电脑
+                  </li>
+                  <li class="tab-item">
+                  智能穿戴
+                  </li>
+                  <li class="tab-item">
+                  3C配件
+                  </li>
+                 
+          </ul>
+          <div class="tab-content">
+                <div class="content">
+                <!--手机-->
+                  <div  class="spu-list" style="display: block;">
+                      <div class="floor-type"> 
+                          <div class="  item-middle-image item-wrap">
+                              <a title="小米 红米Note(标准版)" target="_blank" class="img-wrap" href="//s.taobao.com/list?app=detailproduct&amp;spu_title=%E5%B0%8F%E7%B1%B3+%E7%BA%A2%E7%B1%B3Note(%E6%A0%87%E5%87%86%E7%89%88)&amp;pspuid=708626&amp;cat=1512&amp;from_type=3c">
+                                  <img  height="160" src="../../../Public/img/TB12lvMFVXXXXc1XXXXXXXXXXXX.jpg_160x160.png">
+                              </a>
+                              <a title="小米 红米Note(标准版)" target="_blank" href="//s.taobao.com/list?app=detailproduct&amp;spu_title=%E5%B0%8F%E7%B1%B3+%E7%BA%A2%E7%B1%B3Note(%E6%A0%87%E5%87%86%E7%89%88)&amp;pspuid=708626&amp;cat=1512&amp;from_type=3c" class="item-desc">
+                                  <h5 class="title">小米 红米Note(标准版)</h5>
+                                  <p class="price">¥ 755.00</p>
+                              </a>
+                          </div>     
+  
+                          <div class="  item-middle-image item-wrap">
+                              <a title="华为 荣耀畅玩4C" target="_blank" class="img-wrap" href="//s.taobao.com/list?app=detailproduct&amp;spu_title=%E5%8D%8E%E4%B8%BA+%E8%8D%A3%E8%80%80%E7%95%85%E7%8E%A94C&amp;pspuid=1173405&amp;cat=1512&amp;from_type=3c">
+                                  <img height="160" src="../../../Public/img/TB1CEbBHVXXXXbLXpXXXXXXXXXX.jpg_160x160.jpg">
+                              </a><a title="华为 荣耀畅玩4C" target="_blank" href="//s.taobao.com/list?app=detailproduct&amp;spu_title=%E5%8D%8E%E4%B8%BA+%E8%8D%A3%E8%80%80%E7%95%85%E7%8E%A94C&amp;pspuid=1173405&amp;cat=1512&amp;from_type=3c" class="item-desc">
+                                  <h5 class="title">华为 荣耀畅玩4C</h5>
+                                  <p class="price">¥ 936.00</p>
+                              </a>
+                          </div>
+                              
+                          <div class="  item-middle-image item-wrap">
+                              <a title="苹果 iPhone 5s" target="_blank" class="img-wrap" href="//s.taobao.com/list?app=detailproduct&amp;spu_title=%E8%8B%B9%E6%9E%9C+iPhone+5s&amp;pspuid=251575&amp;cat=1512&amp;from_type=3c">
+                                  <img iwidth="140" height="160" src="../../../Public/img/TB1PTP0GVXXXXbSaXXXXXXXXXXX.jpg_160x160.png">
+                              </a><a title="苹果 iPhone 5s" target="_blank" href="//s.taobao.com/list?app=detailproduct&amp;spu_title=%E8%8B%B9%E6%9E%9C+iPhone+5s&amp;pspuid=251575&amp;cat=1512&amp;from_type=3c" class="item-desc">
+                                  <h5 class="title">苹果 iPhone 5s</h5>
+                                  <p class="price">¥ 3205.00</p>
+                              </a>
+                          </div>
+                                  
+                              
+                          <div class="  item-middle-image item-wrap">
+                              <a title="小米 红米Note(增强版)" target="_blank" class="img-wrap" href="//s.taobao.com/list?app=detailproduct&amp;spu_title=%E5%B0%8F%E7%B1%B3+%E7%BA%A2%E7%B1%B3Note(%E5%A2%9E%E5%BC%BA%E7%89%88)&amp;pspuid=856375&amp;cat=1512&amp;from_type=3c">
+                                  <img iwidth="140" height="160" src="../../../Public/img/TB1InYCFVXXXXcEXVXXXXXXXXXX.jpg_160x160.png">
+                              </a><a title="小米 红米Note(增强版)" target="_blank" href="//s.taobao.com/list?app=detailproduct&amp;spu_title=%E5%B0%8F%E7%B1%B3+%E7%BA%A2%E7%B1%B3Note(%E5%A2%9E%E5%BC%BA%E7%89%88)&amp;pspuid=856375&amp;cat=1512&amp;from_type=3c" class="item-desc">
+                                  <h5 class="title">小米 红米Note(增强版)</h5>
+                                  <p class="price">¥ 898.00</p>
+                              </a>
+                          </div>
+                              
+                          <div class="  item-middle-image item-wrap">
+                              <a title="HTC One M8" target="_blank" class="img-wrap" href="//s.taobao.com/list?spm=a217h.1099669.a214d9c-5x0.1.y7x5WY&amp;app=detailproduct&amp;spu_title=HTC+One+M8&amp;pspuid=709004&amp;cat=1512&amp;from_type=3c" data-spm-anchor-id="a217h.1099669.a214d9c-5x0.1">
+                                  <img iwidth="140" height="160" src="../../../Public/img/TB1yKrDFVXXXXayXVXXXXXXXXXX.jpg_160x160.png">
+                              </a><a title="HTC One M8" target="_blank" href="//s.taobao.com/list?spm=a217h.1099669.a214d9c-5x0.2.y7x5WY&amp;app=detailproduct&amp;spu_title=HTC+One+M8&amp;pspuid=709004&amp;cat=1512&amp;from_type=3c" class="item-desc" data-spm-anchor-id="a217h.1099669.a214d9c-5x0.2">
+                                  <h5 class="title">HTC One M8</h5>
+                                  <p class="price">¥ 2454.00</p>
+                              </a>
+                          </div>
+ 
+                          <div class="  item-middle-image item-wrap">
+                              <a title="三星 Galaxy S5" target="_blank" class="img-wrap" href="//s.taobao.com/list?spm=a217h.1099669.a214d9c-5x0.3.y7x5WY&amp;app=detailproduct&amp;spu_title=%E4%B8%89%E6%98%9F+Galaxy+S5&amp;pspuid=699964&amp;cat=1512&amp;from_type=3c" data-spm-anchor-id="a217h.1099669.a214d9c-5x0.3">
+                                  <img iwidth="140" height="160" src="../../../Public/img/TB1nKAJHpXXXXbzXVXXXXXXXXXX.jpg_160x160.jpg">
+                              </a><a title="三星 Galaxy S5" target="_blank" href="//s.taobao.com/list?spm=a217h.1099669.a214d9c-5x0.4.y7x5WY&amp;app=detailproduct&amp;spu_title=%E4%B8%89%E6%98%9F+Galaxy+S5&amp;pspuid=699964&amp;cat=1512&amp;from_type=3c" class="item-desc" data-spm-anchor-id="a217h.1099669.a214d9c-5x0.4">
+                                  <h5 class="title">三星 Galaxy S5</h5>
+                                  <p class="price">¥ 2448.00</p>
+                              </a>
+                          </div>
+ 
+                          <div class="  item-middle-image item-wrap">
+                              <a title="vivo Xplay 3S" target="_blank" class="img-wrap" href="//s.taobao.com/list?spm=a217h.1099669.a214d9c-5x0.5.y7x5WY&amp;app=detailproduct&amp;spu_title=vivo+Xplay+3S&amp;pspuid=601193&amp;cat=1512&amp;from_type=3c" data-spm-anchor-id="a217h.1099669.a214d9c-5x0.5">
+                                  <img iwidth="140" height="160" src="../../../Public/img/T1xDgXFMxXXXXXXXXX.jpg_160x160.jpg">
+                              </a><a title="vivo Xplay 3S" target="_blank" href="//s.taobao.com/list?spm=a217h.1099669.a214d9c-5x0.6.y7x5WY&amp;app=detailproduct&amp;spu_title=vivo+Xplay+3S&amp;pspuid=601193&amp;cat=1512&amp;from_type=3c" class="item-desc" data-spm-anchor-id="a217h.1099669.a214d9c-5x0.6">
+                                  <h5 class="title">vivo Xplay 3S</h5>
+                                  <p class="price">¥ 2498.00</p>
+                              </a>
+                          </div>
+    
+                          <div class="  item-middle-image item-wrap">
+                            <a title="努比亚 Z9 Max" target="_blank" class="img-wrap" href="//s.taobao.com/list?spm=a217h.1099669.a214d9c-5x0.7.y7x5WY&amp;app=detailproduct&amp;spu_title=%E5%8A%AA%E6%AF%94%E4%BA%9A+Z9+Max&amp;pspuid=1160947&amp;cat=1512&amp;from_type=3c" data-spm-anchor-id="a217h.1099669.a214d9c-5x0.7">
+                                <img  height="160" src="../../../Public/img/TB138CkHpXXXXaVaXXXXXXXXXXX.jpg_160x160.png">
+                            </a><a title="努比亚 Z9 Max" target="_blank" href="//s.taobao.com/list?spm=a217h.1099669.a214d9c-5x0.8.y7x5WY&amp;app=detailproduct&amp;spu_title=%E5%8A%AA%E6%AF%94%E4%BA%9A+Z9+Max&amp;pspuid=1160947&amp;cat=1512&amp;from_type=3c" class="item-desc" data-spm-anchor-id="a217h.1099669.a214d9c-5x0.8">
+                                <h5 class="title">努比亚 Z9 Max</h5>
+                                <p class="price">¥ 2084.00</p>
+                            </a>
+                          </div>
+
+                      </div>
+                  </div>
+                  <!--END 手机-->
+                <!--相机-->
+                  <div class="spu-list " style="">
+                      <div class="floor-type ">
+                            <div class="  item-middle-image item-wrap">
+                                <a title="尼康 D3200 18-55" target="_blank" class="img-wrap" href="//s.taobao.com/list?spm=a217h.1099669.a214d9d-0x0.1.LagsQY&amp;app=detailproduct&amp;spu_title=%E5%B0%BC%E5%BA%B7+D3200+18-55&amp;pspuid=268448&amp;cat=50003773&amp;from_type=3c" >
+                                    <img  height="160" src="../../../Public/img/T1sA5fXu4dXXctESg4_054111.jpg_160x160.jpg">
+                                </a>
+                                <a title="尼康 D3200 18-55" target="_blank" href="//s.taobao.com/list?spm=a217h.1099669.a214d9d-0x0.2.LagsQY&amp;app=detailproduct&amp;spu_title=%E5%B0%BC%E5%BA%B7+D3200+18-55&amp;pspuid=268448&amp;cat=50003773&amp;from_type=3c" class="item-desc" >
+                                    <h5 class="title">尼康 D3200 18-55</h5>
+                                    <p class="price">¥ 2330.00</p>
+                                </a>
+                            </div>
+
+                                
+                            <div class="  item-middle-image item-wrap">
+                                <a title="佳能 6D 24-105" target="_blank" class="img-wrap" href="//s.taobao.com/list?spm=a217h.1099669.a214d9d-0x0.3.LagsQY&amp;app=detailproduct&amp;spu_title=%E4%BD%B3%E8%83%BD+6D+24-105&amp;pspuid=268249&amp;cat=50003773&amp;from_type=3c" >
+                                    <img  height="160" src="../../../Public/img/T1r0goXnxeXXcmzTMT_012923.jpg_160x160.jpg">
+                                </a>
+                                <a title="佳能 6D 24-105" target="_blank" href="//s.taobao.com/list?spm=a217h.1099669.a214d9d-0x0.4.LagsQY&amp;app=detailproduct&amp;spu_title=%E4%BD%B3%E8%83%BD+6D+24-105&amp;pspuid=268249&amp;cat=50003773&amp;from_type=3c" class="item-desc" >
+                                    <h5 class="title">佳能 6D 24-105</h5>
+                                    <p class="price">¥ 10109.0</p>
+                                </a>
+                            </div>
+
+                                
+                            <div class="  item-middle-image item-wrap">
+                                <a title="" target="_blank" class="img-wrap" href="#">
+                                    <img  height="160" src="*">
+                                </a>
+                                <a title="" target="_blank" href="#">
+                                    <h5 class="title">123</h5>
+                                    <p class="price">¥ 5990.00</p>
+                                </a>
+                            </div>
+
+                            <div class="  item-middle-image item-wrap">
+                                <a title="尼康 D3200 18-55" target="_blank" class="img-wrap" href="//s.taobao.com/list?spm=a217h.1099669.a214d9d-0x0.1.LagsQY&amp;app=detailproduct&amp;spu_title=%E5%B0%BC%E5%BA%B7+D3200+18-55&amp;pspuid=268448&amp;cat=50003773&amp;from_type=3c" >
+                                    <img  height="160" src="../../../Public/img/T1sA5fXu4dXXctESg4_054111.jpg_160x160.jpg">
+                                </a>
+                                <a title="尼康 D3200 18-55" target="_blank" href="//s.taobao.com/list?spm=a217h.1099669.a214d9d-0x0.2.LagsQY&amp;app=detailproduct&amp;spu_title=%E5%B0%BC%E5%BA%B7+D3200+18-55&amp;pspuid=268448&amp;cat=50003773&amp;from_type=3c" class="item-desc" >
+                                    <h5 class="title">尼康 D3200 18-55</h5>
+                                    <p class="price">¥ 2330.00</p>
+                                </a>
+                            </div>
+
+                                
+                            <div class="  item-middle-image item-wrap">
+                                <a title="佳能 6D 24-105" target="_blank" class="img-wrap" href="//s.taobao.com/list?spm=a217h.1099669.a214d9d-0x0.3.LagsQY&amp;app=detailproduct&amp;spu_title=%E4%BD%B3%E8%83%BD+6D+24-105&amp;pspuid=268249&amp;cat=50003773&amp;from_type=3c" >
+                                    <img  height="160" src="../../../Public/img/T1r0goXnxeXXcmzTMT_012923.jpg_160x160.jpg">
+                                </a>
+                                <a title="佳能 6D 24-105" target="_blank" href="//s.taobao.com/list?spm=a217h.1099669.a214d9d-0x0.4.LagsQY&amp;app=detailproduct&amp;spu_title=%E4%BD%B3%E8%83%BD+6D+24-105&amp;pspuid=268249&amp;cat=50003773&amp;from_type=3c" class="item-desc" >
+                                    <h5 class="title">佳能 6D 24-105</h5>
+                                    <p class="price">¥ 10109.0</p>
+                                </a>
+                            </div>
+
+                                
+                            <div class="  item-middle-image item-wrap">
+                                <a title="" target="_blank" class="img-wrap" href="#">
+                                    <img  height="160" src="*">
+                                </a>
+                                <a title="" target="_blank" href="#">
+                                    <h5 class="title">123</h5>
+                                    <p class="price">¥ 5990.00</p>
+                                </a>
+                            </div>
+
+                            <div class="  item-middle-image item-wrap">
+                                <a title="" target="_blank" class="img-wrap" href="#">
+                                    <img  height="160" src="*">
+                                </a>
+                                <a title="" target="_blank" href="#">
+                                    <h5 class="title">123</h5>
+                                    <p class="price">¥ 5990.00</p>
+                                </a>
+                            </div>
+                      </div>
+                  </div>
+                  <!--END 相机-->
+                <!--电脑-->
+                  <div  class="spu-list" style="display: block;">
+                      <div class="floor-type"> 
+                          <div class="  item-middle-image item-wrap">
+                              <a title="小米 红米Note(标准版)" target="_blank" class="img-wrap" href="//s.taobao.com/list?app=detailproduct&amp;spu_title=%E5%B0%8F%E7%B1%B3+%E7%BA%A2%E7%B1%B3Note(%E6%A0%87%E5%87%86%E7%89%88)&amp;pspuid=708626&amp;cat=1512&amp;from_type=3c">
+                                  <img  height="160" src="../../../Public/img/TB12lvMFVXXXXc1XXXXXXXXXXXX.jpg_160x160.png">
+                              </a>
+                              <a title="小米 红米Note(标准版)" target="_blank" href="//s.taobao.com/list?app=detailproduct&amp;spu_title=%E5%B0%8F%E7%B1%B3+%E7%BA%A2%E7%B1%B3Note(%E6%A0%87%E5%87%86%E7%89%88)&amp;pspuid=708626&amp;cat=1512&amp;from_type=3c" class="item-desc">
+                                  <h5 class="title">小米 红米Note(标准版)</h5>
+                                  <p class="price">¥ 755.00</p>
+                              </a>
+                          </div>     
+  
+                          <div class="  item-middle-image item-wrap">
+                              <a title="华为 荣耀畅玩4C" target="_blank" class="img-wrap" href="//s.taobao.com/list?app=detailproduct&amp;spu_title=%E5%8D%8E%E4%B8%BA+%E8%8D%A3%E8%80%80%E7%95%85%E7%8E%A94C&amp;pspuid=1173405&amp;cat=1512&amp;from_type=3c">
+                                  <img height="160" src="../../../Public/img/TB1CEbBHVXXXXbLXpXXXXXXXXXX.jpg_160x160.jpg">
+                              </a><a title="华为 荣耀畅玩4C" target="_blank" href="//s.taobao.com/list?app=detailproduct&amp;spu_title=%E5%8D%8E%E4%B8%BA+%E8%8D%A3%E8%80%80%E7%95%85%E7%8E%A94C&amp;pspuid=1173405&amp;cat=1512&amp;from_type=3c" class="item-desc">
+                                  <h5 class="title">华为 荣耀畅玩4C</h5>
+                                  <p class="price">¥ 936.00</p>
+                              </a>
+                          </div>
+                              
+                          <div class="  item-middle-image item-wrap">
+                              <a title="苹果 iPhone 5s" target="_blank" class="img-wrap" href="//s.taobao.com/list?app=detailproduct&amp;spu_title=%E8%8B%B9%E6%9E%9C+iPhone+5s&amp;pspuid=251575&amp;cat=1512&amp;from_type=3c">
+                                  <img iwidth="140" height="160" src="../../../Public/img/TB1PTP0GVXXXXbSaXXXXXXXXXXX.jpg_160x160.png">
+                              </a><a title="苹果 iPhone 5s" target="_blank" href="//s.taobao.com/list?app=detailproduct&amp;spu_title=%E8%8B%B9%E6%9E%9C+iPhone+5s&amp;pspuid=251575&amp;cat=1512&amp;from_type=3c" class="item-desc">
+                                  <h5 class="title">苹果 iPhone 5s</h5>
+                                  <p class="price">¥ 3205.00</p>
+                              </a>
+                          </div>
+                                  
+                              
+                          <div class="  item-middle-image item-wrap">
+                              <a title="小米 红米Note(增强版)" target="_blank" class="img-wrap" href="//s.taobao.com/list?app=detailproduct&amp;spu_title=%E5%B0%8F%E7%B1%B3+%E7%BA%A2%E7%B1%B3Note(%E5%A2%9E%E5%BC%BA%E7%89%88)&amp;pspuid=856375&amp;cat=1512&amp;from_type=3c">
+                                  <img iwidth="140" height="160" src="../../../Public/img/TB1InYCFVXXXXcEXVXXXXXXXXXX.jpg_160x160.png">
+                              </a><a title="小米 红米Note(增强版)" target="_blank" href="//s.taobao.com/list?app=detailproduct&amp;spu_title=%E5%B0%8F%E7%B1%B3+%E7%BA%A2%E7%B1%B3Note(%E5%A2%9E%E5%BC%BA%E7%89%88)&amp;pspuid=856375&amp;cat=1512&amp;from_type=3c" class="item-desc">
+                                  <h5 class="title">小米 红米Note(增强版)</h5>
+                                  <p class="price">¥ 898.00</p>
+                              </a>
+                          </div>
+                              
+                          <div class="  item-middle-image item-wrap">
+                              <a title="HTC One M8" target="_blank" class="img-wrap" href="//s.taobao.com/list?spm=a217h.1099669.a214d9c-5x0.1.y7x5WY&amp;app=detailproduct&amp;spu_title=HTC+One+M8&amp;pspuid=709004&amp;cat=1512&amp;from_type=3c" data-spm-anchor-id="a217h.1099669.a214d9c-5x0.1">
+                                  <img iwidth="140" height="160" src="../../../Public/img/TB1yKrDFVXXXXayXVXXXXXXXXXX.jpg_160x160.png">
+                              </a><a title="HTC One M8" target="_blank" href="//s.taobao.com/list?spm=a217h.1099669.a214d9c-5x0.2.y7x5WY&amp;app=detailproduct&amp;spu_title=HTC+One+M8&amp;pspuid=709004&amp;cat=1512&amp;from_type=3c" class="item-desc" data-spm-anchor-id="a217h.1099669.a214d9c-5x0.2">
+                                  <h5 class="title">HTC One M8</h5>
+                                  <p class="price">¥ 2454.00</p>
+                              </a>
+                          </div>
+ 
+                          <div class="  item-middle-image item-wrap">
+                              <a title="三星 Galaxy S5" target="_blank" class="img-wrap" href="//s.taobao.com/list?spm=a217h.1099669.a214d9c-5x0.3.y7x5WY&amp;app=detailproduct&amp;spu_title=%E4%B8%89%E6%98%9F+Galaxy+S5&amp;pspuid=699964&amp;cat=1512&amp;from_type=3c" data-spm-anchor-id="a217h.1099669.a214d9c-5x0.3">
+                                  <img iwidth="140" height="160" src="../../../Public/img/TB1nKAJHpXXXXbzXVXXXXXXXXXX.jpg_160x160.jpg">
+                              </a><a title="三星 Galaxy S5" target="_blank" href="//s.taobao.com/list?spm=a217h.1099669.a214d9c-5x0.4.y7x5WY&amp;app=detailproduct&amp;spu_title=%E4%B8%89%E6%98%9F+Galaxy+S5&amp;pspuid=699964&amp;cat=1512&amp;from_type=3c" class="item-desc" data-spm-anchor-id="a217h.1099669.a214d9c-5x0.4">
+                                  <h5 class="title">三星 Galaxy S5</h5>
+                                  <p class="price">¥ 2448.00</p>
+                              </a>
+                          </div>
+ 
+                          <div class="  item-middle-image item-wrap">
+                              <a title="vivo Xplay 3S" target="_blank" class="img-wrap" href="//s.taobao.com/list?spm=a217h.1099669.a214d9c-5x0.5.y7x5WY&amp;app=detailproduct&amp;spu_title=vivo+Xplay+3S&amp;pspuid=601193&amp;cat=1512&amp;from_type=3c" data-spm-anchor-id="a217h.1099669.a214d9c-5x0.5">
+                                  <img iwidth="140" height="160" src="../../../Public/img/T1xDgXFMxXXXXXXXXX.jpg_160x160.jpg">
+                              </a><a title="vivo Xplay 3S" target="_blank" href="//s.taobao.com/list?spm=a217h.1099669.a214d9c-5x0.6.y7x5WY&amp;app=detailproduct&amp;spu_title=vivo+Xplay+3S&amp;pspuid=601193&amp;cat=1512&amp;from_type=3c" class="item-desc" data-spm-anchor-id="a217h.1099669.a214d9c-5x0.6">
+                                  <h5 class="title">vivo Xplay 3S</h5>
+                                  <p class="price">¥ 2498.00</p>
+                              </a>
+                          </div>
+    
+                          <div class="  item-middle-image item-wrap">
+                            <a title="努比亚 Z9 Max" target="_blank" class="img-wrap" href="//s.taobao.com/list?spm=a217h.1099669.a214d9c-5x0.7.y7x5WY&amp;app=detailproduct&amp;spu_title=%E5%8A%AA%E6%AF%94%E4%BA%9A+Z9+Max&amp;pspuid=1160947&amp;cat=1512&amp;from_type=3c" data-spm-anchor-id="a217h.1099669.a214d9c-5x0.7">
+                                <img  height="160" src="../../../Public/img/TB138CkHpXXXXaVaXXXXXXXXXXX.jpg_160x160.png">
+                            </a><a title="努比亚 Z9 Max" target="_blank" href="//s.taobao.com/list?spm=a217h.1099669.a214d9c-5x0.8.y7x5WY&amp;app=detailproduct&amp;spu_title=%E5%8A%AA%E6%AF%94%E4%BA%9A+Z9+Max&amp;pspuid=1160947&amp;cat=1512&amp;from_type=3c" class="item-desc" data-spm-anchor-id="a217h.1099669.a214d9c-5x0.8">
+                                <h5 class="title">努比亚 Z9 Max</h5>
+                                <p class="price">¥ 2084.00</p>
+                            </a>
+                          </div>
+
+                      </div>
+                  </div>
+                  <!--END 电脑-->
+                <!--智能穿戴-->
+                  <div class="spu-list " style="">
+                      <div class="floor-type ">
+                            <div class="  item-middle-image item-wrap">
+                                <a title="尼康 D3200 18-55" target="_blank" class="img-wrap" href="//s.taobao.com/list?spm=a217h.1099669.a214d9d-0x0.1.LagsQY&amp;app=detailproduct&amp;spu_title=%E5%B0%BC%E5%BA%B7+D3200+18-55&amp;pspuid=268448&amp;cat=50003773&amp;from_type=3c" >
+                                    <img  height="160" src="../../../Public/img/T1sA5fXu4dXXctESg4_054111.jpg_160x160.jpg">
+                                </a>
+                                <a title="尼康 D3200 18-55" target="_blank" href="//s.taobao.com/list?spm=a217h.1099669.a214d9d-0x0.2.LagsQY&amp;app=detailproduct&amp;spu_title=%E5%B0%BC%E5%BA%B7+D3200+18-55&amp;pspuid=268448&amp;cat=50003773&amp;from_type=3c" class="item-desc" >
+                                    <h5 class="title">尼康 D3200 18-55</h5>
+                                    <p class="price">¥ 2330.00</p>
+                                </a>
+                            </div>
+
+                                
+                            <div class="  item-middle-image item-wrap">
+                                <a title="佳能 6D 24-105" target="_blank" class="img-wrap" href="//s.taobao.com/list?spm=a217h.1099669.a214d9d-0x0.3.LagsQY&amp;app=detailproduct&amp;spu_title=%E4%BD%B3%E8%83%BD+6D+24-105&amp;pspuid=268249&amp;cat=50003773&amp;from_type=3c" >
+                                    <img  height="160" src="../../../Public/img/T1r0goXnxeXXcmzTMT_012923.jpg_160x160.jpg">
+                                </a>
+                                <a title="佳能 6D 24-105" target="_blank" href="//s.taobao.com/list?spm=a217h.1099669.a214d9d-0x0.4.LagsQY&amp;app=detailproduct&amp;spu_title=%E4%BD%B3%E8%83%BD+6D+24-105&amp;pspuid=268249&amp;cat=50003773&amp;from_type=3c" class="item-desc" >
+                                    <h5 class="title">佳能 6D 24-105</h5>
+                                    <p class="price">¥ 10109.0</p>
+                                </a>
+                            </div>
+
+                                
+                            <div class="  item-middle-image item-wrap">
+                                <a title="" target="_blank" class="img-wrap" href="#">
+                                    <img  height="160" src="*">
+                                </a>
+                                <a title="" target="_blank" href="#">
+                                    <h5 class="title">123</h5>
+                                    <p class="price">¥ 5990.00</p>
+                                </a>
+                            </div>
+
+                            <div class="  item-middle-image item-wrap">
+                                <a title="尼康 D3200 18-55" target="_blank" class="img-wrap" href="//s.taobao.com/list?spm=a217h.1099669.a214d9d-0x0.1.LagsQY&amp;app=detailproduct&amp;spu_title=%E5%B0%BC%E5%BA%B7+D3200+18-55&amp;pspuid=268448&amp;cat=50003773&amp;from_type=3c" >
+                                    <img  height="160" src="../../../Public/img/T1sA5fXu4dXXctESg4_054111.jpg_160x160.jpg">
+                                </a>
+                                <a title="尼康 D3200 18-55" target="_blank" href="//s.taobao.com/list?spm=a217h.1099669.a214d9d-0x0.2.LagsQY&amp;app=detailproduct&amp;spu_title=%E5%B0%BC%E5%BA%B7+D3200+18-55&amp;pspuid=268448&amp;cat=50003773&amp;from_type=3c" class="item-desc" >
+                                    <h5 class="title">尼康 D3200 18-55</h5>
+                                    <p class="price">¥ 2330.00</p>
+                                </a>
+                            </div>
+
+                                
+                            <div class="  item-middle-image item-wrap">
+                                <a title="佳能 6D 24-105" target="_blank" class="img-wrap" href="//s.taobao.com/list?spm=a217h.1099669.a214d9d-0x0.3.LagsQY&amp;app=detailproduct&amp;spu_title=%E4%BD%B3%E8%83%BD+6D+24-105&amp;pspuid=268249&amp;cat=50003773&amp;from_type=3c" >
+                                    <img  height="160" src="../../../Public/img/T1r0goXnxeXXcmzTMT_012923.jpg_160x160.jpg">
+                                </a>
+                                <a title="佳能 6D 24-105" target="_blank" href="//s.taobao.com/list?spm=a217h.1099669.a214d9d-0x0.4.LagsQY&amp;app=detailproduct&amp;spu_title=%E4%BD%B3%E8%83%BD+6D+24-105&amp;pspuid=268249&amp;cat=50003773&amp;from_type=3c" class="item-desc" >
+                                    <h5 class="title">佳能 6D 24-105</h5>
+                                    <p class="price">¥ 10109.0</p>
+                                </a>
+                            </div>
+
+                                
+                            <div class="  item-middle-image item-wrap">
+                                <a title="" target="_blank" class="img-wrap" href="#">
+                                    <img  height="160" src="*">
+                                </a>
+                                <a title="" target="_blank" href="#">
+                                    <h5 class="title">123</h5>
+                                    <p class="price">¥ 5990.00</p>
+                                </a>
+                            </div>
+
+                            <div class="  item-middle-image item-wrap">
+                                <a title="" target="_blank" class="img-wrap" href="#">
+                                    <img  height="160" src="*">
+                                </a>
+                                <a title="" target="_blank" href="#">
+                                    <h5 class="title">123</h5>
+                                    <p class="price">¥ 5990.00</p>
+                                </a>
+                            </div>
+                      </div>
+                  </div>
+                  <!--END 智能穿戴-->
+                <!--3C配件-->
+                  <div class="spu-list " style="">
+                      <div class="floor-type ">
+                            <div class="  item-middle-image item-wrap">
+                                <a title="尼康 D3200 18-55" target="_blank" class="img-wrap" href="//s.taobao.com/list?spm=a217h.1099669.a214d9d-0x0.1.LagsQY&amp;app=detailproduct&amp;spu_title=%E5%B0%BC%E5%BA%B7+D3200+18-55&amp;pspuid=268448&amp;cat=50003773&amp;from_type=3c" >
+                                    <img  height="160" src="../../../Public/img/T1sA5fXu4dXXctESg4_054111.jpg_160x160.jpg">
+                                </a>
+                                <a title="尼康 D3200 18-55" target="_blank" href="//s.taobao.com/list?spm=a217h.1099669.a214d9d-0x0.2.LagsQY&amp;app=detailproduct&amp;spu_title=%E5%B0%BC%E5%BA%B7+D3200+18-55&amp;pspuid=268448&amp;cat=50003773&amp;from_type=3c" class="item-desc" >
+                                    <h5 class="title">尼康 D3200 18-55</h5>
+                                    <p class="price">¥ 2330.00</p>
+                                </a>
+                            </div>
+
+                                
+                            <div class="  item-middle-image item-wrap">
+                                <a title="佳能 6D 24-105" target="_blank" class="img-wrap" href="//s.taobao.com/list?spm=a217h.1099669.a214d9d-0x0.3.LagsQY&amp;app=detailproduct&amp;spu_title=%E4%BD%B3%E8%83%BD+6D+24-105&amp;pspuid=268249&amp;cat=50003773&amp;from_type=3c" >
+                                    <img  height="160" src="../../../Public/img/T1r0goXnxeXXcmzTMT_012923.jpg_160x160.jpg">
+                                </a>
+                                <a title="佳能 6D 24-105" target="_blank" href="//s.taobao.com/list?spm=a217h.1099669.a214d9d-0x0.4.LagsQY&amp;app=detailproduct&amp;spu_title=%E4%BD%B3%E8%83%BD+6D+24-105&amp;pspuid=268249&amp;cat=50003773&amp;from_type=3c" class="item-desc" >
+                                    <h5 class="title">佳能 6D 24-105</h5>
+                                    <p class="price">¥ 10109.0</p>
+                                </a>
+                            </div>
+
+                                
+                            <div class="  item-middle-image item-wrap">
+                                <a title="" target="_blank" class="img-wrap" href="#">
+                                    <img  height="160" src="*">
+                                </a>
+                                <a title="" target="_blank" href="#">
+                                    <h5 class="title">123</h5>
+                                    <p class="price">¥ 5990.00</p>
+                                </a>
+                            </div>
+
+                            <div class="  item-middle-image item-wrap">
+                                <a title="尼康 D3200 18-55" target="_blank" class="img-wrap" href="//s.taobao.com/list?spm=a217h.1099669.a214d9d-0x0.1.LagsQY&amp;app=detailproduct&amp;spu_title=%E5%B0%BC%E5%BA%B7+D3200+18-55&amp;pspuid=268448&amp;cat=50003773&amp;from_type=3c" >
+                                    <img  height="160" src="../../../Public/img/T1sA5fXu4dXXctESg4_054111.jpg_160x160.jpg">
+                                </a>
+                                <a title="尼康 D3200 18-55" target="_blank" href="//s.taobao.com/list?spm=a217h.1099669.a214d9d-0x0.2.LagsQY&amp;app=detailproduct&amp;spu_title=%E5%B0%BC%E5%BA%B7+D3200+18-55&amp;pspuid=268448&amp;cat=50003773&amp;from_type=3c" class="item-desc" >
+                                    <h5 class="title">尼康 D3200 18-55</h5>
+                                    <p class="price">¥ 2330.00</p>
+                                </a>
+                            </div>
+
+                                
+                            <div class="  item-middle-image item-wrap">
+                                <a title="佳能 6D 24-105" target="_blank" class="img-wrap" href="//s.taobao.com/list?spm=a217h.1099669.a214d9d-0x0.3.LagsQY&amp;app=detailproduct&amp;spu_title=%E4%BD%B3%E8%83%BD+6D+24-105&amp;pspuid=268249&amp;cat=50003773&amp;from_type=3c" >
+                                    <img  height="160" src="../../../Public/img/T1r0goXnxeXXcmzTMT_012923.jpg_160x160.jpg">
+                                </a>
+                                <a title="佳能 6D 24-105" target="_blank" href="//s.taobao.com/list?spm=a217h.1099669.a214d9d-0x0.4.LagsQY&amp;app=detailproduct&amp;spu_title=%E4%BD%B3%E8%83%BD+6D+24-105&amp;pspuid=268249&amp;cat=50003773&amp;from_type=3c" class="item-desc" >
+                                    <h5 class="title">佳能 6D 24-105</h5>
+                                    <p class="price">¥ 10109.0</p>
+                                </a>
+                            </div>
+
+                                
+                            <div class="  item-middle-image item-wrap">
+                                <a title="" target="_blank" class="img-wrap" href="#">
+                                    <img  height="160" src="*">
+                                </a>
+                                <a title="" target="_blank" href="#">
+                                    <h5 class="title">123</h5>
+                                    <p class="price">¥ 5990.00</p>
+                                </a>
+                            </div>
+
+                            <div class="  item-middle-image item-wrap">
+                                <a title="" target="_blank" class="img-wrap" href="#">
+                                    <img  height="160" src="*">
+                                </a>
+                                <a title="" target="_blank" href="#">
+                                    <h5 class="title">123</h5>
+                                    <p class="price">¥ 5990.00</p>
+                                </a>
+                            </div>
+                      </div>
+                  </div>
+                  <!--END 3C配件-->                  
+
+
+
+                </div>        
+          </div>
+      </div>
+</div>
+
+
 </body>
 </html>
