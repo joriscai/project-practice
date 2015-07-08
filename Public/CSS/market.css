@@ -1,0 +1,108 @@
+@charset "UTF-8";
+
+.current{
+	background: #0dc3ce;
+}
+.nav{
+	
+}
+.nav .sm-item-list {
+	margin-top: 10px;
+	overflow: hidden;
+	position: relative;
+	border-bottom: 2px solid #0dc3ce;
+
+}
+.market-wrap {
+	width: 990px;
+	margin: 0 auto;
+}
+.nav .sm-item-list .main-list {
+	float: left;
+	height: 35px;
+	margin-right: 28px;
+	position: relative;
+	white-space: nowrap;
+	width: auto;
+}
+.nav .sm-item-list .main-list li {
+	float: left;
+	height: 35px;
+	width: auto;
+	display: block;
+	position: relative;
+	z-index: 1;
+}
+.nav .sm-item-list .main-list li:hover {
+	background: #0dc3ce;
+}
+.nav .sm-item-list a {
+	display: inline-block;
+	zoom: 1;
+	height: 35px;
+	width: auto;
+	font: bold 14px/35px "\5b8b\4f53";
+	padding: 0 15px;
+	color: #404040;
+	position: relative;
+}
+
+
+.nav .sm-item-list .menu-button {
+	
+	height: 35px;
+	line-height: 34px;
+	overflow: hidden;
+	float: right;
+	background: #fff;
+	z-index: 100;
+}
+.menu-button li :hover{
+	background: #0dc3ce;
+}
+.nav .sm-cat-list {
+	width: 100%;
+	margin-top: -2px;
+
+}
+.nav .sm-cat-list .fix-box {
+	background-color: #0dc3ce;
+	height: 90px;
+}
+
+.market-wrap .cat{
+	float: left;
+	width: 184px;
+	padding-left: 10px;
+	height: 70px;
+	padding-bottom: 11px;
+	padding-top: 6px;
+	border-right: 1px solid #fff;
+}
+.market-wrap .cat-title{
+	float: left;
+	margin-right: 5px;
+	margin-left: -5px;
+	padding: 0 5px;
+	height: 24px;
+	display: block;
+	position: relative;
+	border-radius: 2px;
+	color: #fff;
+}
+.market-wrap .cat-title a{
+	color: #fff;
+	font-size: 12px;
+}
+.cat-head{
+	width: 184px;
+	clear: both;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 2;
+	margin-bottom: 5px;
+}
+.cat-head a{
+	color:#fff; 
+
+}

@@ -1,90 +1,8 @@
 ﻿<extend name='./Public/tpl/index.html' />
 <block name="head">
-	<style>
-		.mleft,
-		.mcenter,
-		.mright {
-			height: 511px;
-			display: inline-block;
-			+display: inline;
-		}
-		.mleft {
-			width: 370px;
-			position: absolute;
-			top: 0;
-			left: 0;
-		}
-		.mcenter {
-			width: 420px;
-			position: absolute;
-			top: 0px;
-			left: 375px;
-		}
-		.mright {
-			width: 190px;
-			position: absolute;
-			top: 0px;
-			right: 0px;
-			background: rgb(255, 254, 247);
-		}
-		.contain {
-			margin: 0px auto;
-			width: 990px;
-			position: relative;
-			overflow: hidden;
-		}
-		.img_bshow {
-			width: 350px;
-			height: 350px;
-			margin: 5px 5px 5px 8px;
-		}
-		.cmain {
-			height: 511px;
-			margin-top: 10px;
-		}
-		.adv {
-			height: 63px;
-		}
-		.img_lshow {
-			margin: 0px 25px 10px 30px;
-		}
-		.img_lshow li {
-			display: inline-block;
-			+display: inline;
-			width: 54px;
-			height: 54px;
-		}
-		.img_op span {
-			margin-right: 50px;
-		}
-		.mcenter label {
-			font-size: 14px;
-			color: #ccc;
-			margin-right: 20px;
-		}
-		.mcenter li {
-			margin-bottom: 20px;
-		}
-		.price {
-			font-size: 20px;
-			color: red;
-		}
-		.oprice {
-			color: #ccc;
-		}
-		.oprice span {
-			text-decoration: line-through;
-			font-size: 12px;
-		}
-		.youhui {
-			color: red;
-			font-size: 15px;
-		}
-		.youhui span {
-			padding: 2px 10px;
-			color: #fff;
-			background: red;
-		}
+	<link rel="stylesheet" href="__PUBLIC__/CSS/gdinfo.css" />
+<style>
+
 		#add_sc {
 			background: url('__PUBLIC__/img/good/icon_bg.png') no-repeat;
 			background-position-x: 0px;
@@ -117,19 +35,6 @@
 			height: 33px;
 			display: inline-block;
 		}
-		#collect:hover {
-			cursor: pointer;
-			background-position-y: -227px;
-		}
-		.mright>div {
-			border-bottom: 1px dashed #ccc;
-		}
-		.grade {
-			padding: 5px;
-			color: #fff;
-			background: #ab8d6d;
-		}
-		
 		.mright .title span{
 			background: url('__PUBLIC__/img/good/icon_shop.png') no-repeat;
 			background-position-x: 0px;
@@ -143,15 +48,6 @@
 			top: 3px;
 			
 		}
-		.mright div{
-			padding: 10px;
-			
-		}
-		
-		.mright li{
-			padding-bottom: 5px;
-		}
-		
 		.callme{
 			background: url('__PUBLIC__/img/good/imicon07.png') no-repeat;
 			background-position-x: 0px;
@@ -162,116 +58,30 @@
 			+display: inline;
 			margin-left: 30px;
 		}
-		.callme{
-			cursor: pointer;
+		.li_border{
+			border: 2px solid chartreuse;
 		}
-		.house span{
-			background: rgb(242, 229, 215);
-			padding: 5px 10px;
-			color: #C0A16B;
-			
-		}
-		.house span:hover{
-			cursor: pointer;
-		}
-		.save li{
-			color: #C0A16B;
-			font-size: 14px;
-		}
-		.keep li{
-			color: red;
-			font-size: 13px;
-		}
-		.msg_box{
-			border: 1px solid #ccc;
-			width: 190px;
-			height: 140px;
-			margin-bottom: 10px;
-			
-		}
-		.msg_box p{
-			color: #000000;
-			font-weight:bolder;
-			margin:10px 20px;
-			padding-bottom: 10px;
-			font-size: 20px;
-			border-bottom: 2px dashed #ccc;
-			
-		}
-		.msg_box ul{
-			font-size: 14px;
-			color: #000000;
-			margin: 10px;
-		}
-		.msg_box li{
-			margin: 10px 10px 5px 10px;
-			font-size: 12px;
-			color: #C0A16B;
-		}
-		.msg_box span{
-			margin-left: -5px;
-			font-weight: bolder;
-			font-size: 14px;
-		}
-		.bleft{
-			display: inline-block;
-			+display: inline;
-			float: left;
-		}
-		.bright{
-			display: inline-block;
-			+display: inline;
-			margin-left: 10px;
-			
-			width: 780px;
-			float: left;
-			border: 1px solid #ccc;
-
-		}
-		.main_b{
-			position: relative;
-		}
-		.bright .title{
-			border: 1px solid #C0C0C0;
-			background: #fff;
-			padding: 5px;
-			margin: 0px;
-			font-size: 15px;
-			display: inline-block;
-			width: 100px;
-			height: 20px;
-			margin-right: -5px;
-			text-align: center;
-			cursor: pointer;
-
-		}
-		.bright .title:hover{
-			color: red;
-		}
-		.bright .chose{
-			background: #CCCCCC;
-			cursor: default;
-		}
-		.bright .chose:hover{
-			color: #000;
-		}
-		.info td{
-			width: 250px;
-			font-size: 13px;
-			color: #5E5E5E;
-		}
-		.info table{
-			margin: 10px 0px 10px 10px;
-		}
-		.info img{
-			max-width: 780px;
-		}
-	</style>
+</style>
+<script>
+$(function(){
+	$('.li_lshow').mouseenter(function(){
+		$(this).addClass('li_border');
+	})
+	$('.li_lshow').mouseleave(function(){
+		$(this).removeClass('li_border');
+	})
+	
+		
+})
+</script>
 </block>
 <block name="body">
+	<!--广告图片-->
 	<div class="contain adv">
 		<img src="__PUBLIC__/img/good/adv.jpg">
 	</div>
+	
+	<!--页面主题-->
 	<div class="contain cmain">
 		<!--主体左边-->
 		<div class="mleft">
@@ -280,19 +90,19 @@
 			</div>
 			<div>
 				<ul class="img_lshow">
-					<li>
+					<li class="li_lshow">
 						<img src="__PUBLIC__/img/good/img2.jpg">
 					</li>
-					<li>
+					<li class="li_lshow">
 						<img src="__PUBLIC__/img/good/img3.jpg">
 					</li>
-					<li>
+					<li class="li_lshow">
 						<img src="__PUBLIC__/img/good/img4.jpg">
 					</li>
-					<li>
+					<li class="li_lshow">
 						<img src="__PUBLIC__/img/good/img5.jpg">
 					</li>
-					<li>
+					<li class="li_lshow">
 						<img src="__PUBLIC__/img/good/img6.jpg">
 					</li>
 				</ul>
@@ -353,10 +163,12 @@
 			<div class="house"><span>进入店铺</span><span>收藏店铺</span></div>
 		</div>
 	</div>
+	<!--页面下端-->
 	<div class="contain main_b">
 		
-		
+		<!--商品其他相关的-->
 		<div class="bleft">
+			
 			<div class="msg_box">
 				<p>在线客服</p>
 				<ul>
@@ -385,11 +197,13 @@
 			</div>
 
 		</div>
+		<!--商品详情-->
 		<div class="bright">
 			<span class="title chose">商品详情</span>
 			<span class="title">商品评论</span>
 			<span class="title">商品问答</span>
 			<div class="info">
+				<!--商品文字详情-->
 				<table>
 					<tr>
 						<td>品牌：马甲卡</td>
@@ -407,7 +221,7 @@
 						<td>袖型：无袖</td>
 					</tr>
 				</table>
-				
+				<!--商品图片详情-->
 				<ul>
 					<li><img src="__PUBLIC__/img/good/show3.jpg"></li>
 					<li><img src="__PUBLIC__/img/good/show1.jpg"></li>
@@ -415,31 +229,6 @@
 					<li><img src="__PUBLIC__/img/good/show2.jpg"></li>
 				</ul>
 			</div>
-			
-			
-
-		</div>
-		
-		
-		
+		</div>	
 	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 </block>
