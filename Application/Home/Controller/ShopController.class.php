@@ -85,7 +85,34 @@ class ShopController extends Controller{
 		
 	}
 	public function good_acount(){
+		//链接数据库
+		$con=M('shopcat');
+		$user_id=session('user_id');
+		
+		$data=$con->where("user_id='$user_id' and isselect=1")->select();
+		
+		if(!$data){//没有任何要购买的东西，直接返回
+			$this->index();
+		}
+		$s_price=0;
+		for($i=0;$i<count($data);$i++){
+			$s_price+=($data[$i]['price']*$data[$i]['number']);
+		}
+		
+		$this->assign('goods',$data);
+		$this->assign('a_acount',$s_price);
 		$this->display('ShoppingCart/acounts');
+	}
+	//提交订单处理
+	public function ajax_menu_handle(){
+		$con=M('shopcat');
+		$user_id=session('user_id');
+		
+		if($con->where("user_id='$user_id' and isselect=1")->delete()){
+			$this->ajaxReturn('订单提交成功','EVAL');
+		}else{
+			$this->ajaxReturn('操作失败','EVAL');
+		}
 	}
 
 	//购物车首页

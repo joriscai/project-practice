@@ -35,6 +35,16 @@ if($db_act=='create_db'){
 	price float not null,
 	number int not null,
 	user_id int not null
+	);
+	create table menu(
+	menuid int(10) not null primary key  auto_increment,
+	sellerid int(10) not null,
+	buyerid int(10) not null,
+	msg text not null,
+	address varchar(50) not null,
+	name varchar(32) not null,
+	pnumber varchar(12) not null,
+	price int not null
 	);"
 	;
 }elseif($db_act="insert_data"){
