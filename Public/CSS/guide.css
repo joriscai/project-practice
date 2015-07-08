@@ -8,37 +8,46 @@
    padding-bottom: 60px;
    text-align: center;
 }
-.guide {
-   /*border-top: 1px solid #E1E1E1;*/
-   background-color: #F5F5F5;
-   text-align: center;
+.box {
+	position: relative;
+	border: 0px solid;
+	width: 990px;
+	height: 180px;
+	top: 30px;
+	left: 200px;
 }
-.guide a {
+.wapper a {
 	color: #777;
     font-size: 16px;
 }
-.guide dt {
+.wapper dt {
 	color: #333;
     font-size: 18px;
+    text-align: center;
 }
 dl.fore1 {
 	position: absolute;
+    text-align: left;
     left: 25px	
 }
 dl.fore2 {
 	position: absolute;
+    text-align: left;
     left: 225px	
 }
 dl.fore3 {
 	position: absolute;
+    text-align: left;
     left: 425px	
 }
 dl.fore4 {
 	position: absolute;
+    text-align: left;
     left: 625px	
 }
 dl.fore5 {
 	position: absolute;
+    text-align: left;
     left: 825px	
 }
 
