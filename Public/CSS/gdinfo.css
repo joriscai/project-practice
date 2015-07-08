@@ -29,6 +29,7 @@
 	width: 990px;
 	position: relative;
 	overflow: hidden;
+	z-index: 1;
 }
 .img_bshow {
 	width: 350px;
