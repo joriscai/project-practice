@@ -5,6 +5,10 @@
    		<script>
    			var path = "__PUBLIC__";
    			var islogin = 1;
+   			var op_num_path="{:U('Home/Shop/ajax_num_op')}";
+   			var op_del_path="{:U('Home/Shop/ajax_d')}";
+   			var home_path="{:U('Home/Shop/index')}";
+   			var op_s_path="{:U('Home/Shop/ajax_s')}";
    			
    			
    		</script>
@@ -44,9 +48,11 @@
 		<!--显示商品-->
 		<div id="show">
 			<foreach name="goods" item="good">
-			<div class="mid_main1" id="1">
+			<div class="mid_main1" id="all_{$good['shopid']}">
 				<div class="g_checkbox">
-					<input type="checkbox" class="chec" <?php echo $good['isselect']==0?'':'checked'; ?> name="chgoods"/>
+					<input type="checkbox" shopid="{$good['shopid']}" class="chec" <?php echo $good['isselect']==0?'':'checked'; ?> name="chgoods"/>
+
+					<input type="hidden" value="{$good['price']}" id="price_{$good['shopid']}"/>
 				</div>
 				<div class="g_img">
 					<img src="__PUBLIC__/img/{$good['imgpath']}" />
@@ -59,24 +65,24 @@
 				</div>
 				<div class="g_quantity">
 					<div class="g_add">
-						<a href="javascript:void(0);" class="num_re">
+						<a href="javascript:void(0);" class="num_re" value="{$good['shopid']}">
 							<div class="go_add_re">
 								-
 							</div>
 						</a>
-						<input type="text" class="go_text shopid" value="{$good['number']}"></input>
-						<a href="javascript:void(0);" class="num_ad">
+						<input type="text" class="go_text shopid" value="{$good['number']}" shopid="{$good['shopid']}"></input>
+						<a href="javascript:void(0);" class="num_ad " value="{$good['shopid']}">
 							<div class="go_add_re">
 								+
 							</div>
 						</a>
 					</div>
 				</div>
-				<div class="g_sum">
+				<div class="g_sum g_sum_{$good['shopid']}">
 					<?php echo $good['price']*$good['number']; ?>
 				</div>
 				<div class="g_action">
-					<a href="javascript:void(0);">
+					<a href="javascript:void(0);" value="{$good['shopid']}" class="good_d">
 						删除
 					</a>
 				</div>
@@ -96,9 +102,9 @@
 			<!--显示商品总价-->
 			<div class="acc_text" id = "ac">
 				已选择  
-				<span style="color: #ff0000;">{$gdcount['s_count']}</span>  
+				<span style="color: #ff0000;" class="a_count">{$gdcount['s_count']}</span>  
 				件商品  --- 总价  : 
-				<span style="color: #ff0000; font-size: 18px;">¥ {$gdcount['p_count']}</span>
+				<span style="color: #ff0000; font-size: 18px;" class="a_price">¥ {$gdcount['p_count']}</span>
 			</div>
 			<a id="account" href="">
 				<div class="account_button" style="color: #fff;">
