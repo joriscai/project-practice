@@ -14,7 +14,7 @@
 	color: #666;
 	padding-left: 5px;
 	border-bottom: 1px #aaa solid;
-	background-color: #e5f9be;
+	/*background-color: #e5f9be;*/
 }
 .main .w_address {
 	position: relative;
@@ -93,35 +93,26 @@
 	padding: 3px 3px;
 	border: 1px #aaa solid;
 	font-size: 13px;
-	background-color: #F9F5FF;
+	/*background-color: #F9F5FF;*/
 	width: 100px;
 	height: 20px;
-	border: 1px #aaa solid;
+	border: 0px #aaa solid;
 }
 .ribox1 .button2 {
-	left: 113px;
+	left: 133px;
 	width: 200px;
 }
-.button1 .left,.button2 .left {
+.button1 select,.button2 select {
 	position: absolute;
 	text-align: left;
-	width: 80px;
+	width: 120px;
 	height: 26px;
 	padding: 3px 4px;
 	top: 0px;
 	left: 0px;
 }
-.button2 .left {
+.button2 select {
 	width: 180px;
-}
-
-.button1 .right,.button2 .right {
-	position: absolute;
-	width: 20px;
-	height: 26px;
-	top: 0px;
-	right: 0px;
-	background-image: url(../../img/selete.png);
 }
 
 .main .sh_top {
@@ -218,6 +209,46 @@
 	border-bottom: 0px;
 }
 
+.ri1 .ar_left,.ri2 .ar_left,.ri3 .ar_left,.ri4 .ar_left {
+	position: absolute;
+	top: 1px;
+	width: 80px;
+	height: 40px;
+	left: 6px;
+	font-size: 13px;
+	text-align: right;
+	line-height: 40px;
+	color: #666;
+	border: 0px #00f solid;
+}
+.ri1 .ar_middle,.ri2 .ar_middle,.ri3 .ar_middle,.ri4 .ar_middle {
+	position: absolute;
+	top: 1px;
+	width: 225px;
+	height: 40px;
+	left: 123px;
+	font-size: 12px;
+	color: #222;
+	padding-left: 3px;
+	border: 0px #00f solid;
+}
+.ri1 .ar_middle select {
+	width: 120px;
+}
+.ri1 .ar_right,.ri2 .ar_right,.ri3 .ar_right,.ri4 .ar_right {
+	position: absolute;
+	top: 1px;
+	width: 80px;
+	height: 40px;
+	right: 4px;
+	font-size: 13px;
+	text-align: right;
+	line-height: 40px;
+	color: #111;
+	padding-right: 2px;
+	border: 0px #00f solid;
+}
+
 .at_left .atl_top {
 	position: relative;
 	width: 480px;
@@ -245,6 +276,8 @@
 	border: 0px #00f solid;
 }
 .in textarea {
+	padding: 3px 3px;
+	font-size: 13px;
 	border: 1px #aaa solid;
 }
 
@@ -254,7 +287,136 @@
 	height: 200px;
 	top: 5px;
 	font-size: 15px;
-	border: 1px #61CAD0 dashed;
+	border: 0px #61CAD0 dashed;
 	margin: 0px auto;
 }
 
+.commit .co_right {
+	position: absolute;
+	right: 2px;
+	top: 15px;
+	width: 500px;
+	height: 185px;
+	font-size: 15px;
+	line-height: 45px;
+	text-align: right;
+	border: 0px #f8552a solid;
+}
+
+.co_right .co_ri_top {
+	position: relative;
+	width: auto;
+	height: 113px;
+	border: 0px #00f solid;
+}
+.co_ri_top .top_top {
+	position: relative;
+	height: 45px;
+	font-size: 15px;
+	line-height: 45px;
+	text-align: right;
+	padding-right: 4px;
+	border: 1px #f8552a solid;
+	border-bottom: 0px;
+}
+.co_ri_top .top_bot {
+	position: relative;
+	height: 66px;
+	top: 0px;
+	font-size: 15px;
+	margin-bottom: 5px;
+	border: 1px #f8552a solid;
+	border-top: 0px;
+}
+.top_bot .bot1,.top_bot .bot2 {
+	position: relative;
+	top: 0px;
+	height: 30px;
+	padding-right: 4px;
+	
+	border: 0px #00f solid;
+}
+
+.co_right .co_ri_bot {
+	position: absolute;
+	width: 100px;
+	top: 113px;
+	right: 0px;
+	height: 40px;
+	text-align: center;
+	color: #fff;
+	font-size: 20px;
+	line-height: 38px;
+	background-color: #f8552a;
+	border: 0px #00f solid;
+}
+
+.goods_message .show {
+	position: relative;
+	width: 960px;
+	height: 100px;
+	margin: 0px auto;
+	color: #111;
+	font-size: 14px;
+	border-top: 1px #2af6f8 dashed;
+}
+.show .go_img {
+	position: absolute;
+	width: 65px;
+	height: 65px;
+	top: 10px;
+	left: 20px;
+	border: 0px #00f solid;
+}
+.show .go_mes {
+	position: absolute;
+	width: 240px;
+	height: 100px;
+	left: 120px;
+	line-height: 30px;
+	border: 0px #00f solid;
+}
+.show .go_pri {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	left: 405px;
+	text-align: center;
+	line-height: 70px;
+	border: 0px #00f solid;
+}
+.show .go_cou {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	left: 550px;
+	text-align: center;
+	line-height: 70px;
+	border: 0px #00f solid;
+}
+.show .go_yh {
+	position: absolute;
+	width: 150px;
+	height: 100px;
+	left: 673px;
+	border: 0px #00f solid;
+}
+.go_yh .yh {
+	position: relative;
+	top: 25px;
+	width: 110px;
+	margin: 0px auto;
+}
+.yh select {
+	width: 110px;
+}
+.show .go_sum {
+	position: absolute;
+	width: 95px;
+	height: 100px;
+	left: 850px;
+	padding-right: 5px;
+	text-align: right;
+	line-height: 70px;
+	border: 0px #00f solid;
+}
