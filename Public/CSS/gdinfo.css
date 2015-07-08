@@ -3,8 +3,15 @@
 .mright {
 	height: 511px;
 	display: inline-block;
+	
+}
+.mleft,
+.mcenter,
+.mright {
+	
 	+display: inline;
 }
+
 .mleft {
 	width: 370px;
 	position: absolute;
@@ -29,6 +36,7 @@
 	width: 990px;
 	position: relative;
 	overflow: hidden;
+	z-index: 1;
 }
 .img_bshow {
 	width: 350px;
@@ -43,13 +51,19 @@
 	height: 63px;
 }
 .img_lshow {
-	margin: 0px 25px 10px 30px;
+	margin: 0px 20px 10px 20px;
 }
 .img_lshow li {
 	display: inline-block;
-	+display: inline;
 	width: 54px;
 	height: 54px;
+	margin-right: 3px;
+	border: 2px dashed #ccc;
+	
+	
+}
+.img_lshow li{
+	+display: inline;
 }
 .img_op span {
 	margin-right: 50px;

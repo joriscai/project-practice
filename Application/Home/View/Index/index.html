@@ -7,6 +7,9 @@
 
    <link href="__PUBLIC__/pulish.css" rel="stylesheet">
    <link href="__PUBLIC__/CSS/index.css" rel="stylesheet">
+   <link href="__PUBLIC__/css/footer.css" rel="stylesheet"><!--footer通用css-->
+   <link href="__PUBLIC__/css/guide.css" rel="stylesheet"><!--footer通用css2-->
+   
    <script src="__PUBLIC__/jquery-1.7.2.min.js"></script>
    <!--<script src="__PUBLIC__/bootstrap/js/bootstrap.min.js"></script>-->
    <style type="text/css" rel="stylesheet">
@@ -158,8 +161,13 @@
 <body>
 	<div class="tToolbar">
 		<div style="float:right;">
-			<a href="{:U('Home/User/login')}">登  录</a>
-			<a href="{:U('Home/User/regedit')}">注  册</a>
+			<?php if(!session('user_name')){ ?>
+				<a href="{:U('Home/User/login')}">登陆</a>
+				<a href="{:U('Home/User/regedit')}">注册</a>
+			<?php }else{ ?>
+				<a href="{:U('Home/Index/index')}"><?php echo session('user_name'); ?></a>
+				<a href="{:U('Home/User/loginout')}">退出</a>
+			<?php }?>
 		</div>
 	</div>
 	<div style="clear:both; height:0;"></div>
@@ -174,7 +182,7 @@
 		<div class="shopbar"style="">
 			<div class="shop">
 				<div class="shopl"></div>
-				<a target="_blank" href="{:U('Home/Shop/Index')}">我的购物车</a>
+				<a href="{:U('Home/Shop/Index')}">我的购物车</a>
 			</div>
 		</div>
 	</div>
@@ -1694,5 +1702,6 @@
 			</ul>
 		</div>
 	</div>
+	<include file="./Public/tpl/footer.html"/>
 </body>
 </html>
