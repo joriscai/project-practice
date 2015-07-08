@@ -61,6 +61,28 @@
 		.li_border{
 			border: 2px solid chartreuse;
 		}
+		.img_tip{
+			background: #000000;
+			filter:alpha(opacity=50);
+			-moz-opacity:0.5;
+			-khtml-opacity: 0.5;
+			opacity: 0.5;
+			position: absolute;
+			width: 348px;
+			height: 100px;
+			border: 1px solid #CCCCCC;
+			top:253px;
+			left: 8px;
+			color: #fff;
+			text-align: center;
+			display: none;
+		}
+		
+		.img_tip span{
+			margin-top: 40px;
+			display: inline-block;
+			height: 10px;
+		}
 </style>
 <script>
 $(function(){
@@ -71,6 +93,29 @@ $(function(){
 		$(this).removeClass('li_border');
 	})
 	
+	//图片展示提示
+	$('.img_bshow').mouseenter(function(){
+		$('.img_tip').css('display','block');
+		
+	})
+	$('.img_bshow').mouseleave(function(){
+		
+		$('.img_tip').css('display','none');
+	})
+	//在子元素中也可以
+	$('.img_tip').mouseover(function(){
+		$('.img_tip').css('display','block');
+	})
+	$('.img_tip').mouseleave(function(){
+		
+		$('.img_tip').css('display','none');
+	})
+	
+	//点击小图，大图跳转
+	$('.li_lshow').click(function(){
+
+		$('.img_bshow').attr('src',"__PUBLIC__/img/good/"+$(this).attr('bimg'));
+	})
 		
 })
 </script>
@@ -85,25 +130,26 @@ $(function(){
 	<div class="contain cmain">
 		<!--主体左边-->
 		<div class="mleft">
-			<div>
-				<img src="__PUBLIC__/img/good/img1.jpg" class="img_bshow">
+			<div style="position: relative;">
+				<img src="__PUBLIC__/img/good/{$goodinfo.good_bimg.1}" class="img_bshow">
+				<div class="img_tip"><span>这个真的好</span></div>
 			</div>
 			<div>
 				<ul class="img_lshow">
-					<li class="li_lshow">
-						<img src="__PUBLIC__/img/good/img2.jpg">
+					<li class="li_lshow" bimg="{$goodinfo.good_bimg.1}">
+						<img src="__PUBLIC__/img/good/{$goodinfo.good_limg.1}" >
 					</li>
-					<li class="li_lshow">
-						<img src="__PUBLIC__/img/good/img3.jpg">
+					<li class="li_lshow" bimg="{$goodinfo.good_bimg.2}">
+						<img src="__PUBLIC__/img/good/{$goodinfo.good_limg.2}" >
 					</li>
-					<li class="li_lshow">
-						<img src="__PUBLIC__/img/good/img4.jpg">
+					<li class="li_lshow" bimg="{$goodinfo.good_bimg.3}">
+						<img src="__PUBLIC__/img/good/{$goodinfo.good_limg.3}" >
 					</li>
-					<li class="li_lshow">
-						<img src="__PUBLIC__/img/good/img5.jpg">
+					<li class="li_lshow" bimg="{$goodinfo.good_bimg.4}">
+						<img src="__PUBLIC__/img/good/{$goodinfo.good_limg.4}" >
 					</li>
-					<li class="li_lshow">
-						<img src="__PUBLIC__/img/good/img6.jpg">
+					<li class="li_lshow" bimg="{$goodinfo.good_bimg.5}">
+						<img src="__PUBLIC__/img/good/{$goodinfo.good_limg.5}" >
 					</li>
 				</ul>
 			</div>
@@ -112,13 +158,13 @@ $(function(){
 		</div>
 		<!--主体中间-->
 		<div class="mcenter">
-			<p><strong>玛吉卡童装2015夏装新款女童甜美无袖公主连衣裙 0211</strong>
+			<p><strong>{$goodinfo.good_name}</strong>
 			</p>
 			<ul>
 				<li>
-					<label>当当价</label><span class="price">¥79.00</span> </li>
+					<label>5M价</label><span class="price">¥{$goodinfo.price}</span> </li>
 				<li>
-					<label>市场价</label><span class="oprice"><span >¥ 329.00</span>（节省了 250元）</span>
+					<label>市场价</label><span class="oprice"><span >¥ {$goodinfo.oprice}</span>（节省了<?php echo $goodinfo[oprice]-$goodinfo[price]; ?> 元）</span>
 				</li>
 				<li>
 					<label>促销</label><span class="youhui"><span>店铺VIP</span> 登录后确认是否享有此优惠</span>
@@ -132,7 +178,7 @@ $(function(){
 				<li>
 					<label>数量</label>1件</li>
 				<li>
-					<label>提示</label>没有钱</li>
+					<label>提示</label>{$goodinfo.msg}</li>
 				<li>
 					<a id="add_sc"></a>
 					<a id="buy"></a>
@@ -200,8 +246,8 @@ $(function(){
 		<!--商品详情-->
 		<div class="bright">
 			<span class="title chose">商品详情</span>
-			<span class="title">商品评论</span>
-			<span class="title">商品问答</span>
+			<!--<span class="title">商品评论</span>
+			<span class="title">商品问答</span>-->
 			<div class="info">
 				<!--商品文字详情-->
 				<table>
