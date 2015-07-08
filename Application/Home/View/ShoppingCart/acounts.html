@@ -1,6 +1,21 @@
 <extend name='./Public/tpl/index.html' />
 <block name="head">
 		<link rel="stylesheet" href="__PUBLIC__/CSS/ShoppingCart/accounts.css" />
+		<script>
+			$(function(){
+				$('.co_ri_bot').click(function(){
+					$.ajax({
+						type:"post",
+						url:"{:U('Home/Shop/ajax_menu_handle')}",
+						async:true,
+						success:function(msg){
+							alert(msg);
+							window.location="{:U('Home/Index/index')}";
+						}
+					});
+				})
+			})
+		</script>
 </block>
 <block name="body">
 		<div class="main">
@@ -53,13 +68,15 @@
 				<div class="p_xcount">小计(元)</div>
 			</div>
 			<div class="goods_message">
+				<!--商品信息-->
+				<foreach name="goods" item="good">
 				<div class="show">
 					<div class="go_img">
-						<img src="adv.jpg" width="65px" height="65px"/>
+						<img src="__PUBLIC__/img/{$good['imgpath']}" width="65px" height="65px"/>
 					</div>
-					<div class="go_mes">商品信息商品信息商品信息商品信息<br>123</div>
-					<div class="go_pri">10.00</div>
-					<div class="go_cou">1</div>
+					<div class="go_mes">{$good['shopname']}<br>123</div>
+					<div class="go_pri">{$good['price']}</div>
+					<div class="go_cou">{$good['number']}</div>
 					<div class="go_yh">
 						<div class="yh">
 							<select>
@@ -69,9 +86,13 @@
 						</div>
 					</div>
 					<div class="go_sum">
-						<span style="color: #ff0000;">10.00</span>
+						<span style="color: #ff0000;">
+							<?php echo $good['price']*$good['number']; ?>
+						</span>
 					</div>
 				</div>
+				</foreach>
+				<!--结束-->
 				
 				<div class="all_mess">
 					<div class="a_top">
@@ -115,12 +136,12 @@
 								<div class="ar_middle">
 									<input type="checkbox"/>购买运费险，退货可赔付9元
 								</div>
-								<div class="ar_right">0.40</div>
+								<div class="ar_right">0.00</div>
 							</div>
 						</div>
 					</div>
 					<div class="a_bottom">
-						店铺合计(含运费) : ￥<span style="color: #ff0000;">10.40</span>
+						店铺合计(含运费) : ￥<span style="color: #ff0000;">{$a_acount}</span>
 					</div>
 				</div>
 				<div class="commit">
@@ -128,7 +149,7 @@
 						<div class="co_ri_top">
 							<div class="top_top">
 								实付款：<span style="color: #666; font-size: 25px;">￥</span>
-								<span style="color: #ff0000; font-size: 25px;">10.40</span>
+								<span style="color: #ff0000; font-size: 25px;">{$a_acount}</span>
 							</div>
 							<div class="top_bot">
 								<div class="bot1">
@@ -139,7 +160,7 @@
 								</div>
 							</div>
 						</div>
-						<a href="">
+						<a>
 							<div class="co_ri_bot">
 								提交订单
 							</div>
