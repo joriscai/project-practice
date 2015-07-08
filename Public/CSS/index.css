@@ -63,6 +63,12 @@ a:active{
 	float: left;
 	width:300px;
 	height:100px;
+	text-align: center;
+	margin: 0 auto;
+	vertical-align:middle;
+}
+.logo img{
+	margin-top: 20px;
 }
 .search{
 	margin: 30px;
@@ -195,6 +201,7 @@ a:active{
 	display: none;
 	margin: 0px;
 	background:rgba(247, 247, 247, 1);
+	background:#f7f7f7;
 	padding: 0px;
 	width: 580px;
 	border-right: 1px solid red;

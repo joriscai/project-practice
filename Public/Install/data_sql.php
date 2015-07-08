@@ -45,6 +45,18 @@ if($db_act=='create_db'){
 	name varchar(32) not null,
 	pnumber varchar(12) not null,
 	price int not null
+	);
+	create table goods(
+	good_id int(10) not null primary key auto_increment,
+	good_name varchar(50) not null,
+	seller_id int(10) not null,
+	good_limg text not null,
+	good_bimg text not null,
+	price float not null,
+	oprice float not null,
+	msg varchar(30) not null,
+	info text not null,
+	info_img text not null
 	);"
 	;
 }elseif($db_act="insert_data"){

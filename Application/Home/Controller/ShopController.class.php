@@ -3,8 +3,42 @@ namespace Home\Controller;
 use Think\Controller;
 
 class ShopController extends Controller{
+	public function addgood(){
+		$con=M('goods');
+		$good_limg=array(
+		'1'=>'img2.jpg',
+		'2'=>'img2.jpg',
+		'3'=>'img2.jpg',
+		'4'=>'img2.jpg',
+		'5'=>'img2.jpg'
+		);
+		var_dump(json_encode($good_limg));
+	}
+	
 	//商品详情页
 	public function show(){
+		
+		//获取商品的ID
+		$goodid=I('goodid');
+		//链接数据库
+		$con=M('goods');
+		
+		//安全监测
+		if(!$goodid){
+			$this->error('没有该页面');
+			die;
+		}
+		//读取数据
+		$data=$con->where("good_id=$goodid")->limit(1)->select();
+		//如果没有该商品ID，说明是非法访问
+		if(!$data){
+			$this->error('没有该页面');
+			die;
+		}
+		$data[0]['good_limg']=json_decode($data[0]['good_limg'],TRUE);
+		$data[0]['good_bimg']=json_decode($data[0]['good_bimg'],TRUE);
+		
+		$this->assign('goodinfo',$data[0]);
 		$this->display('ShoppingCart/good');
 	}
 	public function ajax_s(){
