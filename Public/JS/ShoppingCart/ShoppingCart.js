@@ -72,6 +72,33 @@ $(function(){
 			
 		}
 	)
+	
+	$(".check_all").click(function()
+	{
+		m = 1;
+		var ids = document.getElementsByName("chgoods");
+		var all = document.getElementById("check_all");
+		var al = document.getElementById("check_al");
+		m == 1 ? al.checked = all.checked : all.checked = al.checked;
+		for(var j = 0;j < ids.length;++j)
+		{
+			ids[j].checked = all.checked;
+		}
+	})
+	
+	$(".check_al").click(function()
+	{
+		m = 0;
+		var ids = document.getElementsByName("chgoods");
+		var all = document.getElementById("check_all");
+		var al = document.getElementById("check_al");
+		m == 1 ? al.checked = all.checked : all.checked = al.checked;
+		for(var j = 0;j < ids.length;++j)
+		{
+			ids[j].checked = al.checked;
+		}
+	})
+
 	window.onload = function()
 	{
 		sele();
