@@ -34,4 +34,8 @@ class IndexController extends Controller {
 	public function soc(){
 		$this->display('About/soc');
 	}
+	
+	public function seller(){
+		$this->display('seller/SellerShop');
+	}
 }
