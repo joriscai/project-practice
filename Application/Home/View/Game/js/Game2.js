@@ -53,22 +53,15 @@ window.onload = function()
 	can.width = width;
 	ctx = can.getContext("2d");				//创建画布
 	
-//	ctx.fillStyle = "#ffffff";
-//	ctx.fillRect(0,0,720,9);				//绘制能量条
-//	ctx.fillStyle = "#9cfcfb";				//信息显示区颜色
-//	ctx.fillRect(601,9,720,420);			//绘制信息显示区
 	
-}
-//渐变色
-function change_color(a,b,c)
-{
-	//创建渐变色
-	var gradient = ctx.createLinearGradient(0,0,600,0);
-	gradient.addColorStop("0",a);
-	gradient.addColorStop("0.5",b);
-	gradient.addColorStop("1.0",c);
-	
-	return gradient;
+	var key = localStorage.key(0);
+	var value = localStorage.getItem(key);
+	if(!value)
+	{
+		value = 0;
+	}
+	var id = document.getElementById("history");
+	id.value = value+"s";
 }
 //画圆(圆心横坐标，圆心纵坐标，半径，颜色)
 function drawarc(x,y,r,c)
@@ -220,6 +213,21 @@ function monster_move()
 				window.clearInterval(timer);
 				window.clearInterval(times);
 				alert("游戏结束！\n当前速度为:"+speed+"\n坚持的时间为："+(t-1)+"秒\n继续加油！！！");
+				var te = (t-1);
+				var key = localStorage.key(0);
+				var value = localStorage.getItem(key);
+				if(!value)
+				{
+					value = 0;
+				}
+				if(t > parseInt(value))
+				{
+					key = localStorage.key(0);
+					localStorage.removeItem(key);
+					localStorage.setItem(1 ,te);
+					var id = document.getElementById("history");
+					id.value = te+"s";
+				}
 				ctx.fillStyle = "#000000";
 				ctx.fillRect(0,0,width,height);
 				i = 51;
@@ -229,6 +237,19 @@ function monster_move()
 		}
 	}
 }
+
+function clear_his()
+{
+	var key = localStorage.key(0);
+	var value = localStorage.getItem(key);
+	if(value)
+	{
+		localStorage.removeItem(key);
+	}
+	var id = document.getElementById("history");
+	id.value = 0+"s";
+}
+
 //玩家移动
 function player_move(p_move_x,p_move_y)
 {

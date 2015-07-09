@@ -1,0 +1,20 @@
+﻿<extend name='./Public/tpl/index.html' />
+<block name="head">
+<title>关于我们</title>
+<link href="__PUBLIC__/css/AboutUs/AboutUs.css" rel="stylesheet">
+</block>
+<block name="body">
+    <div id="container">
+    	<div id="sign">
+    	    <div class="box0">关于我们</div>
+    	    <div class="box1"><a href="{:U('Home/Index/cul')}" target="text">企业文化</a></div>
+    	    <div class="box2"><a href="{:U('Home/Index/mod')}" target="text">经营模式</a></div>
+    	    <div class="box3"><a href="{:U('Home/Index/comn')}" target="text">公司使命</a></div>
+    	    <div class="box4"><a href="{:U('Home/Index/soc')}" target="text">社会责任</a></div>
+    		<div id="centre">
+    			<iframe name="text" width="790" height="1200" frameborder="0px" src="{:U('Home/Index/cul')}">></iframe>
+    		</div>
+    	</div>
+    	
+    </div>
+</block>

@@ -351,6 +351,10 @@
 	border: 0px #00f solid;
 }
 
+.co_ri_bot:hover {
+	cursor: pointer;
+}
+
 .goods_message .show {
 	position: relative;
 	width: 960px;

@@ -15,7 +15,12 @@
 			</canvas>
 		</div>
 		<div class="shuoming">
-			<button id="but" onclick="init()">开始游戏</button>
+			<input id="but" type="button" onclick="init()" value="开始游戏">
+			<div class="history">
+				<label>历史最高记录 : </label>
+				<input type="button" name="history" id="history" value="0s" disabled="disabled"/>
+				<input type="button" class="cls" onclick="clear_his()" value="清空历史记录"/>
+			</div>
 		</div>
 	</body>
 </html>

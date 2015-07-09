@@ -9,12 +9,11 @@
    text-align: center;
 }
 .box {
-	position: relative;
+	margin:0px auto;
 	border: 0px solid;
 	width: 990px;
 	height: 180px;
-	top: 30px;
-	left: 200px;
+
 }
 .wapper a {
 	color: #777;
