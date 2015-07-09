@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 <head>
    <title> 商城首页</title>
@@ -13,6 +13,30 @@
    <script src="__PUBLIC__/jquery-1.7.2.min.js"></script>
    <!--<script src="__PUBLIC__/bootstrap/js/bootstrap.min.js"></script>-->
    <style type="text/css" rel="stylesheet">
+   		.big_box {
+			position: absolute;
+			width: 200px;
+			height: 200px;
+			border: 0px solid;
+			z-index: 100;
+			background-image: url(__PUBLIC__/img/adv.png);
+		}
+		.big_box .close {
+			float: right;
+			top: 0px;
+			width: 20px;
+			height: 20px;
+			right: 0px;
+			z-index: 10px;
+			background-color: #000;
+			display: none;
+		}
+		.big_box .picture {
+			position: absolute;
+			bottom: 0px;
+			width: 200px;
+			height: 180px;
+		}
 		
    </style>
    <script type="text/javascript">
@@ -157,6 +181,7 @@
 
 //----------------结束---- 生活服务效果代码--------------------------------//				
    </script>
+
 </head>
 <body>
 	<div class="tToolbar">
@@ -1703,5 +1728,101 @@
 		</div>
 	</div>
 	<include file="./Public/tpl/footer.html"/>
+	
+	<!--漂浮广告-->
+	<div class="big_box" id="floatdiv" onmouseenter="mousein()" onmouseleave="mouseout()" style="border: 1px solid;">
+			<div id="close" class="close">
+				<img src="__PUBLIC__/img/close.png" onclick="close_adv()"/>
+			</div>
+			<a href="./Application/Home/View/Game/index.html" target="_blank">
+				<div class="picture"></div>
+			</a>
+	</div>
 </body>
+   <!--漂浮广告js-->
+   <script >
+   	var mousein = function(){
+		var ida = document.getElementById("close");
+		ida.style.display="block";
+		pause_resume();
+	}
+	var mouseout = function(){
+		var ida = document.getElementById("close");
+		ida.style.display="none";
+		pause_resume();
+	}
+
+	var xPos = 20;
+	var yPos = document.body.clientHeight;
+	var step = 1;
+	var delay = 30;
+	var height = 0;
+	var Hoffset = 0;
+	var Woffset = 0;
+	var yon = 0;
+	var xon = 0;
+	var pause = true;
+	var interval;
+	floatdiv.style.top = yPos;
+	function changePos() {
+		width = document.body.clientWidth;
+		height = document.body.clientHeight;
+		Hoffset = floatdiv.offsetHeight;
+		Woffset = floatdiv.offsetWidth;
+		floatdiv.style.left = xPos + document.body.scrollLeft;
+		floatdiv.style.top = yPos + document.body.scrollTop;
+	//clientWidth是对象看到的宽度（不含边线）
+	//offsetWidth是对象看到的宽度（含边线，如滚动条的占用的宽，值会随着内容的输入而不断改变）
+	//scrollWidth是对象实际内容的宽度。
+		if(yon){
+			yPos = yPos + step;
+		}else{
+			yPos = yPos - step;
+		}
+		if (yPos<0){
+			yon = 1;
+			yPos = 0;
+		}
+		if (yPos >= (height - Hoffset)) {
+			yon = 0;
+			yPos = (height - Hoffset);
+		}
+		if (xon) {
+			xPos = xPos + step;
+		}else{
+			xPos = xPos - step;
+		}
+		if (xPos < 0) {
+			xon = 1;
+			xPos = 0;
+			}
+		if (xPos >= (width - Woffset)) {
+			xon = 0;
+				xPos = (width - Woffset);
+		}
+	}
+	function start() {
+		floatdiv.visibility = 'visible';
+		interval = setInterval('changePos()', delay);
+	}
+	function pause_resume() {
+		if(pause) {
+			clearInterval(interval);
+			pause = false;
+		}else{
+			interval = setInterval('changePos()',delay);
+			pause = true;
+		}
+	}
+	start();
+	  
+	var close_adv = function()
+	{
+		clearInterval(interval);
+		pause = false;
+		floatdiv.style.index = 0;
+		var id = document.getElementById("floatdiv");
+		id.style.display = "none";
+	}
+</script>
 </html>
