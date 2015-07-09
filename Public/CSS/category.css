@@ -19,8 +19,8 @@
 }
 .hc-category-index{
 	width: 120px;
-	height: 20px;
-	padding: 7px 0 4px;
+	height: 27px;
+	padding-top: 7px;
 	overflow: hidden;
 	margin: 0 auto;
 }
@@ -53,7 +53,7 @@
 }
 .content{
 	display: inline-block;
-	width: 865px;
+	width: 860px;
 }
 .index-item{
 	margin: 10px;

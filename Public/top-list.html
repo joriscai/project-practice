@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+	<title>排行榜</title>
+	<link href="pulish.css" rel="stylesheet">
+	<link href="top-list.css" rel="stylesheet">
+	<script src="jquery-1.7.2.min.js"></script>
+	<script type="text/javascript">
+			$(function(){
+				$(".item-list li").hover(function(){
+					$(this).find(".item-hd").hide();
+					$(this).find(".item-bd").show();
+					$(this).siblings().find(".item-bd").hide();
+				},function(){
+					$(this).find(".item-hd").show();
+					$(this).find(".item-bd").hide();
+				})
+			});
+	</script>
+</head>
+<body>
+<div class="Top-list">
+	<ul class="item-list">
+				<li class="current">
+					<div class="item-hd">
+						<span class="num-top">1</span>
+						<a href="">东风标致308S</a>									
+					</div>
+					<div class="item-bd" style="display: none; height: 122px;">
+						<div class="item-info">
+							<a target="_blank" class="item-img" href="#">
+								<img src="img/3bf33a87e950352a6f7ca3b05043fbf2b2118b6d.jpg" style="width: 110px; ">
+							</a>
+							<p class="item-text">
+								<a target="_blank"  style="" href="#">2014年11月20日， 东风标致308S亮相2014广州车展，正式公布其动力总成，同时宣告将以“超级智能运动型车”的产品定位登陆国内市场。在细分领域，东风标致308S集东风标致动力总成、智能…
+								</a>
+							</p>
+						</div>
+					</div>
+				</li>
+				<li class="">
+					<div class="item-hd">
+						<span class="num-top">2</span>
+						<a target="_blank" title="五菱宏光" class="list-title" href="#">五菱宏光</a>						
+					</div>
+					<div class="item-bd" style="display: none;">
+						<div class="item-info">
+							<a target="_blank" class="item-img" href="#">
+								<img src="#" style="width: 110px; ">
+							</a>
+							<p class="item-text">
+								<a target="_blank"  style="" href="#">五菱宏光是上汽通用五菱推出的第一款介于商用车和乘用车的跨界自主研发产品，以流畅的外形设计，多样化、实用性的宽敞驾乘空间，动力性和经济性的完美平衡，以及在操…
+								</a>
+							</p>
+						</div>
+					</div>
+				</li>
+				<li class="">
+					<div class="item-hd">
+						<span class="num-top">2</span>
+						<a target="_blank" title="五菱宏光" class="list-title" href="#">五菱宏光</a>						
+					</div>
+					<div class="item-bd" style="display: none;">
+						<div class="item-info">
+							<a target="_blank" class="item-img" href="#">
+								<img src="#" style="width: 110px; ">
+							</a>
+							<p class="item-text">
+								<a target="_blank"  style="" href="#">五菱宏光是上汽通用五菱推出的第一款介于商用车和乘用车的跨界自主研发产品，以流畅的外形设计，多样化、实用性的宽敞驾乘空间，动力性和经济性的完美平衡，以及在操…
+								</a>
+							</p>
+						</div>
+					</div>
+				</li>
+				<li class="">
+					<div class="item-hd">
+						<span class="num-top">2</span>
+						<a target="_blank" title="五菱宏光" class="list-title" href="#">五菱宏光</a>						
+					</div>
+					<div class="item-bd" style="display: none;">
+						<div class="item-info">
+							<a target="_blank" class="item-img" href="#">
+								<img src="#" style="width: 110px; ">
+							</a>
+							<p class="item-text">
+								<a target="_blank"  style="" href="#">五菱宏光是上汽通用五菱推出的第一款介于商用车和乘用车的跨界自主研发产品，以流畅的外形设计，多样化、实用性的宽敞驾乘空间，动力性和经济性的完美平衡，以及在操…
+								</a>
+							</p>
+						</div>
+					</div>
+				</li>
+
+			</ul>
+</div>
+</body>
+</html>
