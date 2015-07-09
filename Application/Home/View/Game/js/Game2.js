@@ -41,6 +41,7 @@ var t;
 //锁
 var suo;
 var time1;
+var suoskill;
 
 window.onload = function()
 {
@@ -93,6 +94,7 @@ function init()
 	isplay = 0;
 	t = 0;
 	suo = 1;
+	suoskill = 1;
 	sk = 10;
 	ks = 0;
 	
@@ -281,7 +283,11 @@ document.onkeydown = function(event)
 		//B、b放技能
 		case 66:
 		case 98:
-			clea();
+			if(suoskill)
+			{
+				suoskill = 0;
+				clea();
+			}
 			break;
 	}
 }
@@ -309,6 +315,7 @@ function player_skill()
 			window.clearInterval(time1);
 			timer = window.setInterval("monster_move();",  100);
 			times = window.setInterval("ac_time();", 1000);
+			suoskill = 1;
 			return ;
 		}
 	}
