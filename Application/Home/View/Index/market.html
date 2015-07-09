@@ -1,11 +1,10 @@
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<extend name='./Public/tpl/index.html' />
+<block name="head">
   <title>数码产品</title>
-  <link href="../../../Public/pulish.css" rel="stylesheet">
-   <link href="../../../Public/CSS/market.css" rel="stylesheet">
-   <script src="../../../Public/jquery-1.7.2.min.js"></script>
-   <!--<script src="__PUBLIC__/bootstrap/js/bootstrap.min.js"></script>-->
+
+   <link href="__PUBLIC__/CSS/market.css" rel="stylesheet">
+
+
    <script type="text/javascript">
       //-------------------- 选项效果代码--------------------------------// 
         $(function(){
@@ -19,8 +18,10 @@
 
 //----------------结束---- 选项效果代码--------------------------------// 
    </script>
-</head>
-<body>
+</block>
+
+<block name="b_menu"></block><!--取消导航栏的菜单-->
+<block name="body">
 <div class="width" display="text-align: center;">
 <div class="mkcontent" style="width: 990px;margin: 0 auto;">
 <!--导航栏-->
@@ -644,5 +645,4 @@
 </div>
 
 </div>
-</body>
-</html>
+</block>
