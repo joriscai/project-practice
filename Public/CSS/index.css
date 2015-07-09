@@ -24,7 +24,7 @@ a:active{
 .w{
 	width:990px;
 	margin: 0 auto;
-	height: 410px;
+	height: auto;
 }
 
 /*--------JQ控制效果样式-----------------------------------------*/
@@ -536,10 +536,6 @@ a:active{
 .noborder{
 	border: 0px;
 }*/
-
-
-
-
 
 
 

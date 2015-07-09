@@ -156,7 +156,15 @@
 	})
 
 
-//----------------结束---- 生活服务效果代码--------------------------------//				
+//----------------结束---- 生活服务效果代码--------------------------------//			
+
+//----------------关闭固定广告----------------------------------------//
+var closeadv = function(m)
+{
+	var id = document.getElementById((m == 1 ? "leftadv" : "rightadv"));
+	id.style.display = "none";
+}
+//----------------结束-----------------------------------------------//
    </script>
 
 </head>
@@ -1704,9 +1712,12 @@
 			</ul>
 		</div>
 	</div>
+	
+	</div>
+
+	
 	<include file="./Public/tpl/footer.html"/>
-	
-	
 </body>
+	<include file="./Public/tpl/adv-fixed.html"/>
    
 </html>

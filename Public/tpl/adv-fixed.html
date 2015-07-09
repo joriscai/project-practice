@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>固定位置广告</title>
-	</head>
+
 	<style type="text/css">
 		.adv_left,.adv_right {
 			position: fixed;
@@ -25,29 +20,27 @@
 			width: 150px;
 			height: 20px;
 			border: 0px solid;
-			background-image: url(../img/close_adv.png);
+			background-image: url(__PUBLIC__/img/close_adv.png);
 		}
 		.adv_close:hover {
 			cursor: pointer;
-			background-image: url(../img/close_adv_on.png);
+			background-image: url(__PUBLIC__/img/close_adv_on.png);
 		}
 	</style>
 
 	<body>
 		<div class="adv_left" id="leftadv">
 			<div class="adv_top">
-				<a href=""><img src="../img/left_adv.png"/></a>
+				<a href=""><img src="__PUBLIC__/img/left_adv.png"/></a>
 			</div>
 			<div class="adv_close" onclick="closeadv(1)"></div>
 		</div>
 		<div class="adv_right" id="rightadv">
 			<div class="adv_top">
-				<a href=""><img src="../img/right_adv.png"/></a>
+				<a href=""><img src="__PUBLIC__/img/right_adv.png"/></a>
 			</div>
 			<div class="adv_close" onclick="closeadv(2)"></div>
 		</div>
-	</body>
-</html>
 
 <script>
 	var closeadv = function(m)
