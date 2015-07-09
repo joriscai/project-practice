@@ -1,8 +1,15 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
 <script type="text/javascript" src="../jquery-1.7.2.min.js" ></script>
 <style type="text/css">
 	*{list-style:none;border:0;}
-body{height:3000px;}
+.bo {
+	width: auto;
+	height: 3000px;
+	border: 1px #00f solid;
+}
 #rocket-to-top div {
     left: 0;
     margin: 0;
@@ -41,12 +48,15 @@ body{height:3000px;}
     z-index: 11;
 }
 </style>
-
-
+</head>
+<body>
+<div class="bo">
 <div style="display: none;" id="rocket-to-top">
 <div style="opacity:0;display: block;" class="level-2"></div>
 <div class="level-3"></div>
-
+</div>
+</body>
+</html>
 
 <script>
 $(function() {
