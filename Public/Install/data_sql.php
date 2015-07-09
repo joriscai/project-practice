@@ -56,7 +56,8 @@ if($db_act=='create_db'){
 	oprice float not null,
 	msg varchar(30) not null,
 	info text not null,
-	info_img text not null
+	info_img text not null,
+	cate int not null
 	);"
 	;
 }elseif($db_act="insert_data"){

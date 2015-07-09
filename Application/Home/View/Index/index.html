@@ -1369,16 +1369,16 @@ var closeadv = function(m)
 	        <div id="navitems">
 	        	<ul id="">
 					<li  class="fore0">
-						<a target="_blank" href="">服装城</a>
+						<a href="{:U('Home/Index/market','','')}/id/1">智能产品</a>
 					</li>
 					<li class="fore0">
-						<a target="_blank" href="">美妆馆</a>
+						<a target="_blank" href="{:U('Home/Index/market','','')}/id/2">服装城</a>
 					</li>
 					<li class="fore0">
-						<a target="_blank" href="">美食</a>
+						<a target="_blank" href="{:U('Home/Index/market','','')}/id/3">美容产品</a>
 					</li>
 					<li class="fore0">
-						<a target="_blank" href="">全球购</a>
+						<a target="_blank" href="{:U('Home/Index/aboutus')}">关于我们</a>
 					</li>
 				</ul>
 	        </div>
@@ -1630,85 +1630,24 @@ var closeadv = function(m)
 		</div>
 		<div class="nc">
 			<ul>
+				<foreach name="youl" item="good">
 				<li>
 					<div class="p-img">
-						<a href="">
-							<img  width="130" height="130" title="闪迪（SanDisk）至尊高速SDHC UHS-I存储卡 32GB Class10 读速40Mb/s" src="__PUBLIC__/img/54928836N0fba8749.jpg" class="">
+						<a href="{:U('Home/shop/show','','')}/goodid/{$good.good_id}" >
+							<img  width="130" height="130" title="{$good.good_name}" src="__PUBLIC__/img/good/{$good.cate}/{$good.good_bimg.1}" class="">
 						</a>
 					</div>
 					<div class="p-info">
 						<div class="p-name">
-							<a  href="http://item.jd.com/593335.html" target="_blank" title="闪迪（SanDisk）至尊高速SDHC UHS-I存储卡 32GB Class10 读速40Mb/s">闪迪（SanDisk）至尊高速SDHC UHS-I存储卡 32GB Class10 读速40Mb/s</a>
-
+							<a  href="{:U('Home/shop/show','','')}/goodid/{$good.good_id}"  target="_blank" title="{$good.good_name}">{$good.good_name}</a>
 							</a>
 						</div>
 						<div class="p-price">
-							￥89.00
+							￥{$good.price}
 						</div>
 					</div>
 				</li>
-				<li>
-					<div class="p-img">
-						<a href="">
-							<img  width="130" height="130" title="西部数据(WD)蓝盘 1TB 5400转8M SATA6Gb/s  笔记本硬盘(WD10JPVX)" src="__PUBLIC__/img/rBEhUlJFX08IAAAAAAIvz5AvT2AAADmVwLy7MYAAi_n246.jpg" class="">
-						</a>
-					</div>
-					<div class="p-info">
-						<div class="p-name">
-							<a  href="http://item.jd.com/976058.html" target="_blank" title="西部数据(WD)蓝盘 1TB 5400转8M SATA6Gb/s  笔记本硬盘(WD10JPVX)">西部数据(WD)蓝盘 1TB 5400转8M SATA6Gb/s  笔记本硬盘(WD10JPVX)</a>
-							
-						</div>
-						<div class="p-price">
-							￥339.00
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="p-img">
-						<a href="">
-							<img  width="130" height="130" title="摩斯维 手机套/手机壳/保护套 适用于红米NOTE/红米note增强版 深宝蓝" src="__PUBLIC__/img/53f483aaN36424356.jpg" class="">
-						</a>
-					</div>
-					<div class="p-info">
-						<div class="p-name">
-							<a  target="_blank" title="摩斯维 手机套/手机壳/保护套 适用于红米NOTE/红米note增强版 深宝蓝">摩斯维 手机套/手机壳/保护套 适用于红米NOTE/红米note增强版 深宝蓝</a>
-						</div>
-						<div class="p-price">
-							￥38.00
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="p-img">
-						<a href="">
-							<img  width="130" height="130" title="魅族 MX4 16GB 灰色 移动4G手机" src="__PUBLIC__/img/c75f45a8/5541f3b0N85da5f80.jpg" class="">
-						</a>
-					</div>
-					<div class="p-info">
-						<div class="p-name">
-							<a target="_blank" title="魅族 MX4 16GB 灰色 移动4G手机">魅族 MX4 16GB 灰色 移动4G手机</a>
-						</div>
-						<div class="p-price">
-							￥1499.00
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="p-img">
-						<a href="">
-							<img  width="130" height="130" title="华为荣耀盒子 真4K超高清H.265硬解 网络机顶盒 蓝光3D安卓电视盒子 无线300M" src="__PUBLIC__/img/65cec9de/549a3411N0a7ca0a0.jpg" class="">
-						</a>
-					</div>
-					<div class="p-info">
-						<div class="p-name">
-							<a  target="_blank" title="华为荣耀盒子 真4K超高清H.265硬解 网络机顶盒 蓝光3D安卓电视盒子 无线300M">华为荣耀盒子 真4K超高清H.265硬解 网络机顶盒 蓝光3D安卓电视盒子 无线300M</a>
-						</div>
-						<div class="p-price">
-							￥298.00
-						</div>
-					</div>
-				</li>
-				
+				</foreach>
 			</ul>
 		</div>
 	</div>
