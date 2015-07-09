@@ -168,9 +168,9 @@
 					if($('#ve_input').val().length==3){
 					$.post("{:U('Home/User/ajax_verify')}",{code:$('#ve_input').val()},function(data){
 					if(data==1){
-						$('#verify').after('<span id="msg_v" class="msg">对勾</span>');
+						$('#verify').after('<span id="msg_v" class="msg"><img src="__PUBLIC__/img/yes.png" /></span>');
 					}else{
-						$('#verify').after('<span id="msg_v" class="msg">验证码错误</span>');
+						$('#verify').after('<span id="msg_v" class="msg"><img src="__PUBLIC__/img/no.png" /></span>');
 					}
 				})
 		}

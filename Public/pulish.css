@@ -37,5 +37,6 @@ li{
 
 img{
 	border: 0px;
+	z-index: 1;
 }
 

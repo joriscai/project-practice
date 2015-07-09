@@ -42,11 +42,14 @@ var t;
 var suo;
 var time1;
 
-
-
 window.onload = function()
 {
+	width = document.body.clientWidth;
+	height =  document.body.clientHeight - 100;
 	can = document.getElementById("can");
+	gam = document.getElementById("gam");
+	can.height = height;
+	can.width = width;
 	ctx = can.getContext("2d");				//创建画布
 	
 //	ctx.fillStyle = "#ffffff";
@@ -94,7 +97,7 @@ function init()
 	ks = 0;
 	
 	ctx.fillStyle = "#000000";
-	ctx.fillRect(0,0,720,420);
+	ctx.fillRect(0,0,width,height);
 	drawarc(player_x,player_y,10,player_color);
 	rand_monster();
 	for(var i = 0;i < 50; ++i)
@@ -130,16 +133,16 @@ function rand_monster()
 	{
 		number = parseInt(8*Math.random());
 		monster_color[i] = number;
-		number = parseInt(700*Math.random());
+		number = parseInt((width - 10)*Math.random());
 		while(judge(number,player_x) <= 100)
 		{
-			number = parseInt(700*Math.random());
+			number = parseInt((width - 10)*Math.random());
 		}
 		monster_x[i] = number;
-		number = parseInt(400*Math.random());
+		number = parseInt((height - 10)*Math.random());
 		while(judge(number,player_y) <= 100)
 		{
-			number = parseInt(400*Math.random());
+			number = parseInt((height - 10)*Math.random());
 		}
 		monster_y[i] = number;
 	}
@@ -179,11 +182,11 @@ function m_move(mon_x,mon_y)
 //怪物移动反弹偏移量
 function m_move1(ax,ay,i)
 {
-	if(ax <= 0 || ax >= 715)
+	if(ax <= 0 || ax >= width-5)
 	{
 		special_x[i] *= -1;
 	}
-	if(ay <= 0 || ay >= 415)
+	if(ay <= 0 || ay >= height-5)
 	{
 		special_y[i] *= -1;
 	}
@@ -216,7 +219,7 @@ function monster_move()
 				window.clearInterval(times);
 				alert("游戏结束！\n当前速度为:"+speed+"\n坚持的时间为："+(t-1)+"秒\n继续加油！！！");
 				ctx.fillStyle = "#000000";
-				ctx.fillRect(0,0,720,420);
+				ctx.fillRect(0,0,width,height);
 				i = 51;
 				j = speed + 1;
 				suo = 0;
@@ -227,54 +230,59 @@ function monster_move()
 //玩家移动
 function player_move(p_move_x,p_move_y)
 {
-	var p_x = player_x - 10;
-	var p_y = player_y - 10;
-	if(p_x + p_move_x < 0 || p_x + p_move_x >  700 || 
-	   p_y + p_move_y < 0 || p_y + p_move_y > 400){}
-	else
+	
+	if(suo)
 	{
-		drawarc(player_x,player_y,10,"#000000");
-		player_x += p_move_x;
-		player_y += p_move_y;
-		drawarc(player_x,player_y,10,player_color);
+		var p_x = player_x - 10;
+		var p_y = player_y - 10;
+		if(p_x + p_move_x < 0 || p_x + p_move_x >  width-20 || 
+		   p_y + p_move_y < 0 || p_y + p_move_y > height-20){}
+		else
+		{
+			drawarc(player_x,player_y,10,"#000000");
+			player_x += p_move_x;
+			player_y += p_move_y;
+			drawarc(player_x,player_y,10,player_color);
+		}
 	}
 }
 document.onkeydown = function(event)
 {
-	if(suo)
+	switch(event.keyCode)
 	{
-		switch(event.keyCode)
-		{
-			// 按下了“向下”箭头
-			case 40:
-			case 83:
-			case 115:
-				player_move(0,10);
-				break;
-			// 按下了“向左”箭头
-			case 37:
-			case 65:
-			case 97:
-				player_move(-10,0);
-				break;
-			// 按下了“向右”箭头
-			case 39:
-			case 68:
-			case 100:
-				player_move(10,0);
-				break;
-			// 按下了“向上”箭头
-			case 38:
-			case 87:
-			case 119:
-				player_move(0,-10);
-				break;
-			case 66:
-			case 98:
-				clea();
-				break;
-			
-		}
+		//按空格键开始
+		case 32:
+			init();
+			break;
+		// 按下了“向下”箭头
+		case 40:
+		case 83:
+		case 115:
+			player_move(0,10);
+			break;
+		// 按下了“向左”箭头
+		case 37:
+		case 65:
+		case 97:
+			player_move(-10,0);
+			break;
+		// 按下了“向右”箭头
+		case 39:
+		case 68:
+		case 100:
+			player_move(10,0);
+			break;
+		// 按下了“向上”箭头
+		case 38:
+		case 87:
+		case 119:
+			player_move(0,-10);
+			break;
+		//B、b放技能
+		case 66:
+		case 98:
+			clea();
+			break;
 	}
 }
 
@@ -282,7 +290,7 @@ var sk;
 var ks;
 function player_skill()
 {
-	if(ks < 80)
+	if(ks < 150)
 	{
 		sk += 10;
 	}
@@ -296,7 +304,7 @@ function player_skill()
 			ks = 0;
 			suo = 1;
 			ctx.fillStyle = "#000000";
-			ctx.fillRect(0,0,720,420);
+			ctx.fillRect(0,0,height,height);
 			drawarc(player_x,player_y,10,player_color);
 			window.clearInterval(time1);
 			timer = window.setInterval("monster_move();",  100);
@@ -311,7 +319,7 @@ function player_skill()
 function clea()
 {
 	suo = 0;
-	time1 = window.setInterval("player_skill();",  10);
+	time1 = window.setInterval("player_skill();",  1);
 	window.clearInterval(times);
 	window.clearInterval(timer);
 	rand_monster();
