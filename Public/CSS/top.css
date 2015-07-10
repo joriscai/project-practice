@@ -244,7 +244,6 @@
 			border-bottom: 1px solid #ccc;
 		}
 		.dorpdown-layerin{
-			display: none;
 			display: inline-block;
 			/*z-index: 50;*/
 			height: 347px;
@@ -256,14 +255,14 @@
 		}
 		.fore{
 			display: inline-block;
-			margin-top:-5px;
+			margin-top:5px;
 			width: 580px;
-			height: 53px;
+			/*height: 53px;*/
 		}
 
 		.fore .dt1 {
 			width: 110px;
-			margin-top:-8px;
+			/*margin-top:-8px;*/
 			text-align: right;
 			float: left;
 			display: inline-block;
@@ -284,13 +283,13 @@
 			position: relative;
 			display: inline-block;
 			border-bottom: 1px solid black;
-			padding-bottom: 7px ;
+			/*padding-bottom: 7px ;*/
 		}
 
 		.fore .dd1 a{
 			color: black;
 			margin: 1px auto;
-			font-size: 12px;
+			font-size: 13px;
 			border-left: 2px solid #eee;
 			float: left;
 			line-height: 16px;
