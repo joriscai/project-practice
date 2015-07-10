@@ -1,7 +1,4 @@
-body{
-  width: 990px;
-  margin: auto;
-}
+
 
 
 a {
@@ -19,6 +16,8 @@ a {
 #container{
 	height: 100%;
   min-height: 550px;
+  width: 990px;
+  margin: 0 auto;
   text-align: center;
   background-color: #eee;
 }
