@@ -3,16 +3,23 @@ namespace Home\Controller;
 use Think\Controller;
 
 class ShopController extends Controller{
-	public function addgood(){
-		$con=M('goods');
-		$good_limg=array(
-		'1'=>'img2.jpg',
-		'2'=>'img2.jpg',
-		'3'=>'img2.jpg',
-		'4'=>'img2.jpg',
-		'5'=>'img2.jpg'
-		);
-		var_dump(json_encode($good_limg));
+	
+	//订单页面
+	public function slist(){
+		$this->display('List/index');
+	}
+	
+	public function slist_1(){
+		$this->display('List/list1');
+	}
+	public function slist_2(){
+		$this->display('List/list2');
+	}
+	public function slist_3(){
+		$this->display('List/list3');
+	}
+	public function slist_4(){
+		$this->display('List/list4');
 	}
 	
 	//商品详情页

@@ -1,0 +1,21 @@
+﻿<extend name='./Public/tpl/index.html' />
+<block name="head">
+<link href="__PUBLIC__/css/ShoppingList/Shopping List.css" rel="stylesheet">
+<title>我的订单</title>
+</block>
+<block name="body">
+
+    <div id="container">
+
+    	<div id="sign">
+    	    <div class="box0">我的订单</div>
+    	    <div class="box1"><a href="{:U('Home/Shop/slist_1')}" target="text">全部订单</a></div>
+    	    <div class="box2"><a href="{:U('Home/Shop/slist_2')}" target="text">待收货订单</a></div>
+    	    <div class="box3"><a href="{:U('Home/Shop/slist_3')}" target="text">已收货订单</a></div>
+    	    <div class="box4"><a href="{:U('Home/Shop/slist_4')}" target="text">取消订单记录</a></div>
+    	<div id="centre">
+    			<iframe name="text" width="790" height="100%" frameborder="0px" src="{:U('Home/Shop/slist_1')}"></iframe>
+    	</div>
+    	</div>
+    </div>
+</block>
