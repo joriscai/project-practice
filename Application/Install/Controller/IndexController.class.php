@@ -102,7 +102,8 @@ class IndexController extends Controller {
 		$detail = explode(';', $presql);
 		
 		$count = count($detail);
-		
+		mysql_query('COMMIT');//事务提交，增加插入速度
+		mysql_query('BEGIN');
 		for ($i = 0; $i < $count-1; $i++) {
 			$sql = $detail[$i];
 			$sql = str_replace("\n", '', $sql);
@@ -113,7 +114,8 @@ class IndexController extends Controller {
 				return 0;
 			}
 		
-	}
+		}
+		mysql_query('COMMIT');
 	return  1;
 }
 }
