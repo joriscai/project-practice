@@ -197,7 +197,7 @@ a:active{
 	position: relative;
 	top:-363px;
 	left: 210px;
-	/*height: 370px;*/
+	height: 363px;
 	display: none;
 	margin: 0px;
 	background:rgba(247, 247, 247, 1);
@@ -211,35 +211,14 @@ a:active{
 
 	display: inline-block;
 	/*z-index: 50;*/
-	height: 350px;
+	/*height: 350px;*/
 	
 	margin: 0px;
-	margin-top: 12px;
+	margin-top: 5px;
 	padding: 0px;
 	width: 580px;
 }
 
-/*.dorpdown-layerin a{
-	color: black;
-	text-decoration: none;
-	padding:0px 20px 0px 0px;
-}
-
-.dorpdown-layerin a:hover{
-	color: red;
-	text-decoration: none;
-	
-}
-.dorpdown-layerin a:visited{
-	color: black;
-	text-decoration: none;
-	padding:0px 20px 0px 0px;
-}
-.dorpdown-layerin a:active{
-	color: black;
-	text-decoration: none;
-	padding:0px 20px 0px 0px;
-}*/
 .fore{
 	display: inline-block;
 	margin-top:-5px;

@@ -5,6 +5,9 @@
 		<title>广告</title>
 	</head>
 	<style type="text/css">
+	body {
+		height: 1200px;
+	}
 		.big_box {
 			position: absolute;
 			width: 200px;
@@ -19,9 +22,18 @@
 			width: 20px;
 			height: 20px;
 			right: 0px;
-			z-index: 10px;
+			z-index: 10;
 			background-color: #000;
 			display: none;
+		}
+		.big_box:hover {
+			cursor: pointer;
+		}
+		.big_box .but {
+			float: right;
+			top: 0px;
+			width: 200px;
+			height: 180px;
 		}
 	</style>
 	<body>
@@ -30,6 +42,7 @@
 				<img src="../img/close.png" onclick="close_adv()"/>
 			</div>
 			<a href="../../Application/Home/View/Game/index.html" target="_blank">
+			<div class="but"></div>
 			</a>
 		</div>
 	</body>
@@ -64,8 +77,8 @@
 		height = document.body.clientHeight;
 		Hoffset = floatdiv.offsetHeight;
 		Woffset = floatdiv.offsetWidth;
-		floatdiv.style.left = xPos + document.body.scrollLeft;
-		floatdiv.style.top = yPos + document.body.scrollTop;
+		floatdiv.style.left = xPos + document.body.scrollLeft + "px";
+		floatdiv.style.top = yPos + document.body.scrollTop + "px";
 	//clientWidth是对象看到的宽度（不含边线）
 	//offsetWidth是对象看到的宽度（含边线，如滚动条的占用的宽，值会随着内容的输入而不断改变）
 	//scrollWidth是对象实际内容的宽度。

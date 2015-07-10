@@ -1,11 +1,15 @@
-body{
-  width: 990px;
-  margin: auto;
+.abou {
+	height: auto;
+	width: 990px;
+	margin: 0px auto;
 }
 
-a {
+.box1 a,.box2 a,.box3 a,.box4 a {
   text-decoration:none; 
   color: #666;
+} 
+.box1 a:hover,.box2 a:hover,.box3 a:hover,.box4 a:hover {
+  color: #ff0000;
 } 
 
 #head{
@@ -16,11 +20,8 @@ a {
 }
 
 #container{
-	height: 1250px;
-  border-bottom: 1px solid #999;
-  border-right: 1px solid #999;
-  border-top: 1px solid #999;
-  border-left: 1px solid #999;
+height: 1150px;
+  border: 1px solid #999;
   text-align: center;
 }
 
@@ -37,27 +38,26 @@ a {
   width: 990px;
   height: 50px;
   text-align: left;
-  font: normal 10px "微软雅黑";
   color: #ccc;
 }
 
 #sign{
   width: 200px;
-  height: 1200px;
+  height: 1150px;
   position: relative;
   top: 0px;
+  font-size: 14px;
   border-right: 1px solid #999;
   border-top: 1px solid #999;
 }
 
 #centre{
   width: 790px;
-  height: 1200px;
+  height: 1150px;
   position: absolute;
   left: 200px;
   top: 0px;
   border-top: 1px solid #999;
-  border-bottom: 1px solid #999;
 }
 
 .box0{
@@ -65,7 +65,6 @@ a {
   top: 0px;
   text-align: left;
   width: 200px;
-  font: normal 14px "微软雅黑";
   color: #222;
   text-indent: 28px;
   line-height: 50px;
@@ -79,7 +78,6 @@ a {
   left: 20px;
   text-align: left;
   width: 160px;
-  font: normal 14px "微软雅黑";
   color: #036;
   border-bottom: 1px solid #999;
   text-indent: 8px;
@@ -93,7 +91,6 @@ a {
   left: 20px;
   text-align: left;
   width: 160px;
-  font: normal 14px "微软雅黑";
   color: #036;
   border-bottom: 1px solid #999;
   text-indent: 8px;
@@ -107,7 +104,6 @@ a {
   left: 20px;
   text-align: left;
   width: 160px;
-  font: normal 14px "微软雅黑";
   color: #036;
   border-bottom: 1px solid #999;
   text-indent: 8px;
@@ -121,10 +117,37 @@ a {
   left: 20px;
   text-align: left;
   width: 160px;
-  font: normal 14px "微软雅黑";
   color: #036;
   border-bottom: 1px solid #999;
   text-indent: 8px;
   line-height: 35px;
   height: 35px;
+}
+
+.big_box {
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	border: 1px solid;
+	z-index: 1000;
+	background: url(../../img/adv.png);
+}
+.big_box .close {
+	float: right;
+	top: 0px;
+	width: 20px;
+	height: 20px;
+	right: 0px;
+	z-index: 1000;
+	background-color: #000;
+	display: none;
+}
+.big_box:hover {
+	cursor: pointer;
+}
+.big_box .but {
+	float: right;
+	top: 0px;
+	width: 200px;
+	height: 180px;
 }
