@@ -1,7 +1,8 @@
-body{
+﻿body{
 	width: 760px;
 	height: 1200px;
 	margin: auto;
+	
 }
 
 #head{
@@ -40,4 +41,35 @@ ul{
 p{
 	line-height: 20px;
 	list-style-position: outside; 
+}
+
+.Top-list{
+	width: 308px;
+	text-align: left;
+	padding: 7px;
+}
+.num-top{
+	line-height: 20px;
+	width: 20px;
+	display: inline-block;
+	text-align: center;
+}
+.item-hd{
+	border-bottom: 1px solid #ccc;
+}
+.item-bd{
+	overflow: hidden;
+	background: #FCFCFD;
+}
+.item-info{
+	font-size: 12px;
+	color: #4D4D4D;
+	line-height: 20px;
+}
+.Top-list a{
+	color: #4D4D4D;
+}
+.item-info img{
+	float: left;
+	margin-right: 10px;
 }
