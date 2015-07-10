@@ -28,13 +28,11 @@ if($db_act=='create_db'){
 	proID int
 	);
 	create table shopcat(
-	shopid int not null primary key auto_increment,
-	shopname varchar(32) not null,
-	imgpath varchar(64) not null,
+	shopid int not null,
+	user_id int not null,
 	isselect tinyint(2) not null,
-	price float not null,
 	number int not null,
-	user_id int not null
+	primary key(user_id,shopid)
 	);
 	create table menu(
 	menuid int(10) not null primary key  auto_increment,
@@ -479,6 +477,6 @@ insert into city values(11,'兴安盟',33);
 insert into city values(12,'阿拉善盟',33);
 insert into city values(1,'澳门',34);
 insert into city values(1,'香港',35);
-insert shopcat values(1,'陈','goods1.png',1,20,3,1);
-insert shopcat values(2,'456','goods1.png',1,20,3,1);";
+insert shopcat values(1,1,1,20);
+insert shopcat values(2,1,1,2);";
 }
