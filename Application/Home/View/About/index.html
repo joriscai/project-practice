@@ -4,6 +4,7 @@
 <link href="__PUBLIC__/css/AboutUs/AboutUs.css" rel="stylesheet">
 </block>
 <block name="body">
+	<div class="abou">
     <div id="container">
     	<div id="sign">
     	    <div class="box0">关于我们</div>
@@ -12,9 +13,103 @@
     	    <div class="box3"><a href="{:U('Home/Index/comn')}" target="text">公司使命</a></div>
     	    <div class="box4"><a href="{:U('Home/Index/soc')}" target="text">社会责任</a></div>
     		<div id="centre">
-    			<iframe name="text" width="790" height="1200" frameborder="0px" src="{:U('Home/Index/cul')}">></iframe>
+    			<iframe name="text" width="780" height="1200" style="border: 0px;" src="{:U('Home/Index/cul')}"></iframe>
     		</div>
     	</div>
     	
     </div>
+    </div>
+
+		<div class="big_box" id="floatdiv" onmouseenter="mousein()" onmouseleave="mouseout()">
+			<div id="close" class="close">
+				<img src="__PUBLIC__/img/close.png" onclick="close_adv()"/>
+			</div>
+			<a href="../Game/index.html" target="_blank">
+			<div class="but">
+			</div>
+			</a>
+		</div>
+    
+<script>
+	var mousein = function(){
+		var ida = document.getElementById("close");
+		ida.style.display="block";
+		pause_resume();
+	}
+	var mouseout = function(){
+		var ida = document.getElementById("close");
+		ida.style.display="none";
+		pause_resume();
+	}
+
+	var xPos = 20;
+	var yPos = document.body.clientHeight;
+	var step = 1;
+	var delay = 30;
+	var height = 0;
+	var Hoffset = 0;
+	var Woffset = 0;
+	var yon = 0;
+	var xon = 0;
+	var pause = true;
+	var interval;
+	floatdiv.style.top = yPos;
+	function changePos() {
+		width = document.body.clientWidth;
+		height = document.body.clientHeight;
+		Hoffset = floatdiv.offsetHeight;
+		Woffset = floatdiv.offsetWidth;
+		floatdiv.style.left = xPos + document.body.scrollLeft + "px";
+		floatdiv.style.top = yPos + document.body.scrollTop + "px";
+		if(yon){
+			yPos = yPos + step;
+		}else{
+			yPos = yPos - step;
+		}
+		if (yPos<0){
+			yon = 1;
+			yPos = 0;
+		}
+		if (yPos >= (height - Hoffset)) {
+			yon = 0;
+			yPos = (height - Hoffset);
+		}
+		if (xon) {
+			xPos = xPos + step;
+		}else{
+			xPos = xPos - step;
+		}
+		if (xPos < 0) {
+			xon = 1;
+			xPos = 0;
+			}
+		if (xPos >= (width - Woffset)) {
+			xon = 0;
+				xPos = (width - Woffset);
+		}
+	}
+	function start() {
+		floatdiv.visibility = 'visible';
+		interval = setInterval('changePos()', delay);
+	}
+	function pause_resume() {
+		if(pause) {
+			clearInterval(interval);
+			pause = false;
+		}else{
+			interval = setInterval('changePos()',delay);
+			pause = true;
+		}
+	}
+	start();
+	  
+	var close_adv = function()
+	{
+		clearInterval(interval);
+		pause = false;
+		floatdiv.style.index = 0;
+		var id = document.getElementById("floatdiv");
+		id.style.display = "none";
+	}
+</script>
 </block>
