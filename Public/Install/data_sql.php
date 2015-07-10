@@ -28,13 +28,11 @@ if($db_act=='create_db'){
 	proID int
 	);
 	create table shopcat(
-	shopid int not null primary key auto_increment,
-	shopname varchar(32) not null,
-	imgpath varchar(64) not null,
+	shopid int not null,
+	user_id int not null,
 	isselect tinyint(2) not null,
-	price float not null,
 	number int not null,
-	user_id int not null
+	primary key(user_id,shopid)
 	);
 	create table menu(
 	menuid int(10) not null primary key  auto_increment,
@@ -479,6 +477,26 @@ insert into city values(11,'兴安盟',33);
 insert into city values(12,'阿拉善盟',33);
 insert into city values(1,'澳门',34);
 insert into city values(1,'香港',35);
-insert shopcat values(1,'陈','goods1.png',1,20,3,1);
-insert shopcat values(2,'456','goods1.png',1,20,3,1);";
+insert shopcat values(1,1,1,20);
+insert shopcat values(2,1,1,2);
+insert goods values(1,\"iphone\",2,
+'{\"1\":\"2-S1.jpg\",\"2\":\"2-S2.jpg\",\"3\":\"2-S3.jpg\",\"4\":\"2-S4.jpg\",\"5\":\"2-S5.jpg\"}',
+'{\"1\":\"2-L1.jpg\",\"2\":\"2-L2.jpg\",\"3\":\"2-L3.jpg\",\"4\":\"2-L4.jpg\",\"5\":\"2-L5.jpg\"}',
+5000,650,'iphone好','',
+'{\"1\":\"2-1.jpg\",\"2\":\"2-2.jpg\",\"3\":\"2-3.jpg\"}',1);
+insert goods values(2,\"美容产品\",2,
+'{\"1\":\"3-S1.jpg\",\"2\":\"3-S2.jpg\",\"3\":\"3-S3.jpg\",\"4\":\"3-S4.jpg\",\"5\":\"3-S5.jpg\"}',
+'{\"1\":\"3-L1.jpg\",\"2\":\"3-L2.jpg\",\"3\":\"3-L3.jpg\",\"4\":\"3-L4.jpg\",\"5\":\"3-L5.jpg\"}',
+20,650,'这个也好','',
+'{\"1\":\"3-1.gif\",\"2\":\"3-2.gif\",\"3\":\"3-3.gif\"}',3);
+insert goods values(3,\"高端相机\",2,
+'{\"1\":\"4-S1.jpg\",\"2\":\"4-S2.jpg\",\"3\":\"4-S3.jpg\",\"4\":\"4-S4.jpg\",\"5\":\"4-S5.jpg\"}',
+'{\"1\":\"4-L1.jpg\",\"2\":\"4-L2.jpg\",\"3\":\"4-L3.jpg\",\"4\":\"4-L4.jpg\",\"5\":\"4-L5.jpg\"}',
+17900,650,'这个更好','',
+'{\"1\":\"4-1.jpg\",\"2\":\"4-2.jpg\",\"3\":\"4-3.jpg\"}',1);
+insert goods values(4,\"小端相机\",2,
+'{\"1\":\"5-S1.jpg\",\"2\":\"5-S2.jpg\",\"3\":\"5-S3.jpg\",\"4\":\"5-S4.jpg\",\"5\":\"5-S5.jpg\"}',
+'{\"1\":\"5-L1.jpg\",\"2\":\"5-L2.jpg\",\"3\":\"5-L3.jpg\",\"4\":\"5-L4.jpg\",\"5\":\"5-L5.jpg\"}',
+1910,650,'什么都好','',
+'{\"1\":\"5-1.jpg\",\"2\":\"5-2.jpg\",\"3\":\"5-3.jpg\"}',1);";
 }

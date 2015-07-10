@@ -3,16 +3,23 @@ namespace Home\Controller;
 use Think\Controller;
 
 class ShopController extends Controller{
-	public function addgood(){
-		$con=M('goods');
-		$good_limg=array(
-		'1'=>'img2.jpg',
-		'2'=>'img2.jpg',
-		'3'=>'img2.jpg',
-		'4'=>'img2.jpg',
-		'5'=>'img2.jpg'
-		);
-		var_dump(json_encode($good_limg));
+	
+	//订单页面
+	public function slist(){
+		$this->display('List/index');
+	}
+	
+	public function slist_1(){
+		$this->display('List/list1');
+	}
+	public function slist_2(){
+		$this->display('List/list2');
+	}
+	public function slist_3(){
+		$this->display('List/list3');
+	}
+	public function slist_4(){
+		$this->display('List/list4');
 	}
 	
 	//商品详情页
@@ -88,7 +95,7 @@ class ShopController extends Controller{
 		}
 		
 		$con->where("shopid='$id' and user_id='$user_id'")->setField('isselect',$isc);
-		$data=$con->query("select sum(price*number) as ap,count(*) as acount from shopcat where isselect=1 and user_id='$user_id'");
+		$data=$con->query("select sum(price*number) as ap,count(*) as acount from shopcat left join goods on good_id=shopid where user_id=$user_id and isselect=1");
 		$r=array(
 			'ap'=>$data[0][ap],
 			'acount'=>$data[0][acount]
@@ -111,7 +118,7 @@ class ShopController extends Controller{
 			if(!$con->where("user_id='$user_id'")->select()){
 				$this->ajaxReturn('2','EVAL');//没有商品了
 			}
-			$data=$con->query("select sum(price*number) as ap,count(*) as acount from shopcat where isselect=1 and user_id='$user_id'");
+			$data=$con->query("select sum(price*number) as ap,count(*) as acount from shopcat left join goods on good_id=shopid where user_id=$user_id and isselect=1");
 			$r=array(
 			'ap'=>$data[0][ap],
 			'acount'=>$data[0][acount]
@@ -148,24 +155,30 @@ class ShopController extends Controller{
 		
 		$con->where("shopid='$id' and user_id='$user_id'")->setField('number',$num);
 		//sum(price*number)
-		$data=$con->query("select sum(price*number) as ap from shopcat where isselect=1 and user_id='$user_id'");
+		$data=$con->query("select sum(price*number) as ap 
+			from shopcat left join goods on good_id=shopid where user_id=$user_id");
 		$this->ajaxReturn($data[0][ap],'EVAL');
 		
 		
 	}
+	
 	public function good_acount(){
 		//链接数据库
 		$con=M('shopcat');
 		$user_id=session('user_id');
 		
-		$data=$con->where("user_id='$user_id' and isselect=1")->select();
+		$data=$con->query("select good_name as shopname,good_bimg as imgpath,goods.price as price,number,isselect 
+			from shopcat left join goods on good_id=shopid where user_id=$user_id");
 		
 		if(!$data){//没有任何要购买的东西，直接返回
 			$this->index();
 		}
 		$s_price=0;
 		for($i=0;$i<count($data);$i++){
+			
+			$data[$i]['imgpath']=json_decode($data[$i]['imgpath'],TRUE);
 			$s_price+=($data[$i]['price']*$data[$i]['number']);
+				
 		}
 		
 		$this->assign('goods',$data);
@@ -187,20 +200,20 @@ class ShopController extends Controller{
 	//购物车首页
 	public function index(){
 
-		//ȡ���û�ID
 		$user_id=session('user_id');
-		if($user_id){//�û��Ѿ���½
-			//������ݿ�
+		if($user_id){
 			$con=M('shopcat');
-			//�жϹ��ﳵ�����Ƿ�������
-			//��ѯ��������
-			$data=$con->where("user_id='$user_id'")->select();
+			$data=$con->query("select shopid, good_name as shopname,good_bimg as imgpath,goods.price as price,number,isselect 
+			from shopcat left join goods on good_id=shopid where user_id=$user_id");
+			//$data=$con->where("user_id='$user_id'")->select();
 			//select sum(price) as aprice,count(price) as aselect from shopcat where isselect=1; 
-			//ͳ�Ƽ۸�
-			$s_data=$con->where('isselect=1')->select();
+
+			//$s_data=$con->where('isselect=1')->select();
 			$s_price=0;
-			for($i=0;$i<count($s_data);$i++){
-				$s_price+=($s_data[$i]['price']*$s_data[$i]['number']);
+			for($i=0;$i<count($data);$i++){
+				$data[$i]['imgpath']=json_decode($data[$i]['imgpath'],TRUE);
+				$s_price+=($data[$i]['price']*$data[$i]['number']);
+				
 			}
 			$gdcount=array(
 				's_count'=>count($s_data),

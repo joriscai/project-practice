@@ -175,7 +175,7 @@ var closeadv = function(m)
 				<a href="{:U('Home/User/login')}">登陆</a>
 				<a href="{:U('Home/User/regedit')}">注册</a>
 			<?php }else{ ?>
-				<a href="{:U('Home/Index/index')}"><?php echo session('user_name'); ?></a>
+				<a href="{:U('Home/Shop/slist')}"><?php echo session('user_name'); ?></a>
 				<a href="{:U('Home/User/loginout')}">退出</a>
 			<?php }?>
 		</div>
@@ -1805,7 +1805,7 @@ var closeadv = function(m)
 				<li>
 					<div class="p-img">
 						<a href="{:U('Home/shop/show','','')}/goodid/{$good.good_id}" >
-							<img  width="130" height="130" title="{$good.good_name}" src="__PUBLIC__/img/good/{$good.cate}/{$good.good_bimg.1}" class="">
+							<img  width="130" height="130" title="{$good.good_name}" src="__PUBLIC__/img/good/{$good.good_bimg.1}" class="">
 						</a>
 					</div>
 					<div class="p-info">
