@@ -43,7 +43,7 @@
 	}
 
 	var xPos = 20;
-	var yPos = document.body.clientHeight;
+	var yPos = 20;
 	var step = 1;
 	var delay = 30;
 	var height = 0;
@@ -59,8 +59,8 @@
 		height = document.body.clientHeight;
 		Hoffset = floatdiv.offsetHeight;
 		Woffset = floatdiv.offsetWidth;
-		floatdiv.style.left = xPos + document.body.scrollLeft + "px";
-		floatdiv.style.top = yPos + document.body.scrollTop + "px";
+		floatdiv.style.left = xPos  + "px";
+		floatdiv.style.top = yPos  + "px";
 		if(yon){
 			yPos = yPos + step;
 		}else{
