@@ -229,4 +229,5 @@ class ShopController extends Controller{
 		
 		$this->display('ShoppingCart/index');
 	}
+
 }

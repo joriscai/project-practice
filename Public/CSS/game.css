@@ -1,0 +1,58 @@
+body{
+	background-color: #312843;
+	padding: 0px;
+	margin: 0px;
+}
+
+.game {
+	position: relative;
+	width: auto;
+	height: 500px;
+	background-color: #000000;
+}
+.shuoming {
+	position: relative;
+	width: auto;
+	text-align: center;
+	height: 100px;
+	line-height: 45px;
+	background-color: #555;
+}
+.shuoming .history {
+	position: relative;
+	width: 300px;
+	text-align: left;
+	margin: 0px auto;
+	height: 50px;
+	color: #fff;
+	font-size: 15px;
+	border: 0px solid;
+}
+
+.shuoming input {
+	border: 0px #00f solid;
+	width: 100px;
+	height: 30px;
+	font-size: 20px;
+	color: #fff;
+	background-color: #00f;
+}
+.shuoming input:hover {
+	cursor: pointer;
+}
+
+.history input {
+	color: #00f;
+	/*disabled: disabled;*/
+	text-align: center;
+	background-color: #999;
+}
+.history .cls {
+	position: relative;
+	width: 88px;
+	margin: 7px 4px;
+	float: right;
+	text-align: center;
+	background-color: #2AF6F8;
+	font-size: 13px;
+}

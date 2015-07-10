@@ -92,4 +92,8 @@ class IndexController extends Controller {
 	public function seller(){
 		$this->display('seller/SellerShop');
 	}
+	
+	public function game(){
+		$this->display('Game/index');
+	}
 }

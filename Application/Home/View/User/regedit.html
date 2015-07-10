@@ -25,12 +25,12 @@
 						return 0;
 					}
 					
-					if(!$('input[name=email').val().length){
+					if(!$('input[name=email]').val().length){
 						alert('请先填写邮箱');
-						$('input[name=email').focus();
+						$('input[name=email]').focus();
 						return 0;
 					}
-					
+					//检查用户名是否符合规则
 					if(!chk_name()){
 						$('#name').focus();
 						return 0;
@@ -307,7 +307,7 @@
 			<ul id="reg">
 				<li><label>用户名：</label><input name="name" id="name" class="text"/><br /></li>
 				<li><label>密码：</label><input type="password" name="pwd" id="pwd" class="text"/><br /></li>
-				<li><label>确认密码：</label><input name="check_pwd" class="text"/><br /></li>
+				<li><label>确认密码：</label><input name="check_pwd" type="password" class="text"/><br /></li>
 				<li><label>邮箱：</label><input  name="email" class="text"/><br /></li>
 				<li><label>出生日期：</label><input id="birth" class="text" onClick="WdatePicker()"/></li>
 				<li><label>省份：</label>
