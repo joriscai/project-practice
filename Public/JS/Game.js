@@ -53,13 +53,16 @@ window.onload = function()
 	can.width = width;
 	ctx = can.getContext("2d");				//创建画布
 	
-	
-	var key = localStorage.key(0);
-	var value = localStorage.getItem(key);
-	if(!value)
+	if(localStorage.length == 0)
 	{
 		value = 0;
+		localStorage.setItem(1,value);
 	}
+	else
+	{
+		value = localStorage.getItem(localStorage.key(0));
+	}
+	
 	var id = document.getElementById("history");
 	id.value = value+"s";
 }
