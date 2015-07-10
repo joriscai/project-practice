@@ -7,6 +7,28 @@
 
    <script type="text/javascript">
    		var s_now="{$id}";//当前的页面ID
+
+
+      //--------------------导航栏 选项效果代码--------------------------------// 
+        $(function(){
+          $("#l_index"+s_now).addClass("current");
+           $($(".fix-box")[s_now-1]).show().siblings().hide();
+          $(".list-index").hover(function(){
+            $(this).addClass("mar-hover").siblings().removeClass("mar-hover");
+            var index = $(this).index(".list-index");
+            $($(".fix-box")[index]).show().siblings().hide();
+          });
+       /*   $(".nav").mouseleave(function(){
+          $(".list-index").removeClass("current");
+
+        });*/
+        });
+
+
+//----------------结束--导航栏 选项效果代码--------------------------------// 
+
+
+
       //-------------------- 选项效果代码--------------------------------// 
         $(function(){
           $(".tab-item").hover(function(){
@@ -31,15 +53,15 @@
     <div class="sm-item-list">
       <div class="market-wrap">
         <ul class="main-list">
-          <li>
-            <a href="" class="list-index current" ><b>智能产品</b>
-            <b class="marketicon">&nbsp;&nbsp;</b>
+          <li class="list-index" id="l_index1">
+            <a href="#" class="" ><b>智能产品</b>
+            <!-- <b class="marketicon">&nbsp;&nbsp;</b> -->
             </a>
           </li>
 
-          <li>
+          <li class="list-index" id="l_index2">
             <a  href="#" ><b>服装城</b></a></li>
-          <li>
+          <li class="list-index" id="l_index3">
             <a  href="/" ><b>美容产品</b></a></li>
           </ul>
         <div class="menu-button ">
@@ -57,7 +79,7 @@
 
   <!--导航栏目-->
   <div class="sm-cat-list">
-    <div class="fix-box">
+    <div class="fix-box" style="display:block;">
       <div class="market-wrap current">
         <div class="cat"  style="">
             <div class="cat-title cat-head">
@@ -152,6 +174,198 @@
         </div>
       </div> 
     </div>  
+
+    <div class="fix-box">
+      <div class="market-wrap current">
+        <div class="cat"  style="">
+            <div class="cat-title cat-head">
+              <a href="#">手机1</a>
+            </div>
+            <div >
+              <div class="cat-title"><a href="#">iPhone</a></div>
+              <div class="cat-title"><a href="#">小米</a></div>
+              <div class="cat-title"><a href="#">华为</a></div>
+              <div class="cat-title"><a href="#">酷派</a></div>
+              <div class="cat-title"><a href="#">魅族</a></div>
+              <div class="cat-title"><a href="#">中兴</a></div>
+              <div class="cat-title"><a href="#">VIVO</a></div>
+              <div class="cat-title"><a href="#">三星</a></div>
+              <div class="cat-title"><a href="#">其他品牌</a></div>
+            </div>
+        </div>
+
+        <div class="cat">
+            <div class="cat-title cat-head">
+              <a href="#">平板电脑2</a>
+            </div>
+            <div>
+              <div class="cat-title"><a href="#">iPad</a></div>
+              <div class="cat-title"><a href="#">三星</a></div>
+              <div class="cat-title"><a href="#">联想</a></div>
+              <div class="cat-title"><a href="#">台电</a></div>
+              <div class="cat-title"><a href="#">华为</a></div>
+              <div class="cat-title"><a href="#">蓝魔</a></div>
+              <div class="cat-title"><a href="#">酷比魔方</a></div>
+              <div class="cat-title"><a href="#">索尼</a></div>
+            </div>
+        </div>
+
+        <div class="cat">
+            <div class="cat-title cat-head">
+              <a href="#">相机/单反3</a>
+            </div>
+            <div>
+              <div class="cat-title"><a href="#">专业单反</a></div>
+              <div class="cat-title"><a href="#">微单</a></div>
+              <div class="cat-title"><a href="#">镜头</a></div>
+              <div class="cat-title"><a href="#">卡片机</a></div>
+              <div class="cat-title"><a href="#">卡西欧</a></div>
+              <div class="cat-title"><a href="#">佳能</a></div>
+              <div class="cat-title"><a href="#">尼康</a></div>
+              <div class="cat-title"><a href="#">索尼</a></div>
+            </div>
+        </div>
+
+        <div class="cat">
+            <div class="cat-title cat-head">
+              <a href="#">笔记本</a>
+            </div>
+            <div>
+              <div class="cat-title"><a href="#">苹果</a></div>
+              <div class="cat-title"><a href="#">联想</a></div>
+              <div class="cat-title"><a href="#">Thinkpad</a></div>
+              <div class="cat-title"><a href="#">戴尔</a></div>
+              <div class="cat-title"><a href="#">华硕</a></div>
+              <div class="cat-title"><a href="#">Acer</a></div>
+              <div class="cat-title"><a href="#">神舟</a></div>
+              <div class="cat-title"><a href="#">三星</a></div>
+            </div>
+        </div>
+        <div class="cat">
+            <div class="cat-title cat-head">
+              <a href="#">台式机</a>
+            </div>
+            <div>
+              <div class="cat-title"><a href="#">无线鼠标</a></div>
+              <div class="cat-title"><a href="#">CPU</a></div>
+              <div class="cat-title"><a href="#">无线路由器</a></div>
+              <div class="cat-title"><a href="#">移动硬盘</a></div>
+              <div class="cat-title"><a href="#">显卡</a></div>
+              <div class="cat-title"><a href="#">内存</a></div>
+              <div class="cat-title"><a href="#">键盘</a></div>
+            </div>
+        </div>
+
+        <div class="cat" style="border-right:0px;">
+            <div class="cat-title cat-head">
+              <a href="#">3C数码配件</a>
+            </div>
+            <div>
+              <div class="cat-title"><a href="#">智能穿戴</a></div>
+              <div class="cat-title"><a href="#">充电宝</a></div>
+              <div class="cat-title"><a href="#">壳套配件</a></div>
+              <div class="cat-title"><a href="#">蓝牙耳机</a></div>
+              <div class="cat-title"><a href="#">无线键鼠套装</a></div>
+            </div>
+        </div>
+      </div> 
+    </div> 
+
+    <div class="fix-box">
+      <div class="market-wrap current">
+        <div class="cat"  style="">
+            <div class="cat-title cat-head">
+              <a href="#">手机3</a>
+            </div>
+            <div >
+              <div class="cat-title"><a href="#">iPhone</a></div>
+              <div class="cat-title"><a href="#">小米</a></div>
+              <div class="cat-title"><a href="#">华为</a></div>
+              <div class="cat-title"><a href="#">酷派</a></div>
+              <div class="cat-title"><a href="#">魅族</a></div>
+              <div class="cat-title"><a href="#">中兴</a></div>
+              <div class="cat-title"><a href="#">VIVO</a></div>
+              <div class="cat-title"><a href="#">三星</a></div>
+              <div class="cat-title"><a href="#">其他品牌</a></div>
+            </div>
+        </div>
+
+        <div class="cat">
+            <div class="cat-title cat-head">
+              <a href="#">平板电脑3</a>
+            </div>
+            <div>
+              <div class="cat-title"><a href="#">iPad</a></div>
+              <div class="cat-title"><a href="#">三星</a></div>
+              <div class="cat-title"><a href="#">联想</a></div>
+              <div class="cat-title"><a href="#">台电</a></div>
+              <div class="cat-title"><a href="#">华为</a></div>
+              <div class="cat-title"><a href="#">蓝魔</a></div>
+              <div class="cat-title"><a href="#">酷比魔方</a></div>
+              <div class="cat-title"><a href="#">索尼</a></div>
+            </div>
+        </div>
+
+        <div class="cat">
+            <div class="cat-title cat-head">
+              <a href="#">相机/单反3</a>
+            </div>
+            <div>
+              <div class="cat-title"><a href="#">专业单反</a></div>
+              <div class="cat-title"><a href="#">微单</a></div>
+              <div class="cat-title"><a href="#">镜头</a></div>
+              <div class="cat-title"><a href="#">卡片机</a></div>
+              <div class="cat-title"><a href="#">卡西欧</a></div>
+              <div class="cat-title"><a href="#">佳能</a></div>
+              <div class="cat-title"><a href="#">尼康</a></div>
+              <div class="cat-title"><a href="#">索尼</a></div>
+            </div>
+        </div>
+
+        <div class="cat">
+            <div class="cat-title cat-head">
+              <a href="#">笔记3</a>
+            </div>
+            <div>
+              <div class="cat-title"><a href="#">苹果</a></div>
+              <div class="cat-title"><a href="#">联想</a></div>
+              <div class="cat-title"><a href="#">Thinkpad</a></div>
+              <div class="cat-title"><a href="#">戴尔</a></div>
+              <div class="cat-title"><a href="#">华硕</a></div>
+              <div class="cat-title"><a href="#">Acer</a></div>
+              <div class="cat-title"><a href="#">神舟</a></div>
+              <div class="cat-title"><a href="#">三星</a></div>
+            </div>
+        </div>
+        <div class="cat">
+            <div class="cat-title cat-head">
+              <a href="#">台式机</a>
+            </div>
+            <div>
+              <div class="cat-title"><a href="#">无线鼠标</a></div>
+              <div class="cat-title"><a href="#">CPU</a></div>
+              <div class="cat-title"><a href="#">无线路由器</a></div>
+              <div class="cat-title"><a href="#">移动硬盘</a></div>
+              <div class="cat-title"><a href="#">显卡</a></div>
+              <div class="cat-title"><a href="#">内存</a></div>
+              <div class="cat-title"><a href="#">键盘</a></div>
+            </div>
+        </div>
+
+        <div class="cat" style="border-right:0px;">
+            <div class="cat-title cat-head">
+              <a href="#">3C数码配件</a>
+            </div>
+            <div>
+              <div class="cat-title"><a href="#">智能穿戴</a></div>
+              <div class="cat-title"><a href="#">充电宝</a></div>
+              <div class="cat-title"><a href="#">壳套配件</a></div>
+              <div class="cat-title"><a href="#">蓝牙耳机</a></div>
+              <div class="cat-title"><a href="#">无线键鼠套装</a></div>
+            </div>
+        </div>
+      </div> 
+    </div> 
   </div>
   <!-- END 导航栏目-->
 </div>

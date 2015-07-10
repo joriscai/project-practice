@@ -44,9 +44,9 @@
 }
 .sm-item-list a {
 	display: inline-block;
-	zoom: 1;
-	height: 35px;
-
+	
+	height: 37px;
+	/*margin-top: -2px;*/
 	font: bold 14px/35px "\5b8b\4f53";
 	padding: 0 15px;
 	color: #404040;
@@ -73,6 +73,7 @@
 }
 .fix-box {
 	background-color: #0dc3ce;
+	display: none;
 	/*height: 90px;*/
 }
 /*--浮动层自动适应高度---*/
@@ -105,12 +106,13 @@
 	position: relative;
 	border-radius: 2px;
 	color: #fff;
+	text-align: left;
 }
 .cat-title a{
 	color: #fff;
 	font-size: 12px;
-	float: left;
-	display: block;
+	/*float: left;*/
+	/*display: block;*/
 	white-space:nowrap;
 }
 .cat-head{
@@ -215,7 +217,8 @@
 }
 .current{
 	background: #0dc3ce;
-	color: #fff;
+	/*color: #fff;*/
+	
 }
 .selected{
 background: #02b5c0;
@@ -224,4 +227,7 @@ body .mkcontent{
 	width: 990px;
 	margin: 0 auto;
 	text-align: center;
+}
+.mar-hover{
+	background: #0dc3ce;
 }
