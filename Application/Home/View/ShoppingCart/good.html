@@ -129,6 +129,24 @@ $(function(){
 
 		$('.img_bshow').attr('src',"__PUBLIC__/img/good/"+$(this).attr('bimg'));
 	})
+	
+	$('#add_sc').click(function(){
+		$id=$(this).attr('value');
+		$.ajax({
+			type:"post",
+			url:"{:U('Home/Shop/ajax_add')}",
+			async:true,
+			data:{
+				id:$id
+			},
+			success:function(msg){
+				
+					alert(msg);
+				
+			}
+		});
+	})
+	
 		
 })
 </script>
@@ -193,7 +211,7 @@ $(function(){
 				<li>
 					<label>提示</label>{$goodinfo.msg}</li>
 				<li>
-					<a id="add_sc"></a>
+					<a id="add_sc" value="{$goodinfo.good_id}"></a>
 					<a id="buy"></a>
 					<a id="collect"></a>
 				</li>
@@ -282,10 +300,11 @@ $(function(){
 				</table>
 				<!--商品图片详情-->
 				<ul>
-					<li><img src="__PUBLIC__/img/good/show3.jpg"></li>
-					<li><img src="__PUBLIC__/img/good/show1.jpg"></li>
-					<li><img src="__PUBLIC__/img/good/show2.jpg"></li>
-					<li><img src="__PUBLIC__/img/good/show2.jpg"></li>
+					
+					<foreach name="goodinfo['info_img']" item="img">
+
+						<li><img src="__PUBLIC__/img/good/{$img}"></li>
+					</foreach>
 				</ul>
 			</div>
 		</div>	

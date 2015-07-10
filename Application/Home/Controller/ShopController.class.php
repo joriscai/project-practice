@@ -37,10 +37,45 @@ class ShopController extends Controller{
 		}
 		$data[0]['good_limg']=json_decode($data[0]['good_limg'],TRUE);
 		$data[0]['good_bimg']=json_decode($data[0]['good_bimg'],TRUE);
+		$data[0]['info_img']=json_decode($data[0]['info_img'],TRUE);
 		
 		$this->assign('goodinfo',$data[0]);
 		$this->display('ShoppingCart/good');
 	}
+	
+	//加入购物车
+	public function ajax_add(){
+		
+		$id=I('id');//商品ID
+		$user_id=session('user_id');
+		$con=M('shopcat');
+		
+		if(!$id){
+			$this->ajaxReturn("添加失败",'EVAL');
+		}
+		
+		if(!$user_id){
+			$this->ajaxReturn("添加失败，请先登录",'EVAL');
+		}
+		
+		$data=array(
+		'shopid'=>$id,
+		'shopname'=>'1',
+		'imgpath'=>'1',
+		'isselect'=>1,
+		'price'=>1,
+		'number'=>1,
+		'user_id'=>$user_id
+		);
+		
+		if($con->add($data)){
+			$this->ajaxReturn("添加成功",'EVAL');
+		}
+		$this->ajaxReturn("添加失败",'EVAL');
+		
+	}
+	
+	
 	public function ajax_s(){
 		$id=I('id');
 		$isc=I('c');//是否选中
