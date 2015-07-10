@@ -168,6 +168,8 @@ class ShopController extends Controller{
 		}
 		$s_price=0;
 		for($i=0;$i<count($data);$i++){
+			
+			$data[$i]['imgpath']=json_decode($data[$i]['imgpath'],TRUE);
 			$s_price+=($data[$i]['price']*$data[$i]['number']);
 				
 		}
@@ -202,6 +204,7 @@ class ShopController extends Controller{
 			//$s_data=$con->where('isselect=1')->select();
 			$s_price=0;
 			for($i=0;$i<count($data);$i++){
+				$data[$i]['imgpath']=json_decode($data[$i]['imgpath'],TRUE);
 				$s_price+=($data[$i]['price']*$data[$i]['number']);
 				
 			}
