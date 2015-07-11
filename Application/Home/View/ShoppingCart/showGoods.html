@@ -11,7 +11,7 @@
 		<div class="mid_top">
 			<!--显示购物车内有多少件商品的div-->
 			<div class="all_shop" id="all">
-				<b>全部商品 0</b>
+				<b>全部商品 {$goods|count}</b>
 			</div>
 		</div>
 		<!--商品表头-->
@@ -41,18 +41,19 @@
 		</div>
 		<!--显示商品-->
 		<div id="show">
+			<foreach name="goods" item="good">
 			<div class="mid_main" id="1">
 				<div class="g_checkbox">
-					<input type="checkbox" checked="checked" name="chgoods"/>
+					<input type="checkbox" <?php echo $good['isselect']==0?'':'checked'; ?> name="chgoods"/>
 				</div>
 				<div class="g_img">
-					<img src="__PUBLIC__/img/goods1.png" />
+					<img src="__PUBLIC__/img/{$good['imgpath']}" />
 				</div>
 				<div class="g_name">
-					这是商品1<br />商品
+					{$good['shopname']}<br />商品
 				</div>
 				<div class="g_price">
-					10.00
+					{$good['price']}
 				</div>
 				<div class="g_quantity">
 					<div class="g_add">
@@ -61,7 +62,7 @@
 								-
 							</div>
 						</a>
-						<input type="text" class="go_text" value="1"></input>
+						<input type="text" class="go_text" value="{$good['number']}"></input>
 						<a href="javascript:void(0);">
 							<div class="go_add_re">
 								+
@@ -70,7 +71,7 @@
 					</div>
 				</div>
 				<div class="g_sum">
-					10.00
+					<?php echo $good['price']*$good['number']; ?>
 				</div>
 				<div class="g_action">
 					<a href="javascript:void(0);">
@@ -78,6 +79,7 @@
 					</a>
 				</div>
 			</div>
+			</foreach>
 		</div>
 		<div class="mid_buttom">
 			<div class="m_checkbox">
@@ -92,9 +94,9 @@
 			<!--显示商品总价-->
 			<div class="acc_text" id = "ac">
 				已选择  
-				<span style="color: #ff0000;">1</span>  
+				<span style="color: #ff0000;">{$gdcount['s_count']}</span>  
 				件商品  --- 总价  : 
-				<span style="color: #ff0000; font-size: 18px;">¥ 00.00</span>
+				<span style="color: #ff0000; font-size: 18px;">¥ {$gdcount['p_count']}</span>
 			</div>
 			<a id="account" href="">
 				<div class="account_button" style="color: #fff;">
