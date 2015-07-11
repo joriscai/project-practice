@@ -25,7 +25,16 @@ if($db_act=='create_db'){
 	cityID int not null,
 	cityName varchar(50) primary key,
 	proID int
-	);"
+	);
+	create table shopcat(
+	shopid int not null primary key auto_increment,
+	shopname varchar(32) not null,
+	imgpath varchar(64) not null,
+	isselect tinyint(2) not null,
+	price float not null,
+	number int not null,
+	user_id int not null
+);"
 	;
 }elseif($db_act="insert_data"){
 	return "insert into promary values(1,'±±¾©');
